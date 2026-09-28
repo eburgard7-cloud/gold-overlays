@@ -7,34 +7,8 @@
     42.98
   ],
   "built_at": "2026-09-28",
-  "reference_points": [
-    [
-      "WVM #3 Dads Creek",
-      "polygon",
-      "WVM #3"
-    ],
-    [
-      "WVM #4 Dads Creek",
-      "polygon",
-      "WVM #4"
-    ],
-    [
-      "WVM #5 Dads Creek",
-      "polygon",
-      "WVM #5"
-    ],
-    [
-      "Pure White Gold (Whitehorse Cr)",
-      "polygon",
-      "PURE WHITE GOLD"
-    ],
-    [
-      "Cow Creek Recreational Gold Panning Area",
-      "point",
-      "published site"
-    ]
-  ],
-  "usmin_count": 225,
+  "usmin_points": 205,
+  "usmin_polygons": 20,
   "usmin_dropped_types": [
     "borrow pit",
     "gravel pit",
@@ -44,184 +18,118 @@
   "milo_count": 167,
   "mrds_raw_count": 113,
   "mrds_kept_after_dedup": 38,
-  "active_claims_count": 207,
-  "active_claims_clipped_to_bbox": 30,
-  "closed_placer_claims_count": 269,
-  "closed_unmatched_to_grid": 4,
-  "density_top_cells": [
-    {
-      "lat": 42.90560848643323,
-      "lon": -123.52545148749213,
-      "count": 26,
-      "decades": {
-        "2020": 26
-      }
-    },
-    {
-      "lat": 42.90949828792346,
-      "lon": -123.47951766841113,
-      "count": 26,
-      "decades": {
-        "2020": 26
-      }
-    },
-    {
-      "lat": 42.975624913257334,
-      "lon": -123.41521032169773,
-      "count": 14,
-      "decades": {
-        "2020": 14
-      }
-    },
-    {
-      "lat": 42.93283709686483,
-      "lon": -123.47951766841113,
-      "count": 13,
-      "decades": {
-        "2020": 13
-      }
-    },
-    {
-      "lat": 42.89393908196255,
-      "lon": -123.49789119604354,
-      "count": 11,
-      "decades": {
-        "2020": 11
-      }
-    },
-    {
-      "lat": 42.90949828792346,
-      "lon": -123.55301177894076,
-      "count": 10,
-      "decades": {
-        "2020": 10
-      }
-    },
-    {
-      "lat": 42.98340451623779,
-      "lon": -123.37846326643292,
-      "count": 10,
-      "decades": {
-        "2020": 10
-      }
-    },
-    {
-      "lat": 42.91338808941369,
-      "lon": -123.54382501512455,
-      "count": 8,
-      "decades": {
-        "2020": 8
-      }
-    },
-    {
-      "lat": 42.92505749388437,
-      "lon": -123.53463825130837,
-      "count": 8,
-      "decades": {
-        "2020": 8
-      }
-    },
-    {
-      "lat": 42.90949828792346,
-      "lon": -123.51626472367595,
-      "count": 8,
-      "decades": {
-        "2020": 8
-      }
-    }
-  ],
+  "active_claims_raw_count": 207,
   "land_blm_features": 1,
   "land_usfs_features": 0,
   "nhd_available": true,
-  "nhd_skipped_for_open_ground": false,
-  "open_ground_count": 25,
-  "open_ground_top10": [
-    {
-      "name": "OPEN-cowcreek-01",
-      "lat": 42.7162386162379,
-      "lon": -123.25757686165443,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-02",
-      "lat": 42.862185,
-      "lon": -123.385877,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-03",
-      "lat": 42.698004,
-      "lon": -123.608403,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-04",
-      "lat": 42.699277,
-      "lon": -123.608766,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-05",
-      "lat": 42.698376,
-      "lon": -123.607984,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-06",
-      "lat": 42.697119,
-      "lon": -123.609107,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-07",
-      "lat": 42.69794,
-      "lon": -123.60989,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-08",
-      "lat": 42.713288,
-      "lon": -123.577453,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-09",
-      "lat": 42.714018,
-      "lon": -123.577058,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-cowcreek-10",
-      "lat": 42.862566,
-      "lon": -123.384706,
-      "type": "Prospect Pit",
-      "near_claim": false
+  "layer1_my_claims": {
+    "count": 8,
+    "lookups": [
+      [
+        "WVM 3 Dads Creek",
+        "area+pin",
+        "WVM #3"
+      ],
+      [
+        "WVM 4 Dads Creek",
+        "area+pin",
+        "WVM #4"
+      ],
+      [
+        "WVM 5 Dads Creek",
+        "area+pin",
+        "WVM #5"
+      ],
+      [
+        "Pure White Gold (Whitehorse Cr)",
+        "area+pin",
+        "PURE WHITE GOLD"
+      ]
+    ]
+  },
+  "layer2_public": {
+    "count": 1,
+    "corridor_areas_skipped": "no verified public-corridor extent geometry source in this build -- not rendered rather than invented"
+  },
+  "layer3_other_claims": {
+    "count": 203,
+    "clipped_to_bbox": 30,
+    "excluded_as_my_claims": 4
+  },
+  "layer4_history": {
+    "raw_records": 430,
+    "clusters_before_cap": 231,
+    "dropped_generic_milo_far_from_usmin": 0,
+    "dropped_prospect_pits_over_cap": 47,
+    "final_count": 150,
+    "max_allowed": 150
+  },
+  "layer5_scout": {
+    "count": 10,
+    "nhd_skipped": false,
+    "candidate_pool": 25,
+    "land_checks": {
+      "public_confirmed": 10,
+      "private_dropped": 0,
+      "unverifiable": 0
     }
-  ],
+  },
+  "layer6_access": {
+    "count": 0,
+    "reason": "no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route"
+  },
   "files": [
     {
-      "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_onx.kml",
-      "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_onx.gpx",
-      "kml_bytes": 368589,
-      "gpx_bytes": 446301,
-      "feature_count": 692,
-      "layers": [
-        "My claims & public sites",
-        "Historical workings (USMIN)",
-        "Mine & prospect sites (MILO/MRDS, gold)",
-        "Active mining claims (BLM MLRS)",
-        "Past claim density (closed placer, 500m hex)",
-        "Open ground to sample"
-      ]
+      "layer": "1_my_claims",
+      "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_1_my_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_1_my_claims.kml",
+      "item_count": 8,
+      "gpx_bytes": 5139,
+      "kml_bytes": 4726,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "2_public",
+      "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_2_public.gpx",
+      "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_2_public.kml",
+      "item_count": 1,
+      "gpx_bytes": 625,
+      "kml_bytes": 677,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "3_other_claims",
+      "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_3_other_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_3_other_claims.kml",
+      "item_count": 203,
+      "gpx_bytes": 152618,
+      "kml_bytes": 151248,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "4_history",
+      "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_4_history.gpx",
+      "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_4_history.kml",
+      "item_count": 150,
+      "gpx_bytes": 35515,
+      "kml_bytes": 33710,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "5_scout",
+      "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_5_scout.gpx",
+      "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_5_scout.kml",
+      "item_count": 10,
+      "gpx_bytes": 3059,
+      "kml_bytes": 2959,
+      "under_4mb": true,
+      "under_3000_items": true
     }
-  ]
+  ],
+  "caltopo_path": "/home/user/gold-overlays/out/cowcreek/caltopo_cowcreek.geojson",
+  "caltopo_feature_count": 372
 }

@@ -7,19 +7,8 @@
     44.68
   ],
   "built_at": "2026-09-28",
-  "reference_points": [
-    [
-      "WVM #1B Dry Gulch",
-      "polygon",
-      "WVM #1  B"
-    ],
-    [
-      "Cedar Bend Placer",
-      "polygon",
-      "CEDAR BEND"
-    ]
-  ],
-  "usmin_count": 22,
+  "usmin_points": 52,
+  "usmin_polygons": 0,
   "usmin_dropped_types": [
     "borrow pit",
     "gravel pit",
@@ -28,102 +17,98 @@
   "milo_count": 185,
   "mrds_raw_count": 16,
   "mrds_kept_after_dedup": 9,
-  "active_claims_count": 50,
-  "active_claims_clipped_to_bbox": 2,
-  "closed_placer_claims_count": 1,
-  "closed_unmatched_to_grid": 0,
-  "density_top_cells": [],
+  "active_claims_raw_count": 50,
   "land_blm_features": 1,
   "land_usfs_features": 1,
   "nhd_available": true,
-  "nhd_skipped_for_open_ground": false,
-  "open_ground_count": 25,
-  "open_ground_top10": [
-    {
-      "name": "OPEN-quartzville-01",
-      "lat": 44.55485597253256,
-      "lon": -122.27590996582218,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-02",
-      "lat": 44.54771,
-      "lon": -122.275014,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-03",
-      "lat": 44.572628,
-      "lon": -122.29176,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-04",
-      "lat": 44.546626,
-      "lon": -122.258089,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-05",
-      "lat": 44.582342,
-      "lon": -122.311554,
-      "type": "Prospect Pit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-06",
-      "lat": 44.59715051387162,
-      "lon": -122.32156913592453,
-      "type": "unknown",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-07",
-      "lat": 44.59763757246858,
-      "lon": -122.321724289339,
-      "type": "unknown",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-08",
-      "lat": 44.598271706876716,
-      "lon": -122.32139224806997,
-      "type": "unknown",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-09",
-      "lat": 44.59800679680157,
-      "lon": -122.3216490743567,
-      "type": "unknown",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-quartzville-10",
-      "lat": 44.60020974816574,
-      "lon": -122.3192735884159,
-      "type": "unknown",
-      "near_claim": false
+  "layer1_my_claims": {
+    "count": 4,
+    "lookups": [
+      [
+        "WVM 1B Dry Gulch",
+        "area+pin",
+        "WVM #1  B"
+      ],
+      [
+        "Cedar Bend Placer",
+        "area+pin",
+        "CEDAR BEND"
+      ]
+    ]
+  },
+  "layer2_public": {
+    "count": 0,
+    "corridor_areas_skipped": "no verified public-corridor extent geometry source in this build -- not rendered rather than invented"
+  },
+  "layer3_other_claims": {
+    "count": 48,
+    "clipped_to_bbox": 1,
+    "excluded_as_my_claims": 2
+  },
+  "layer4_history": {
+    "raw_records": 246,
+    "clusters_before_cap": 121,
+    "dropped_generic_milo_far_from_usmin": 0,
+    "dropped_prospect_pits_over_cap": 0,
+    "final_count": 121,
+    "max_allowed": 150
+  },
+  "layer5_scout": {
+    "count": 10,
+    "nhd_skipped": false,
+    "candidate_pool": 25,
+    "land_checks": {
+      "public_confirmed": 10,
+      "private_dropped": 0,
+      "unverifiable": 0
     }
-  ],
+  },
+  "layer6_access": {
+    "count": 0,
+    "reason": "no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route"
+  },
   "files": [
     {
-      "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_onx.kml",
-      "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_onx.gpx",
-      "kml_bytes": 115199,
-      "gpx_bytes": 108477,
-      "feature_count": 293,
-      "layers": [
-        "My claims & public sites",
-        "Historical workings (USMIN)",
-        "Mine & prospect sites (MILO/MRDS, gold)",
-        "Active mining claims (BLM MLRS)",
-        "Open ground to sample"
-      ]
+      "layer": "1_my_claims",
+      "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_1_my_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_1_my_claims.kml",
+      "item_count": 4,
+      "gpx_bytes": 3475,
+      "kml_bytes": 2967,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "3_other_claims",
+      "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_3_other_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_3_other_claims.kml",
+      "item_count": 48,
+      "gpx_bytes": 44953,
+      "kml_bytes": 39721,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "4_history",
+      "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_4_history.gpx",
+      "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_4_history.kml",
+      "item_count": 121,
+      "gpx_bytes": 28996,
+      "kml_bytes": 28166,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "5_scout",
+      "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_5_scout.gpx",
+      "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_5_scout.kml",
+      "item_count": 10,
+      "gpx_bytes": 3146,
+      "kml_bytes": 3049,
+      "under_4mb": true,
+      "under_3000_items": true
     }
-  ]
+  ],
+  "caltopo_path": "/home/user/gold-overlays/out/quartzville/caltopo_quartzville.geojson",
+  "caltopo_feature_count": 183
 }

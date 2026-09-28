@@ -153,7 +153,7 @@ class LocalProjector:
 
 def polygon_to_rings(geom):
     """shapely Polygon -> [exterior, hole1, hole2, ...] as (x,y) tuple lists,
-    for kml_writer.polygon_geometry / gpx_writer.GpxTrack.
+    for kml_writer.polygon_geometry / onx_gpx.OnxRoute.
     """
     exterior = list(geom.exterior.coords)
     holes = [list(interior.coords) for interior in geom.interiors]

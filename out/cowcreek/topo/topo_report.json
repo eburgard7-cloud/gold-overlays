@@ -2,15 +2,13 @@
   {
     "scale": "15 x 15",
     "title": "USGS 1:62500-scale Quadrangle for Dutchman Butte, OR 1946",
-    "status": "downloaded",
-    "path": "/home/user/gold-overlays/out/cowcreek/topo/USGS_1_62500_scale_Quadrangle_for_Dutchman_Butte_OR_1946.pdf",
-    "bytes": 11197344
+    "status": "cached",
+    "path": "/home/user/gold-overlays/out/cowcreek/topo/USGS_1_62500_scale_Quadrangle_for_Dutchman_Butte_OR_1946.pdf"
   },
   {
     "scale": "7.5 x 7.5",
     "title": "USGS 1:24000-scale Quadrangle for King Mountain, OR 1983",
-    "status": "downloaded",
-    "path": "/home/user/gold-overlays/out/cowcreek/topo/USGS_1_24000_scale_Quadrangle_for_King_Mountain_OR_1983.pdf",
-    "bytes": 15265213
+    "status": "cached",
+    "path": "/home/user/gold-overlays/out/cowcreek/topo/USGS_1_24000_scale_Quadrangle_for_King_Mountain_OR_1983.pdf"
   }
 ]

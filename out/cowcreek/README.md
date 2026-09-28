@@ -3,67 +3,54 @@
 Bounding box (WGS84 minLon,minLat,maxLon,maxLat): `(-123.7, 42.68, -123.1, 42.98)`
 Built: 2026-09-28
 
+## Legend
+
+| layer | icon | color | style | meaning |
+|---|---|---|---|---|
+| 1_my_claims | Mineral Site (pin) / filled Area | yellow | solid | WVM/BMOA club claims -- ours |
+| 2_public | Location (pin) | black | n/a (points only) | Public gold-panning sites open to anyone |
+| 3_other_claims | Area only, no pins | red | dotted | Other active BLM claims -- don't dig here |
+| 4_history | Mineral Site (placer/tailings/hydraulic) / Location (adit/shaft/pit) | black | n/a (points only) | Deduped historical workings |
+| 5_scout | Location (pin) | red | n/a (points only) | Open-ground candidates worth scouting |
+| 6_access | Line | black | dash/dot | Claim-access route (only where a real source describes one) |
+
+Only confirmed onX icons/colors are used: icons `Mineral Site` / `Location`; colors yellow `rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black `rgba(0,0,0,1)`. Green for confirmed public sites and any other icon/color in `onx_samples/onx_test.gpx` is a GUESS pending `onx_samples/STYLE_RESULTS.md` -- not used until confirmed (see top-level README).
+
+## Import steps (phone)
+
+1. onX app -> **My Content** -> **Import** -> choose one `<area>_<layer>.gpx` file.
+2. After import, select all the newly-imported items -> **Add to folder** -> name it `"cowcreek <layer>"` (e.g. `"cowcreek 1_my_claims"`).
+3. Repeat per layer file. Each file is small and single-purpose so the folder step stays quick.
+
 ## Output files
-- `cowcreek_onx.kml` / `cowcreek_onx.gpx` -- 692 features, 360 KB KML / 436 KB GPX
-  - layers: My claims & public sites, Historical workings (USMIN), Mine & prospect sites (MILO/MRDS, gold), Active mining claims (BLM MLRS), Past claim density (closed placer, 500m hex), Open ground to sample
+- `cowcreek_1_my_claims.gpx` (+ `cowcreek_1_my_claims.kml` secondary) -- 8 items, 5.0 KB GPX [OK]
+- `cowcreek_2_public.gpx` (+ `cowcreek_2_public.kml` secondary) -- 1 items, 0.6 KB GPX [OK]
+- `cowcreek_3_other_claims.gpx` (+ `cowcreek_3_other_claims.kml` secondary) -- 203 items, 149.0 KB GPX [OK]
+- `cowcreek_4_history.gpx` (+ `cowcreek_4_history.kml` secondary) -- 150 items, 34.7 KB GPX [OK]
+- `cowcreek_5_scout.gpx` (+ `cowcreek_5_scout.kml` secondary) -- 10 items, 3.0 KB GPX [OK]
+- `caltopo_cowcreek.geojson` -- CalTopo bundle, 372 features, all layers combined
 
 ## Layer counts
-- My claims & public sites: 5
-- USMIN historical workings: 225 (dropped types: borrow pit, gravel pit, open pit mine or quarry, quarry)
-- MILO-4 gold sites: 167
-- MRDS gold sites (raw / kept after MILO dedup): 113 / 38
-- Active BLM claims (Not Closed): 207
-- Closed placer claims fetched: 269 (unmatched to any 500m hex: 4)
-- Land status polygons fetched: BLM=1, USFS=0
-- NHD service reachable for this area: True
-- Open ground to sample: 25 waypoints
+- 1_my_claims: 8
+- 2_public: 1 (no verified public-corridor extent geometry source in this build -- not rendered rather than invented)
+- 3_other_claims: 203 (excluded as ours: 4, clipped to bbox: 30)
+- 4_history: 150 / 150 cap (raw records: 430, clusters before cap: 231, dropped generic MILO far from USMIN: 0, dropped prospect pits over cap: 47)
+- 5_scout: 10 / 10 cap (candidate pool: 25, NHD stream filter skipped: False, land checks: {'public_confirmed': 10, 'private_dropped': 0, 'unverifiable': 0})
+- 6_access: 0 (no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route)
 
-## My claims & public sites (reference table)
-- **WVM #3 Dads Creek** -- polygon (WVM #3)
-- **WVM #4 Dads Creek** -- polygon (WVM #4)
-- **WVM #5 Dads Creek** -- polygon (WVM #5)
-- **Pure White Gold (Whitehorse Cr)** -- polygon (PURE WHITE GOLD)
-- **Cow Creek Recreational Gold Panning Area** -- point (published site)
-
-## Past claim density -- top cells
-
-| lat | lon | total closed placer claims | by decade |
-|---|---|---|---|
-| 42.9056 | -123.5255 | 26 | 2020s:26 |
-| 42.9095 | -123.4795 | 26 | 2020s:26 |
-| 42.9756 | -123.4152 | 14 | 2020s:14 |
-| 42.9328 | -123.4795 | 13 | 2020s:13 |
-| 42.8939 | -123.4979 | 11 | 2020s:11 |
-| 42.9095 | -123.5530 | 10 | 2020s:10 |
-| 42.9834 | -123.3785 | 10 | 2020s:10 |
-| 42.9134 | -123.5438 | 8 | 2020s:8 |
-| 42.9251 | -123.5346 | 8 | 2020s:8 |
-| 42.9095 | -123.5163 | 8 | 2020s:8 |
-
-## Open ground to sample -- top 10
-
-| waypoint | lat | lon | feature type | near active claim |
-|---|---|---|---|---|
-| OPEN-cowcreek-01 | 42.71624 | -123.25758 | placer (heuristic: surface workings) | False |
-| OPEN-cowcreek-02 | 42.86218 | -123.38588 | Prospect Pit | False |
-| OPEN-cowcreek-03 | 42.69800 | -123.60840 | Prospect Pit | False |
-| OPEN-cowcreek-04 | 42.69928 | -123.60877 | Prospect Pit | False |
-| OPEN-cowcreek-05 | 42.69838 | -123.60798 | Adit | False |
-| OPEN-cowcreek-06 | 42.69712 | -123.60911 | Adit | False |
-| OPEN-cowcreek-07 | 42.69794 | -123.60989 | Prospect Pit | False |
-| OPEN-cowcreek-08 | 42.71329 | -123.57745 | Adit | False |
-| OPEN-cowcreek-09 | 42.71402 | -123.57706 | Adit | False |
-| OPEN-cowcreek-10 | 42.86257 | -123.38471 | Prospect Pit | False |
+## My claims (layer 1) resolution detail
+- **WVM 3 Dads Creek** -- area+pin (WVM #3)
+- **WVM 4 Dads Creek** -- area+pin (WVM #4)
+- **WVM 5 Dads Creek** -- area+pin (WVM #5)
+- **Pure White Gold (Whitehorse Cr)** -- area+pin (PURE WHITE GOLD)
 
 ## Caveats specific to this area
-- BLM claim polygons are approximate to the quarter-section; every claim polygon is labeled
-  `[APPROX quarter-section]` in its name and description.
-- 'Closed-claim density' decade buckets use the MLRS `Created` (database record) date as a proxy for
-  located date -- the public feature service does not expose a true located/last-action date.
-- 'Open ground' ranking's final tiebreaker is distance-to-stream, not distance-to-road (no road
-  dataset was fetched in this build).
-- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes);
-  full deposit-type/production detail lives on the per-site page linked in each description.
+- BLM claim polygons are approximate to the quarter-section (not drawn from a legal survey).
+- Layer 1 'directions' field: no club handbook source exists in this repo, so it reads 'not available' rather than being invented.
+- Layer 2 public-corridor Areas are skipped (no verified extent-polygon source) -- only point pins are rendered for public sites.
+- Layer 5 scout candidates' final tiebreaker is distance-to-stream, not distance-to-road (no road dataset fetched in this build).
+- Layer 6 access routes: skipped, no handbook/directions source data exists in this repo.
+- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes).
 
 ## DOGAMI Bulletin 61 notes
 

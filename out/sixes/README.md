@@ -3,49 +3,49 @@
 Bounding box (WGS84 minLon,minLat,maxLon,maxLat): `(-124.45, 42.75, -124.2, 42.88)`
 Built: 2026-09-28
 
+## Legend
+
+| layer | icon | color | style | meaning |
+|---|---|---|---|---|
+| 1_my_claims | Mineral Site (pin) / filled Area | yellow | solid | WVM/BMOA club claims -- ours |
+| 2_public | Location (pin) | black | n/a (points only) | Public gold-panning sites open to anyone |
+| 3_other_claims | Area only, no pins | red | dotted | Other active BLM claims -- don't dig here |
+| 4_history | Mineral Site (placer/tailings/hydraulic) / Location (adit/shaft/pit) | black | n/a (points only) | Deduped historical workings |
+| 5_scout | Location (pin) | red | n/a (points only) | Open-ground candidates worth scouting |
+| 6_access | Line | black | dash/dot | Claim-access route (only where a real source describes one) |
+
+Only confirmed onX icons/colors are used: icons `Mineral Site` / `Location`; colors yellow `rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black `rgba(0,0,0,1)`. Green for confirmed public sites and any other icon/color in `onx_samples/onx_test.gpx` is a GUESS pending `onx_samples/STYLE_RESULTS.md` -- not used until confirmed (see top-level README).
+
+## Import steps (phone)
+
+1. onX app -> **My Content** -> **Import** -> choose one `<area>_<layer>.gpx` file.
+2. After import, select all the newly-imported items -> **Add to folder** -> name it `"sixes <layer>"` (e.g. `"sixes 1_my_claims"`).
+3. Repeat per layer file. Each file is small and single-purpose so the folder step stays quick.
+
 ## Output files
-- `sixes_onx.kml` / `sixes_onx.gpx` -- 71 features, 35 KB KML / 34 KB GPX
-  - layers: My claims & public sites, Historical workings (USMIN), Mine & prospect sites (MILO/MRDS, gold), Active mining claims (BLM MLRS), Open ground to sample
+- `sixes_2_public.gpx` (+ `sixes_2_public.kml` secondary) -- 1 items, 0.6 KB GPX [OK]
+- `sixes_3_other_claims.gpx` (+ `sixes_3_other_claims.kml` secondary) -- 34 items, 22.0 KB GPX [OK]
+- `sixes_4_history.gpx` (+ `sixes_4_history.kml` secondary) -- 24 items, 5.9 KB GPX [OK]
+- `sixes_5_scout.gpx` (+ `sixes_5_scout.kml` secondary) -- 5 items, 1.7 KB GPX [OK]
+- `caltopo_sixes.geojson` -- CalTopo bundle, 64 features, all layers combined
 
 ## Layer counts
-- My claims & public sites: 1
-- USMIN historical workings: 5 (dropped types: borrow pit, gravel pit, open pit mine or quarry, quarry)
-- MILO-4 gold sites: 19
-- MRDS gold sites (raw / kept after MILO dedup): 16 / 6
-- Active BLM claims (Not Closed): 34
-- Closed placer claims fetched: 3 (unmatched to any 500m hex: 0)
-- Land status polygons fetched: BLM=1, USFS=1
-- NHD service reachable for this area: True
-- Open ground to sample: 6 waypoints
+- 1_my_claims: 0
+- 2_public: 1 (no verified public-corridor extent geometry source in this build -- not rendered rather than invented)
+- 3_other_claims: 34 (excluded as ours: 0, clipped to bbox: 4)
+- 4_history: 24 / 150 cap (raw records: 30, clusters before cap: 24, dropped generic MILO far from USMIN: 0, dropped prospect pits over cap: 0)
+- 5_scout: 5 / 10 cap (candidate pool: 6, NHD stream filter skipped: False, land checks: {'public_confirmed': 5, 'private_dropped': 0, 'unverifiable': 0})
+- 6_access: 0 (no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route)
 
-## My claims & public sites (reference table)
-- **Sixes River Campground (rec mining)** -- point (published site)
-
-## Past claim density -- top cells
-
-| lat | lon | total closed placer claims | by decade |
-|---|---|---|---|
-
-## Open ground to sample -- top 10
-
-| waypoint | lat | lon | feature type | near active claim |
-|---|---|---|---|---|
-| OPEN-sixes-01 | 42.80451 | -124.30431 | placer (heuristic: surface workings) | False |
-| OPEN-sixes-02 | 42.77624 | -124.24683 | placer | True |
-| OPEN-sixes-03 | 42.76874 | -124.24563 | placer | False |
-| OPEN-sixes-04 | 42.80400 | -124.31790 | placer | False |
-| OPEN-sixes-05 | 42.80453 | -124.30406 | Open Pit Mine | False |
-| OPEN-sixes-06 | 42.77704 | -124.20812 | lode | False |
+## My claims (layer 1) resolution detail
 
 ## Caveats specific to this area
-- BLM claim polygons are approximate to the quarter-section; every claim polygon is labeled
-  `[APPROX quarter-section]` in its name and description.
-- 'Closed-claim density' decade buckets use the MLRS `Created` (database record) date as a proxy for
-  located date -- the public feature service does not expose a true located/last-action date.
-- 'Open ground' ranking's final tiebreaker is distance-to-stream, not distance-to-road (no road
-  dataset was fetched in this build).
-- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes);
-  full deposit-type/production detail lives on the per-site page linked in each description.
+- BLM claim polygons are approximate to the quarter-section (not drawn from a legal survey).
+- Layer 1 'directions' field: no club handbook source exists in this repo, so it reads 'not available' rather than being invented.
+- Layer 2 public-corridor Areas are skipped (no verified extent-polygon source) -- only point pins are rendered for public sites.
+- Layer 5 scout candidates' final tiebreaker is distance-to-stream, not distance-to-road (no road dataset fetched in this build).
+- Layer 6 access routes: skipped, no handbook/directions source data exists in this repo.
+- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes).
 
 ## DOGAMI Bulletin 61 notes
 

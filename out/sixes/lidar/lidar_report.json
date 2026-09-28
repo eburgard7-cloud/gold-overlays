@@ -6,6 +6,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/sixes/lidar/sixes-river-campground-rec-mining.tif",
     "pdf": "/home/user/gold-overlays/out/sixes/lidar/sixes-river-campground-rec-mining.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/sixes/lidar/sixes-river-campground-rec-mining_overlay.gpkg",
+    "overlay_feature_count": 3,
     "tif_bytes": 2647934
   }
 ]

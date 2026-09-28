@@ -7,14 +7,8 @@
     42.88
   ],
   "built_at": "2026-09-28",
-  "reference_points": [
-    [
-      "Sixes River Campground (rec mining)",
-      "point",
-      "published site"
-    ]
-  ],
-  "usmin_count": 5,
+  "usmin_points": 5,
+  "usmin_polygons": 0,
   "usmin_dropped_types": [
     "borrow pit",
     "gravel pit",
@@ -24,74 +18,87 @@
   "milo_count": 19,
   "mrds_raw_count": 16,
   "mrds_kept_after_dedup": 6,
-  "active_claims_count": 34,
-  "active_claims_clipped_to_bbox": 4,
-  "closed_placer_claims_count": 3,
-  "closed_unmatched_to_grid": 0,
-  "density_top_cells": [],
+  "active_claims_raw_count": 34,
   "land_blm_features": 1,
   "land_usfs_features": 1,
   "nhd_available": true,
-  "nhd_skipped_for_open_ground": false,
-  "open_ground_count": 6,
-  "open_ground_top10": [
-    {
-      "name": "OPEN-sixes-01",
-      "lat": 42.804505197546426,
-      "lon": -124.30431415842925,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-sixes-02",
-      "lat": 42.776237188255024,
-      "lon": -124.2468251937699,
-      "type": "placer",
-      "near_claim": true
-    },
-    {
-      "name": "OPEN-sixes-03",
-      "lat": 42.76873650152214,
-      "lon": -124.24562531048532,
-      "type": "placer",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-sixes-04",
-      "lat": 42.80400140944217,
-      "lon": -124.3178956485598,
-      "type": "placer",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-sixes-05",
-      "lat": 42.804526,
-      "lon": -124.304058,
-      "type": "Open Pit Mine",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-sixes-06",
-      "lat": 42.777036592130365,
-      "lon": -124.20812442986188,
-      "type": "lode",
-      "near_claim": false
+  "layer1_my_claims": {
+    "count": 0,
+    "lookups": []
+  },
+  "layer2_public": {
+    "count": 1,
+    "corridor_areas_skipped": "no verified public-corridor extent geometry source in this build -- not rendered rather than invented"
+  },
+  "layer3_other_claims": {
+    "count": 34,
+    "clipped_to_bbox": 4,
+    "excluded_as_my_claims": 0
+  },
+  "layer4_history": {
+    "raw_records": 30,
+    "clusters_before_cap": 24,
+    "dropped_generic_milo_far_from_usmin": 0,
+    "dropped_prospect_pits_over_cap": 0,
+    "final_count": 24,
+    "max_allowed": 150
+  },
+  "layer5_scout": {
+    "count": 5,
+    "nhd_skipped": false,
+    "candidate_pool": 6,
+    "land_checks": {
+      "public_confirmed": 5,
+      "private_dropped": 0,
+      "unverifiable": 0
     }
-  ],
+  },
+  "layer6_access": {
+    "count": 0,
+    "reason": "no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route"
+  },
   "files": [
     {
-      "kml_path": "/home/user/gold-overlays/out/sixes/sixes_onx.kml",
-      "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_onx.gpx",
-      "kml_bytes": 35862,
-      "gpx_bytes": 34577,
-      "feature_count": 71,
-      "layers": [
-        "My claims & public sites",
-        "Historical workings (USMIN)",
-        "Mine & prospect sites (MILO/MRDS, gold)",
-        "Active mining claims (BLM MLRS)",
-        "Open ground to sample"
-      ]
+      "layer": "2_public",
+      "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_2_public.gpx",
+      "kml_path": "/home/user/gold-overlays/out/sixes/sixes_2_public.kml",
+      "item_count": 1,
+      "gpx_bytes": 625,
+      "kml_bytes": 669,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "3_other_claims",
+      "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_3_other_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/sixes/sixes_3_other_claims.kml",
+      "item_count": 34,
+      "gpx_bytes": 22506,
+      "kml_bytes": 23782,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "4_history",
+      "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_4_history.gpx",
+      "kml_path": "/home/user/gold-overlays/out/sixes/sixes_4_history.kml",
+      "item_count": 24,
+      "gpx_bytes": 6025,
+      "kml_bytes": 5752,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "5_scout",
+      "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_5_scout.gpx",
+      "kml_path": "/home/user/gold-overlays/out/sixes/sixes_5_scout.kml",
+      "item_count": 5,
+      "gpx_bytes": 1760,
+      "kml_bytes": 1732,
+      "under_4mb": true,
+      "under_3000_items": true
     }
-  ]
+  ],
+  "caltopo_path": "/home/user/gold-overlays/out/sixes/caltopo_sixes.geojson",
+  "caltopo_feature_count": 64
 }

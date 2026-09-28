@@ -6,6 +6,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-3-dads-creek.tif",
     "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-3-dads-creek.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-3-dads-creek_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2322873
   },
   {
@@ -15,6 +17,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-4-dads-creek.tif",
     "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-4-dads-creek.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-4-dads-creek_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2290879
   },
   {
@@ -24,6 +28,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-5-dads-creek.tif",
     "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-5-dads-creek.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-5-dads-creek_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2288224
   },
   {
@@ -33,6 +39,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/cowcreek/lidar/pure-white-gold-whitehorse-cr.tif",
     "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/pure-white-gold-whitehorse-cr.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/cowcreek/lidar/pure-white-gold-whitehorse-cr_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2326156
   },
   {
@@ -42,6 +50,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/cowcreek/lidar/cow-creek-recreational-gold-panning-area.tif",
     "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/cow-creek-recreational-gold-panning-area.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/cowcreek/lidar/cow-creek-recreational-gold-panning-area_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2321618
   }
 ]
