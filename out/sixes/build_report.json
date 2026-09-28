@@ -1,0 +1,97 @@
+{
+  "area": "sixes",
+  "bbox": [
+    -124.45,
+    42.75,
+    -124.2,
+    42.88
+  ],
+  "built_at": "2026-09-28",
+  "reference_points": [
+    [
+      "Sixes River Campground (rec mining)",
+      "point",
+      "published site"
+    ]
+  ],
+  "usmin_count": 5,
+  "usmin_dropped_types": [
+    "borrow pit",
+    "gravel pit",
+    "open pit mine or quarry",
+    "quarry"
+  ],
+  "milo_count": 19,
+  "mrds_raw_count": 16,
+  "mrds_kept_after_dedup": 6,
+  "active_claims_count": 34,
+  "active_claims_clipped_to_bbox": 4,
+  "closed_placer_claims_count": 3,
+  "closed_unmatched_to_grid": 0,
+  "density_top_cells": [],
+  "land_blm_features": 1,
+  "land_usfs_features": 1,
+  "nhd_available": true,
+  "nhd_skipped_for_open_ground": false,
+  "open_ground_count": 6,
+  "open_ground_top10": [
+    {
+      "name": "OPEN-sixes-01",
+      "lat": 42.804505197546426,
+      "lon": -124.30431415842925,
+      "type": "placer (heuristic: surface workings)",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-sixes-02",
+      "lat": 42.776237188255024,
+      "lon": -124.2468251937699,
+      "type": "placer",
+      "near_claim": true
+    },
+    {
+      "name": "OPEN-sixes-03",
+      "lat": 42.76873650152214,
+      "lon": -124.24562531048532,
+      "type": "placer",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-sixes-04",
+      "lat": 42.80400140944217,
+      "lon": -124.3178956485598,
+      "type": "placer",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-sixes-05",
+      "lat": 42.804526,
+      "lon": -124.304058,
+      "type": "Open Pit Mine",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-sixes-06",
+      "lat": 42.777036592130365,
+      "lon": -124.20812442986188,
+      "type": "lode",
+      "near_claim": false
+    }
+  ],
+  "files": [
+    {
+      "kml_path": "/home/user/gold-overlays/out/sixes/sixes_onx.kml",
+      "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_onx.gpx",
+      "kml_bytes": 35862,
+      "gpx_bytes": 34577,
+      "feature_count": 71,
+      "layers": [
+        "My claims & public sites",
+        "Historical workings (USMIN)",
+        "Mine & prospect sites (MILO/MRDS, gold)",
+        "Active mining claims (BLM MLRS)",
+        "Open ground to sample"
+      ]
+    }
+  ]
+}

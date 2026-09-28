@@ -1,0 +1,16 @@
+[
+  {
+    "scale": "15 x 15",
+    "title": "USGS 1:62500-scale Quadrangle for Lyons, OR 1951",
+    "status": "downloaded",
+    "path": "/home/user/gold-overlays/out/lnf_santiam/topo/USGS_1_62500_scale_Quadrangle_for_Lyons_OR_1951.pdf",
+    "bytes": 10768222
+  },
+  {
+    "scale": "7.5 x 7.5",
+    "title": "USGS 1:24000-scale Quadrangle for Lyons, OR 1985",
+    "status": "downloaded",
+    "path": "/home/user/gold-overlays/out/lnf_santiam/topo/USGS_1_24000_scale_Quadrangle_for_Lyons_OR_1985.pdf",
+    "bytes": 15237995
+  }
+]

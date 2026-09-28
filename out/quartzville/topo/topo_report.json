@@ -1,0 +1,16 @@
+[
+  {
+    "scale": "15 x 15",
+    "title": "USGS 1:62500-scale Quadrangle for Snow Peak, OR 1951",
+    "status": "downloaded",
+    "path": "/home/user/gold-overlays/out/quartzville/topo/USGS_1_62500_scale_Quadrangle_for_Snow_Peak_OR_1951.pdf",
+    "bytes": 11604111
+  },
+  {
+    "scale": "7.5 x 7.5",
+    "title": "USGS 1:24000-scale Quadrangle for Chimney Peak, OR 1984",
+    "status": "downloaded",
+    "path": "/home/user/gold-overlays/out/quartzville/topo/USGS_1_24000_scale_Quadrangle_for_Chimney_Peak_OR_1984.pdf",
+    "bytes": 14495080
+  }
+]

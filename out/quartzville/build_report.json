@@ -1,0 +1,129 @@
+{
+  "area": "quartzville",
+  "bbox": [
+    -122.5,
+    44.48,
+    -122.15,
+    44.68
+  ],
+  "built_at": "2026-09-28",
+  "reference_points": [
+    [
+      "WVM #1B Dry Gulch",
+      "polygon",
+      "WVM #1  B"
+    ],
+    [
+      "Cedar Bend Placer",
+      "polygon",
+      "CEDAR BEND"
+    ]
+  ],
+  "usmin_count": 22,
+  "usmin_dropped_types": [
+    "borrow pit",
+    "gravel pit",
+    "quarry"
+  ],
+  "milo_count": 185,
+  "mrds_raw_count": 16,
+  "mrds_kept_after_dedup": 9,
+  "active_claims_count": 50,
+  "active_claims_clipped_to_bbox": 2,
+  "closed_placer_claims_count": 1,
+  "closed_unmatched_to_grid": 0,
+  "density_top_cells": [],
+  "land_blm_features": 1,
+  "land_usfs_features": 1,
+  "nhd_available": true,
+  "nhd_skipped_for_open_ground": false,
+  "open_ground_count": 25,
+  "open_ground_top10": [
+    {
+      "name": "OPEN-quartzville-01",
+      "lat": 44.55485597253256,
+      "lon": -122.27590996582218,
+      "type": "placer (heuristic: surface workings)",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-02",
+      "lat": 44.54771,
+      "lon": -122.275014,
+      "type": "Prospect Pit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-03",
+      "lat": 44.572628,
+      "lon": -122.29176,
+      "type": "Prospect Pit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-04",
+      "lat": 44.546626,
+      "lon": -122.258089,
+      "type": "Prospect Pit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-05",
+      "lat": 44.582342,
+      "lon": -122.311554,
+      "type": "Prospect Pit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-06",
+      "lat": 44.59715051387162,
+      "lon": -122.32156913592453,
+      "type": "unknown",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-07",
+      "lat": 44.59763757246858,
+      "lon": -122.321724289339,
+      "type": "unknown",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-08",
+      "lat": 44.598271706876716,
+      "lon": -122.32139224806997,
+      "type": "unknown",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-09",
+      "lat": 44.59800679680157,
+      "lon": -122.3216490743567,
+      "type": "unknown",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-quartzville-10",
+      "lat": 44.60020974816574,
+      "lon": -122.3192735884159,
+      "type": "unknown",
+      "near_claim": false
+    }
+  ],
+  "files": [
+    {
+      "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_onx.kml",
+      "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_onx.gpx",
+      "kml_bytes": 115199,
+      "gpx_bytes": 108477,
+      "feature_count": 293,
+      "layers": [
+        "My claims & public sites",
+        "Historical workings (USMIN)",
+        "Mine & prospect sites (MILO/MRDS, gold)",
+        "Active mining claims (BLM MLRS)",
+        "Open ground to sample"
+      ]
+    }
+  ]
+}

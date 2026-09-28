@@ -1,0 +1,1166 @@
+# Claims change report -- 2026-09-28
+
+Compared 0 previously-seen active claims against 1157 now returned by BLM MLRS Not Closed across all 7 areas.
+
+## New active claims (1157)
+- **AFTER THOUGHT MINE** (OR105222726) -- lode, 20.66 ac, area: rogue_applegate
+- **GOLDEN RATTLER** (OR105222729) -- placer, 20.0 ac, area: cowcreek
+- **RM Sixes** (OR105222736) -- placer, 20.0 ac, area: sixes
+- **LOTSA GOLD** (OR105224619) -- placer, 20.0 ac, area: cowcreek
+- **Lucky Antler** (OR105224650) -- lode, 20.66 ac, area: rogue_applegate
+- **Gold Quartz Apex** (OR105226483) -- lode, 20.66 ac, area: rogue_applegate
+- **New Beginnings** (OR105226487) -- placer, 20.0 ac, area: cowcreek
+- **Disco Gypsy I** (OR105228392) -- placer, 40.0 ac, area: rogue_applegate
+- **Disco Gypsy II** (OR105228393) -- placer, 40.0 ac, area: rogue_applegate
+- **West Fork Diggins** (OR105229048) -- placer, 18.84 ac, area: cowcreek
+- **Patriot Falls** (OR105229776) -- placer, 20.0 ac, area: calapooia
+- **Bee Mine** (OR105229782) -- placer, 20.0 ac, area: rogue_applegate
+- **Poorman Placer** (OR105231152) -- placer, 80.0 ac, area: rogue_applegate
+- **M & M B** (OR105231719) -- placer, 20.0 ac, area: quartzville
+- **Yeti Yak** (OR105243192) -- placer, 43.24 ac, area: rogue_applegate
+- **Golden Handshake #1** (OR105245828) -- placer, 20.0 ac, area: rogue_applegate
+- **Hornet Hill Mine** (OR105245857) -- lode, 20.66 ac, area: rogue_applegate
+- **Sterling Quartz** (OR105245858) -- lode, 20.66 ac, area: rogue_applegate
+- **APEX MINE "Snow Bird"** (OR105250019) -- lode, 20.66 ac, area: rogue_applegate
+- **Hard Luck** (OR105257479) -- placer, 30.0 ac, area: rogue_applegate
+- **Rocky** (OR105257480) -- placer, 40.0 ac, area: rogue_applegate
+- **Taylor 28 A** (OR105259216) -- placer, 20.0 ac, area: rogue_applegate
+- **Taylor 28 B** (OR105259217) -- placer, 20.0 ac, area: rogue_applegate
+- **Hidden Treasure** (OR105260011) -- placer, 20.0 ac, area: rogue_applegate
+- **Gold Run** (OR105260012) -- placer, 20.0 ac, area: rogue_applegate
+- **HANAMII II** (OR105260884) -- placer, 20.0 ac, area: bohemia
+- **Columbia** (OR105260915) -- placer, 20.0 ac, area: rogue_applegate
+- **Golden Middle2** (OR105261178) -- placer, 40.0 ac, area: cowcreek
+- **Gold Prospector #1** (OR105262966) -- lode, 20.66 ac, area: rogue_applegate
+- **Gold Prospector #2** (OR105262967) -- lode, 20.66 ac, area: rogue_applegate
+- **Gold Prospector #3** (OR105262968) -- lode, 20.66 ac, area: rogue_applegate
+- **Shock and Awe Placer** (OR105267367) -- placer, 20.0 ac, area: rogue_applegate
+- **Limpy's Legend** (OR105269012) -- placer, 20.0 ac, area: rogue_applegate
+- **Rattlesnake 3** (OR105269484) -- lode, 0.0 ac, area: bohemia
+- **Rattlesnake 2** (OR105269485) -- lode, 0.0 ac, area: bohemia
+- **Matchless** (OR105271701) -- placer, 20.0 ac, area: rogue_applegate
+- **Blacksmith #1** (OR105272194) -- lode, 20.66 ac, area: rogue_applegate
+- **Blacksmith #2** (OR105272195) -- lode, 20.66 ac, area: rogue_applegate
+- **Blacksmith #3** (OR105272196) -- lode, 20.66 ac, area: rogue_applegate
+- **Golden Bell One** (OR105277543) -- placer, 20.0 ac, area: cowcreek
+- **Perfection** (OR105278269) -- placer, 20.0 ac, area: rogue_applegate
+- **Grave Creek 2** (OR105282511) -- placer, 20.0 ac, area: rogue_applegate
+- **Swedish Fish** (OR105283661) -- placer, 20.0 ac, area: rogue_applegate
+- **Boulder Creek** (OR105285895) -- placer, 20.0 ac, area: cowcreek
+- **Cow Creek Gold** (OR105288749) -- placer, 20.0 ac, area: cowcreek
+- **Jack in the box** (OR105289070) -- placer, 40.0 ac, area: rogue_applegate
+- **Z Gold Mine** (OR105290422) -- placer, 10.08 ac, area: rogue_applegate
+- **Wellspring** (OR105295474) -- placer, 20.0 ac, area: rogue_applegate
+- **Provenance** (OR105295475) -- placer, 20.0 ac, area: rogue_applegate
+- **Glad Mined Too** (OR105296166) -- placer, 20.0 ac, area: rogue_applegate
+- **Pays to Play** (OR105296171) -- placer, 20.0 ac, area: rogue_applegate
+- **Yew Wood** (OR105296172) -- placer, 20.0 ac, area: rogue_applegate
+- **Got Suckered In** (OR105296173) -- placer, 20.0 ac, area: rogue_applegate
+- **Just Because** (OR105296174) -- placer, 20.0 ac, area: rogue_applegate
+- **Old Joe** (OR105296176) -- placer, 19.94 ac, area: rogue_applegate
+- **Golden Star Dust** (OR105296586) -- lode, 20.66 ac, area: rogue_applegate
+- **Ditch Creek 2** (OR105297080) -- placer, 20.0 ac, area: rogue_applegate
+- **Ditch Creek 1** (OR105297081) -- placer, 20.0 ac, area: rogue_applegate
+- **Not Even Once** (OR105297412) -- lode, 20.66 ac, area: rogue_applegate
+- **Golden Slide 1** (OR105749965) -- placer, 20.0 ac, area: rogue_applegate
+- **Golden Eagle Mine** (OR105749973) -- lode, 20.66 ac, area: rogue_applegate
+- **Hand Picked** (OR105752096) -- placer, 20.0 ac, area: rogue_applegate
+- **It's Kime to Mine** (OR105752100) -- placer, 10.0 ac, area: rogue_applegate
+- **Powell's Gold** (OR105753688) -- placer, 20.0 ac, area: rogue_applegate
+- **Boyds Rhoid** (OR105757809) -- placer, 20.0 ac, area: rogue_applegate
+- **El Senora #1** (OR105757810) -- lode, 5111.5 ac, area: rogue_applegate
+- **El Senora #2** (OR105757811) -- lode, 1727.76 ac, area: rogue_applegate
+- **Kiss Mine** (OR105762158) -- placer, 20.0 ac, area: rogue_applegate
+- **Legacy of Lowell** (OR105762159) -- placer, 20.0 ac, area: rogue_applegate
+- **El Senora Quartz** (OR105764515) -- lode, 20.66 ac, area: rogue_applegate
+- **Bull Run 3** (OR105766216) -- placer, 20.0 ac, area: cowcreek
+- **Ben #1** (OR105768773) -- placer, 17.02 ac, area: rogue_applegate
+- **Ben #2** (OR105768774) -- placer, 40.0 ac, area: rogue_applegate
+- **Carly** (OR105768775) -- placer, 10.46 ac, area: rogue_applegate
+- **Carly 2** (OR105768776) -- placer, 40.0 ac, area: rogue_applegate
+- **Susy 2** (OR105768777) -- placer, 7.89 ac, area: rogue_applegate
+- **Susy 3** (OR105768778) -- placer, 39.31 ac, area: rogue_applegate
+- **Clouse's Corner** (OR105780089) -- placer, 40.0 ac, area: rogue_applegate
+- **Brightstar** (OR105782918) -- placer, 20.0 ac, area: rogue_applegate
+- **Lyman South** (OR105787412) -- lode, 20.66 ac, area: rogue_applegate
+- **XPNSV Hobby Too** (OR105788553) -- placer, 40.0 ac, area: quartzville
+- **Easy Time** (OR105788556) -- placer, 40.0 ac, area: rogue_applegate
+- **Windy Gap** (OR105788577) -- lode, 20.66 ac, area: cowcreek
+- **Hankie #2** (OR105789379) -- placer, 20.0 ac, area: sixes
+- **Jak #3** (OR105789380) -- placer, 20.0 ac, area: sixes
+- **Splash #2** (OR105789381) -- placer, 20.0 ac, area: sixes
+- **Gold Cup** (OR105792603) -- placer, 20.0 ac, area: rogue_applegate
+- **Golden Cowbell** (OR105792921) -- placer, 37.28 ac, area: cowcreek
+- **Strat Cat** (OR105795357) -- placer, 199.21 ac, area: rogue_applegate
+- **The Vault** (OR105795358) -- lode, 20.66 ac, area: cowcreek
+- **Emerald City** (OR105795366) -- placer, 0.0 ac, area: bohemia
+- **Golden Flower #2** (OR105795368) -- placer, 40.0 ac, area: quartzville
+- **Admiral Nelson** (OR105795369) -- lode, 20.66 ac, area: bohemia
+- **Cripple Creek** (OR105795370) -- lode, 20.66 ac, area: bohemia
+- **Kruse** (OR105795371) -- lode, 20.66 ac, area: bohemia
+- **La Fiesta** (OR105795372) -- lode, 20.66 ac, area: bohemia
+- **Nola G.** (OR105795373) -- lode, 20.66 ac, area: bohemia
+- **Peekaboo** (OR105795374) -- lode, 20.66 ac, area: bohemia
+- **Grave Creek 1** (OR105799865) -- placer, 20.0 ac, area: rogue_applegate
+- **Middle Creek 1** (OR105799866) -- placer, 20.0 ac, area: cowcreek
+- **Goldopolis** (OR105801780) -- placer, 80.0 ac, area: rogue_applegate
+- **New_Sham_E_1** (OR105803716) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_2** (OR105803717) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_3** (OR105803718) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_4** (OR105803719) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_5** (OR105803720) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_6** (OR105803721) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_7** (OR105803722) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_8** (OR105803723) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_E_9** (OR105803724) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_1** (OR105803725) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_2** (OR105803726) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_3** (OR105803727) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_4** (OR105803728) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_5** (OR105803729) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_6** (OR105803730) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_7** (OR105803731) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_8** (OR105803732) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_9** (OR105803733) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_10** (OR105803734) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_11** (OR105803735) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_12** (OR105803736) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_13** (OR105803737) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_14** (OR105803738) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_15** (OR105803739) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_16** (OR105803740) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_17** (OR105803741) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_18** (OR105803742) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_19** (OR105803743) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_20** (OR105803744) -- lode, 20.66 ac, area: rogue_applegate
+- **New_Sham_W_21** (OR105803745) -- lode, 20.66 ac, area: rogue_applegate
+- **CC #2** (OR105803751) -- placer, 20.0 ac, area: cowcreek
+- **Tami's Treasure** (OR105803753) -- placer, 160.0 ac, area: cowcreek
+- **Constant** (OR105804746) -- lode, 20.66 ac, area: bohemia
+- **Coolidge** (OR105804747) -- lode, 20.66 ac, area: bohemia
+- **Full Moon** (OR105804748) -- lode, 20.66 ac, area: bohemia
+- **Jackass #1** (OR105804749) -- lode, 20.66 ac, area: bohemia
+- **Lincoln** (OR105804750) -- lode, 20.66 ac, area: bohemia
+- **Oro Grande** (OR105805591) -- lode, 20.66 ac, area: rogue_applegate
+- **Oro Grande Two** (OR105805592) -- lode, 20.66 ac, area: rogue_applegate
+- **Cow #1** (OR105810520) -- placer, 20.0 ac, area: cowcreek
+- **Cow #2** (OR105810521) -- placer, 20.0 ac, area: cowcreek
+- **Grave Creek Flats** (OR105816533) -- placer, 20.0 ac, area: cowcreek
+- **Accident Mine 1** (OR105816556) -- lode, 20.66 ac, area: quartzville
+- **Gold Rattler** (OR105817361) -- placer, 20.0 ac, area: cowcreek
+- **Middle Creek 2** (OR105817469) -- placer, 20.0 ac, area: cowcreek
+- **Echo Hill** (OR105818886) -- placer, 40.0 ac, area: rogue_applegate
+- **Faith** (OR105818887) -- placer, 20.0 ac, area: rogue_applegate
+- **Underfed** (OR105818893) -- placer, 20.0 ac, area: cowcreek
+- **Upper Windfall** (OR105818894) -- placer, 40.0 ac, area: rogue_applegate
+- **Lower Windfall** (OR105818895) -- placer, 20.0 ac, area: rogue_applegate
+- **COW # 3** (OR105819658) -- placer, 273.22 ac, area: cowcreek
+- **Captain Gold Stone** (OR105820412) -- placer, 20.0 ac, area: cowcreek
+- **Holy Cow I** (OR105820413) -- placer, 20.0 ac, area: cowcreek
+- **Holy Cow II** (OR105820414) -- placer, 20.0 ac, area: cowcreek
+- **Trade Dollar** (OR105820978) -- lode, 20.66 ac, area: rogue_applegate
+- **Cow # 10** (OR105822994) -- placer, 20.0 ac, area: cowcreek
+- **Cow  # 11** (OR105822995) -- placer, 20.0 ac, area: cowcreek
+- **Henry** (OR105823000) -- placer, 20.0 ac, area: rogue_applegate
+- **Grave Creek Meadow** (OR105823004) -- placer, 20.0 ac, area: cowcreek
+- **Bear Water Gold** (OR105823726) -- placer, 20.0 ac, area: rogue_applegate
+- **Sham_FE1** (OR105824624) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE2** (OR105824625) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE3** (OR105824626) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE4** (OR105824627) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE5** (OR105824628) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE6** (OR105824629) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE7** (OR105824630) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE8** (OR105824631) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE9** (OR105824632) -- lode, 20.66 ac, area: rogue_applegate
+- **Sham_FE10** (OR105824633) -- lode, 20.66 ac, area: rogue_applegate
+- **Big Trigger Dog** (OR105824636) -- placer, 60.0 ac, area: sixes
+- **Freebooter** (OR105825927) -- placer, 20.0 ac, area: rogue_applegate
+- **Stovepipe** (OR105830317) -- placer, 60.0 ac, area: rogue_applegate
+- **Buggy Whip** (OR105830809) -- lode, 20.66 ac, area: rogue_applegate
+- **Halfway** (OR105830811) -- placer, 18.0 ac, area: bohemia
+- **Blalock** (OR105832353) -- lode, 20.66 ac, area: rogue_applegate
+- **The Regal Eagle** (OR105838301) -- lode, 20.66 ac, area: rogue_applegate
+- **Troll Hole** (OR106301132) -- lode, 9.9862259 ac, area: bohemia
+- **Grave Creek Harvest** (OR106301457) -- placer, 20.0 ac, area: rogue_applegate
+- **Larsana L** (OR106304271) -- lode, 20.66 ac, area: bohemia
+- **Murphy Placer** (OR106304273) -- placer, 20.0 ac, area: rogue_applegate
+- **Jump Off Joe 1** (OR106318304) -- placer, 20.0 ac, area: rogue_applegate
+- **County Line** (OR106318305) -- placer, 160.0 ac, area: rogue_applegate
+- **New Dandy** (OR106319339) -- placer, 160.0 ac, area: rogue_applegate
+- **Spalletta Placer** (OR106320654) -- placer, 120.0 ac, area: rogue_applegate
+- **Spalletta Prospect** (OR106320655) -- lode, 160.0 ac, area: rogue_applegate
+- **Dutch Glory** (OR106322362) -- placer, 770.82 ac, area: rogue_applegate
+- **Overlooked** (OR106323746) -- placer, 1430.8 ac, area: rogue_applegate
+- **HOPE 2** (OR106324275) -- placer, 1586.84 ac, area: sixes
+- **Calli Star** (OR106324276) -- placer, 160.0 ac, area: sixes
+- **NEW BEGINNINGS** (OR106324277) -- placer, 160.0 ac, area: sixes
+- **Golden Joe** (OR106324326) -- placer, 200.0 ac, area: rogue_applegate
+- **Bells Gold PMC** (OR106326444) -- placer, 0.0 ac, area: bohemia
+- **Mister Pocket** (OR106328967) -- lode, 160.0 ac, area: calapooia
+- **Rich Gulch** (OR106329144) -- placer, 400.0 ac, area: rogue_applegate
+- **Camp Wait-A-While** (OR106329146) -- placer, 1200.0 ac, area: rogue_applegate
+- **RENO #1** (OR106330193) -- lode, 20.66 ac, area: rogue_applegate
+- **RENO #2** (OR106330194) -- lode, 20.66 ac, area: rogue_applegate
+- **Keno** (OR106330195) -- lode, 20.66 ac, area: rogue_applegate
+- **JACKPOT** (OR106330196) -- lode, 20.66 ac, area: rogue_applegate
+- **Lost Star** (OR106330199) -- placer, 160.0 ac, area: rogue_applegate
+- **Jump off Joe #3** (OR106332156) -- placer, 20.0 ac, area: rogue_applegate
+- **Lonesome Lyons** (OR106332665) -- placer, 327.44 ac, area: rogue_applegate
+- **Two Hole** (OR106333449) -- placer, 2587.9 ac, area: cowcreek
+- **Burned Timber** (OR106333938) -- placer, 160.0 ac, area: rogue_applegate
+- **Lower Cow Creek 1** (OR106336493) -- placer, 40.0 ac, area: cowcreek
+- **Lucky Lucy** (OR106339162) -- placer, 320.0 ac, area: rogue_applegate
+- **Sardine 6** (OR106340238) -- placer, 160.0 ac, area: rogue_applegate
+- **Sardine 5** (OR106340239) -- placer, 320.0 ac, area: rogue_applegate
+- **Star #1** (OR106340670) -- placer, 1586.81 ac, area: rogue_applegate
+- **Star #2** (OR106340671) -- placer, 1586.81 ac, area: rogue_applegate
+- **Bull Run #3** (OR106340875) -- placer, 2587.9 ac, area: cowcreek
+- **Bull Run #4** (OR106340876) -- placer, 2570.85 ac, area: cowcreek
+- **Da Bull** (OR106341088) -- placer, 2587.9 ac, area: cowcreek
+- **Sunshine Susie #2** (OR106343236) -- placer, 158.25 ac, area: rogue_applegate
+- **Pappy 1** (OR106344032) -- placer, 211.28 ac, area: quartzville
+- **Country Gold** (OR106345788) -- placer, 333.08 ac, area: cowcreek
+- **Bull Run #6** (OR106346986) -- placer, 40.0 ac, area: cowcreek
+- **BARG** (OR106347982) -- placer, 319.73 ac, area: rogue_applegate
+- **Eight Dollar 73** (OR106348056) -- lode, 20.66 ac, area: rogue_applegate
+- **Eight Dollar 74** (OR106348057) -- lode, 20.66 ac, area: rogue_applegate
+- **Eight Dollar 75** (OR106348058) -- lode, 20.66 ac, area: rogue_applegate
+- **Eight Dollar 76** (OR106348059) -- lode, 20.66 ac, area: rogue_applegate
+- **Eight Dollar 77** (OR106348060) -- lode, 20.66 ac, area: rogue_applegate
+- **Eight Dollar 78** (OR106348061) -- lode, 20.66 ac, area: rogue_applegate
+- **sweetwater** (OR106348587) -- lode, 641.57 ac, area: quartzville
+- **Fortune 9A** (OR106349910) -- placer, 40.0 ac, area: cowcreek
+- **xpnsv ext** (OR106350535) -- placer, 160.0 ac, area: quartzville
+- **Grouse Creek** (OR106359311) -- placer, 20.0 ac, area: rogue_applegate
+- **RMPA Union** (OR106359320) -- placer, 20.0 ac, area: cowcreek
+- **Lady Luck** (OR106359529) -- placer, 20.0 ac, area: rogue_applegate
+- **Deuces Wild** (OR106359530) -- placer, 20.0 ac, area: rogue_applegate
+- **Gold Digger** (OR106359531) -- placer, 20.0 ac, area: rogue_applegate
+- **Upper Taylor** (OR106360826) -- placer, 40.0 ac, area: rogue_applegate
+- **Taylor 34A** (OR106360894) -- placer, 20.0 ac, area: rogue_applegate
+- **Taylor 34B** (OR106360895) -- placer, 20.0 ac, area: rogue_applegate
+- **Lower Taylor #1** (OR106361099) -- placer, 20.0 ac, area: rogue_applegate
+- **Lower Taylor #2** (OR106361100) -- placer, 20.0 ac, area: rogue_applegate
+- **Old Sturges #1** (OR106361101) -- placer, 20.0 ac, area: rogue_applegate
+- **Old Sturges #2** (OR106361102) -- placer, 20.0 ac, area: rogue_applegate
+- **Old Sturges #3** (OR106361103) -- placer, 20.0 ac, area: rogue_applegate
+- **Old Sturges #4** (OR106361104) -- placer, 19.5 ac, area: rogue_applegate
+- **Old Sturges #5** (OR106361105) -- placer, 19.58 ac, area: rogue_applegate
+- **Grave Creek Gold** (OR106361111) -- placer, 140.0 ac, area: cowcreek
+- **Tibbet Springs** (OR106361899) -- lode, 20.66115702 ac, area: cowcreek
+- **Sam's Verge** (OR106363901) -- placer, 158.25 ac, area: rogue_applegate
+- **Painted Horse** (OR106363908) -- placer, 160.0 ac, area: cowcreek
+- **Horseshoe** (OR106363909) -- placer, 160.0 ac, area: cowcreek
+- **Warp Zone** (OR106363911) -- placer, 20.0 ac, area: rogue_applegate
+- **Rendezvous** (OR106363922) -- placer, 20.0 ac, area: calapooia
+- **Big Chungus** (OR106363923) -- placer, 20.0 ac, area: calapooia
+- **Pound Cake** (OR106364969) -- placer, 1800.308 ac, area: rogue_applegate
+- **English Flat** (OR106366391) -- placer, 20.0 ac, area: rogue_applegate
+- **Grave Digger Gold** (OR106367729) -- placer, 1438.4 ac, area: cowcreek
+- **Crooked T 2** (OR106370888) -- placer, 9.29 ac, area: bohemia
+- **Edson A** (OR106377410) -- lode, 486.09 ac, area: quartzville
+- **Edson B** (OR106377411) -- lode, 486.09 ac, area: quartzville
+- **Edson C** (OR106377412) -- lode, 486.09 ac, area: quartzville
+- **Little Nugget** (OR106377475) -- placer, 60.0 ac, area: rogue_applegate
+- **Star Gate** (OR106378124) -- lode, 160.0 ac, area: rogue_applegate
+- **Shively 1** (OR106384640) -- placer, 20.0 ac, area: cowcreek
+- **Apex Minerals and Properties, LLC Claim No. 1** (OR106385886) -- lode, 40.0 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 2** (OR106385887) -- lode, 80.0 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 3** (OR106385888) -- lode, 80.0 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 4** (OR106385889) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 5** (OR106385890) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 6** (OR106385891) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 7** (OR106385892) -- lode, 20.66 ac, area: rogue_applegate
+- **Corner Pocket** (OR106386444) -- placer, 20.0 ac, area: rogue_applegate
+- **Bummer Gulch** (OR106389221) -- placer, 20.0 ac, area: cowcreek
+- **Taylor Falls #1** (OR106389315) -- placer, 20.0 ac, area: rogue_applegate
+- **Taylor Falls #2** (OR106389316) -- placer, 20.0 ac, area: rogue_applegate
+- **Minnow #4** (OR106389398) -- placer, 20.0 ac, area: rogue_applegate
+- **Hideout Hill** (OR106391323) -- placer, 40.0 ac, area: rogue_applegate
+- **Kincheloe #1** (OR106391862) -- lode, 388.882 ac, area: rogue_applegate
+- **Geisha Gal** (OR106391866) -- placer, 20.0 ac, area: bohemia
+- **Ol' Number Seven** (OR106391867) -- placer, 20.0 ac, area: bohemia
+- **Nuthin But Nugget** (OR106391868) -- placer, 20.0 ac, area: bohemia
+- **Geisha Girl** (OR106391869) -- placer, 20.0 ac, area: bohemia
+- **Golden Lotus** (OR106391870) -- placer, 360.0 ac, area: bohemia
+- **Kramer** (OR106391894) -- lode, 20.66115702 ac, area: rogue_applegate
+- **Joe's Gold Bar** (OR106391923) -- placer, 6116.25 ac, area: rogue_applegate
+- **Gem's Mine** (OR106391924) -- placer, 80.0 ac, area: rogue_applegate
+- **Slutter Mine  4** (OR106392088) -- placer, 44.3 ac, area: cowcreek
+- **Slutter Mine 2** (OR106392089) -- placer, 40.0 ac, area: cowcreek
+- **Slutter mine 3** (OR106392090) -- placer, 61.56 ac, area: cowcreek
+- **Golden Gravels 2** (OR106392130) -- placer, 40.0 ac, area: cowcreek
+- **Lucky Karma** (OR106392132) -- placer, 40.0 ac, area: rogue_applegate
+- **Evergreen #1** (OR106392770) -- placer, 640.0 ac, area: rogue_applegate
+- **Evergreen #2** (OR106392771) -- placer, 20.0 ac, area: rogue_applegate
+- **Archetype** (OR106392988) -- placer, 20.0 ac, area: rogue_applegate
+- **Minnow #7** (OR106392989) -- placer, 20.0 ac, area: rogue_applegate
+- **K Cone** (OR106695250) -- placer, 40.0 ac, area: rogue_applegate
+- **slutter mine 1** (OR106695314) -- placer, 20.0 ac, area: cowcreek
+- **Lucky Sucker** (OR106695666) -- placer, 20.0 ac, area: rogue_applegate
+- **BOUNCING NUGGETTS** (OR106696189) -- placer, 20.0 ac, area: calapooia
+- **Wild Bill PMC** (OR106696226) -- placer, 20.0 ac, area: rogue_applegate
+- **Morgan Mine** (OR106696444) -- lode, 20.66 ac, area: cowcreek
+- **GOLDEN GRAVELS 3** (OR106697035) -- placer, 40.0 ac, area: cowcreek
+- **Golden Gravels 4** (OR106697097) -- placer, 40.0 ac, area: cowcreek
+- **Bairapple** (OR106697106) -- placer, 30.0 ac, area: rogue_applegate
+- **Baker Creek** (OR106697353) -- placer, 20.0 ac, area: rogue_applegate
+- **J and J Treasure Box** (OR106701085) -- lode, 20.66 ac, area: rogue_applegate
+- **Cow # 123** (OR106701466) -- placer, 20.0 ac, area: cowcreek
+- **Cow # 1234** (OR106704810) -- placer, 20.0 ac, area: cowcreek
+- **JANNY-D** (OR106707112) -- placer, 120.0 ac, area: sixes
+- **Galena #1** (OR106707164) -- placer, 40.0 ac, area: quartzville
+- **DENWEL PLACER #1** (OR106709015) -- placer, 20.0 ac, area: quartzville
+- **Dag Nabit** (OR106709327) -- placer, 40.0 ac, area: bohemia
+- **Blanchard Gulch** (OR106709763) -- placer, 20.0 ac, area: rogue_applegate
+- **Specimen** (OR106712436) -- lode, 20.66 ac, area: bohemia
+- **War Eagle** (OR106712437) -- lode, 20.66 ac, area: bohemia
+- **Yukon** (OR106712438) -- lode, 20.66 ac, area: bohemia
+- **Butte** (OR106712439) -- lode, 20.66 ac, area: bohemia
+- **Defiance Apex** (OR106712440) -- lode, 20.66 ac, area: bohemia
+- **Hackysack** (OR106712441) -- lode, 20.66 ac, area: bohemia
+- **Home Run** (OR106712442) -- lode, 20.66 ac, area: bohemia
+- **Home Run Extension** (OR106712443) -- lode, 20.66 ac, area: bohemia
+- **Musick Extension** (OR106712444) -- lode, 20.66 ac, area: bohemia
+- **Mystery** (OR106712445) -- lode, 20.66 ac, area: bohemia
+- **DB #1** (OR106712464) -- placer, 857.8 ac, area: sixes
+- **DB #2** (OR106712465) -- placer, 120.0 ac, area: sixes
+- **High Prospects** (OR106712466) -- placer, 698.76 ac, area: rogue_applegate
+- **T.J Rose** (OR106713323) -- placer, 20.0 ac, area: rogue_applegate
+- **Too Deep** (OR106713326) -- placer, 40.0 ac, area: rogue_applegate
+- **Quartz** (OR106713839) -- placer, 20.0 ac, area: rogue_applegate
+- **Grave Digger** (OR106713841) -- placer, 20.0 ac, area: rogue_applegate
+- **Slade Hill** (OR106714283) -- placer, 20.0 ac, area: rogue_applegate
+- **Evans 1** (OR106715142) -- placer, 18.18 ac, area: rogue_applegate
+- **EMPTY POCKETS** (OR106715274) -- placer, 40.0 ac, area: bohemia
+- **Star Gulch 1** (OR106715353) -- placer, 40.0 ac, area: rogue_applegate
+- **Last Chance** (OR106715355) -- placer, 80.0 ac, area: cowcreek
+- **Fog Rider** (OR106715356) -- lode, 20.66 ac, area: rogue_applegate
+- **Fortune Branch Lode Claim 1** (OR106715602) -- lode, 20.66 ac, area: cowcreek
+- **Fortune Branch Lode Claim 2** (OR106715603) -- lode, 20.66 ac, area: cowcreek
+- **Brass Nugget #2** (OR106716735) -- placer, 40.0 ac, area: bohemia
+- **Maid of the Mist Extension** (OR106717426) -- lode, 20.66 ac, area: rogue_applegate
+- **Jiffy Pop** (OR106718786) -- placer, 40.0 ac, area: rogue_applegate
+- **Stratosphere** (OR106718787) -- placer, 40.0 ac, area: rogue_applegate
+- **RMPA Brice** (OR106719394) -- placer, 20.0 ac, area: bohemia
+- **CandC** (OR106721464) -- placer, 40.0 ac, area: bohemia
+- **King Solomons Mine** (OR106722066) -- lode, 1297.45 ac, area: rogue_applegate
+- **New CD Lode** (OR106723987) -- lode, 1332.42 ac, area: cowcreek
+- **Oscar Load** (OR106727522) -- lode, 20.66 ac, area: rogue_applegate
+- **Sempkins Placer** (OR106728163) -- placer, 40.0 ac, area: rogue_applegate
+- **Barbara Jean** (OR106728700) -- placer, 40.0 ac, area: rogue_applegate
+- **Cornus Christi #3** (OR106728703) -- placer, 20.0 ac, area: lnf_santiam
+- **Corpus Christi #2** (OR106728704) -- placer, 20.0 ac, area: lnf_santiam
+- **Corpus Christi #4** (OR106728705) -- placer, 20.0 ac, area: lnf_santiam
+- **Corpus Christi #5** (OR106728706) -- placer, 20.0 ac, area: lnf_santiam
+- **Jakey Y** (OR106728937) -- placer, 40.0 ac, area: bohemia
+- **RYEMS** (OR106728941) -- placer, 40.0 ac, area: bohemia
+- **Owl Hollow** (OR106730716) -- lode, 20.66115702 ac, area: rogue_applegate
+- **XPNSV GT.A.WY #2** (OR106736573) -- placer, 20.0 ac, area: quartzville
+- **Never Enough** (OR106737431) -- placer, 40.0 ac, area: bohemia
+- **Bucket List** (OR106740296) -- placer, 40.0 ac, area: cowcreek
+- **CCMC # 97** (OR106747660) -- placer, 20.0 ac, area: cowcreek
+- **Lucky Strike** (OR106748110) -- lode, 20.66 ac, area: quartzville
+- **Golden Dream** (OR106748762) -- lode, 20.66115702 ac, area: rogue_applegate
+- **Zeus** (OR106748781) -- placer, 40.0 ac, area: rogue_applegate
+- **Persephone** (OR106748782) -- placer, 40.0 ac, area: rogue_applegate
+- **Bollweg Placer Claim** (OR106748862) -- placer, 120.0 ac, area: rogue_applegate
+- **Bull Run #5** (OR106749699) -- placer, 20.0 ac, area: cowcreek
+- **Zippo Red** (OR106749872) -- placer, 18.45 ac, area: rogue_applegate
+- **Whitehorse** (OR106750058) -- placer, 20.0 ac, area: cowcreek
+- **Gold Ravine** (OR106750059) -- placer, 20.0 ac, area: cowcreek
+- **Piggy Bank** (OR106750061) -- placer, 40.0 ac, area: cowcreek
+- **Golden Gravels 1** (OR106750062) -- placer, 44.33 ac, area: cowcreek
+- **Echo Ridge** (OR106750065) -- lode, 20.66 ac, area: calapooia
+- **Hillside Gold** (OR106750536) -- placer, 20.0 ac, area: cowcreek
+- **Birdseye** (OR106750541) -- placer, 20.0 ac, area: rogue_applegate
+- **Southern Strip** (OR106750542) -- placer, 40.0 ac, area: cowcreek
+- **Mother Load #1** (OR106750544) -- placer, 20.0 ac, area: rogue_applegate
+- **Mother Load #2** (OR106750545) -- placer, 40.0 ac, area: rogue_applegate
+- **Quartz Matrix** (OR106751063) -- lode, 40.0 ac, area: rogue_applegate
+- **Knightsters Stash** (OR106751064) -- placer, 20.0 ac, area: cowcreek
+- **Morning Whimsy** (OR106751919) -- placer, 20.0 ac, area: rogue_applegate
+- **Eastman** (OR106752926) -- placer, 20.0 ac, area: rogue_applegate
+- **CCMC # 007** (OR106753413) -- placer, 20.0 ac, area: cowcreek
+- **QCPGP** (OR106753924) -- placer, 20.0 ac, area: quartzville
+- **CCMC # 002** (OR106754388) -- placer, 20.0 ac, area: cowcreek
+- **RETAYLORS DREAM** (OR106754572) -- placer, 20.0 ac, area: rogue_applegate
+- **Brother's Gold** (OR106754574) -- placer, 84.89 ac, area: rogue_applegate
+- **Chief Taylor** (OR106754576) -- placer, 20.0 ac, area: rogue_applegate
+- **JD'S MISERY** (OR106754581) -- placer, 40.0 ac, area: cowcreek
+- **Fine Line** (OR106754583) -- placer, 20.0 ac, area: rogue_applegate
+- **Little Lower** (OR106754584) -- placer, 20.0 ac, area: rogue_applegate
+- **The Wedge** (OR106754585) -- placer, 20.0 ac, area: rogue_applegate
+- **Jaystone** (OR106754586) -- placer, 80.0 ac, area: rogue_applegate
+- **Vellestone** (OR106754589) -- placer, 20.0 ac, area: rogue_applegate
+- **Gopher** (OR106754591) -- lode, 20.66 ac, area: rogue_applegate
+- **Laura's Luck 2** (OR106754592) -- placer, 41.41 ac, area: rogue_applegate
+- **Norma jean** (OR106754707) -- lode, 15.15151515 ac, area: quartzville
+- **Minnow** (OR106754791) -- placer, 40.0 ac, area: rogue_applegate
+- **Forest Creek A** (OR106754936) -- placer, 40.0 ac, area: rogue_applegate
+- **Forest Creek B** (OR106754937) -- placer, 40.0 ac, area: rogue_applegate
+- **Flume Gulch 2** (OR106757390) -- placer, 40.0 ac, area: rogue_applegate
+- **Norseman** (OR106758248) -- placer, 20.0 ac, area: bohemia
+- **Taylor Creek A** (OR106759618) -- placer, 20.0 ac, area: rogue_applegate
+- **Taylor Creek B** (OR106759619) -- placer, 160.0 ac, area: rogue_applegate
+- **Teyana Claim** (OR106760016) -- placer, 20.0 ac, area: rogue_applegate
+- **Minnow #1** (OR106760018) -- placer, 20.0 ac, area: rogue_applegate
+- **East Helena III** (OR106760025) -- lode, 20.66 ac, area: bohemia
+- **CCMC # 002** (OR106760221) -- placer, 20.0 ac, area: cowcreek
+- **Shively 4** (OR106760764) -- placer, 20.0 ac, area: cowcreek
+- **Star Mine** (OR106761315) -- lode, 20.66 ac, area: rogue_applegate
+- **Hell Begins** (OR106761546) -- placer, 40.0 ac, area: sixes
+- **Cat House** (OR106762686) -- lode, 20.66115702 ac, area: bohemia
+- **Gold Digger 1** (OR106762688) -- placer, 20.0 ac, area: cowcreek
+- **Gold Digger 3** (OR106762690) -- placer, 77.34 ac, area: cowcreek
+- **BIRD'S NEST #1** (OR106763019) -- lode, 20.66115702 ac, area: bohemia
+- **Grouse** (OR106763082) -- lode, 20.66 ac, area: rogue_applegate
+- **Black Bear** (OR106767069) -- lode, 20.66 ac, area: rogue_applegate
+- **Dad and Daughter Inc.** (OR106769516) -- placer, 40.0 ac, area: rogue_applegate
+- **Carson Claims** (OR106769723) -- placer, 40.0 ac, area: rogue_applegate
+- **Remas Pride** (OR106769724) -- placer, 20.0 ac, area: rogue_applegate
+- **Grouse Creek #3** (OR106769746) -- placer, 40.0 ac, area: rogue_applegate
+- **Grouse Creek #2** (OR106769747) -- placer, 40.0 ac, area: rogue_applegate
+- **Epitome** (OR106769913) -- placer, 40.0 ac, area: rogue_applegate
+- **Paragon** (OR106769916) -- placer, 20.0 ac, area: rogue_applegate
+- **Stardust #1** (OR106770174) -- placer, 85.26 ac, area: rogue_applegate
+- **Stardust #2** (OR106770175) -- placer, 205.45 ac, area: rogue_applegate
+- **CWMC # 555** (OR106770199) -- placer, 20.0 ac, area: cowcreek
+- **Slate 6** (OR106770519) -- placer, 20.0 ac, area: rogue_applegate
+- **StarDust** (OR106770850) -- placer, 20.0 ac, area: rogue_applegate
+- **MP01** (OR106770909) -- lode, 20.66 ac, area: rogue_applegate
+- **MP02** (OR106770910) -- lode, 20.66 ac, area: rogue_applegate
+- **MP03** (OR106770911) -- lode, 20.66 ac, area: rogue_applegate
+- **MP04** (OR106770912) -- lode, 20.66 ac, area: rogue_applegate
+- **MP05** (OR106770913) -- lode, 20.66 ac, area: rogue_applegate
+- **MP06** (OR106770914) -- lode, 20.66 ac, area: rogue_applegate
+- **MP07** (OR106770915) -- lode, 20.66 ac, area: rogue_applegate
+- **MP08** (OR106770916) -- lode, 20.66 ac, area: rogue_applegate
+- **MP09** (OR106770917) -- lode, 20.66 ac, area: rogue_applegate
+- **MP10** (OR106770918) -- lode, 20.66 ac, area: rogue_applegate
+- **MP11** (OR106770919) -- lode, 20.66 ac, area: rogue_applegate
+- **MP12** (OR106770920) -- lode, 20.66 ac, area: rogue_applegate
+- **MP13** (OR106770921) -- lode, 20.66 ac, area: rogue_applegate
+- **MP14** (OR106770922) -- lode, 20.66 ac, area: rogue_applegate
+- **MP15** (OR106770923) -- lode, 20.66 ac, area: rogue_applegate
+- **MP16** (OR106770924) -- lode, 20.66 ac, area: rogue_applegate
+- **MP17** (OR106770925) -- lode, 20.66 ac, area: rogue_applegate
+- **MP18** (OR106770926) -- lode, 20.66 ac, area: rogue_applegate
+- **MP19** (OR106770927) -- lode, 20.66 ac, area: rogue_applegate
+- **MP20** (OR106770928) -- lode, 20.66 ac, area: rogue_applegate
+- **MP21** (OR106770929) -- lode, 20.66 ac, area: rogue_applegate
+- **MP22** (OR106770930) -- lode, 20.66 ac, area: rogue_applegate
+- **MP23** (OR106770931) -- lode, 20.66 ac, area: rogue_applegate
+- **MP24** (OR106770932) -- lode, 20.66 ac, area: rogue_applegate
+- **MP25** (OR106770933) -- lode, 20.66 ac, area: rogue_applegate
+- **MP26** (OR106770934) -- lode, 20.66 ac, area: rogue_applegate
+- **MP27** (OR106770935) -- lode, 20.66 ac, area: rogue_applegate
+- **MP28** (OR106770936) -- lode, 20.66 ac, area: rogue_applegate
+- **MP29** (OR106770937) -- lode, 20.66 ac, area: rogue_applegate
+- **MP30** (OR106770938) -- lode, 20.66 ac, area: rogue_applegate
+- **MP31** (OR106770939) -- lode, 20.66 ac, area: rogue_applegate
+- **MP32** (OR106770940) -- lode, 20.66 ac, area: rogue_applegate
+- **MP33** (OR106770941) -- lode, 20.66 ac, area: rogue_applegate
+- **MP34** (OR106770942) -- lode, 20.66 ac, area: rogue_applegate
+- **MP35** (OR106770943) -- lode, 20.66 ac, area: rogue_applegate
+- **MP36** (OR106770944) -- lode, 20.66 ac, area: rogue_applegate
+- **MP37** (OR106770945) -- lode, 20.66 ac, area: rogue_applegate
+- **MP38** (OR106770946) -- lode, 20.66 ac, area: rogue_applegate
+- **MP39** (OR106770947) -- lode, 20.66 ac, area: rogue_applegate
+- **MP40** (OR106770948) -- lode, 20.66 ac, area: rogue_applegate
+- **MP41** (OR106770949) -- lode, 20.66 ac, area: rogue_applegate
+- **MP42** (OR106770950) -- lode, 20.66 ac, area: rogue_applegate
+- **MP43** (OR106770951) -- lode, 20.66 ac, area: rogue_applegate
+- **MP44** (OR106770952) -- lode, 20.66 ac, area: rogue_applegate
+- **MP45** (OR106770953) -- lode, 20.66 ac, area: rogue_applegate
+- **MP46** (OR106770954) -- lode, 20.66 ac, area: rogue_applegate
+- **MP47** (OR106770955) -- lode, 20.66 ac, area: rogue_applegate
+- **MP48** (OR106770956) -- lode, 20.66 ac, area: rogue_applegate
+- **MP49** (OR106770957) -- lode, 20.66 ac, area: rogue_applegate
+- **MP50** (OR106770958) -- lode, 20.66 ac, area: rogue_applegate
+- **MP51** (OR106770959) -- lode, 20.66 ac, area: rogue_applegate
+- **MP52** (OR106770960) -- lode, 20.66 ac, area: rogue_applegate
+- **MP53** (OR106770961) -- lode, 20.66 ac, area: rogue_applegate
+- **MP54** (OR106770962) -- lode, 20.66 ac, area: rogue_applegate
+- **MP55** (OR106770963) -- lode, 10.33 ac, area: rogue_applegate
+- **MP56** (OR106770964) -- lode, 10.33 ac, area: rogue_applegate
+- **MP57** (OR106770965) -- lode, 10.33 ac, area: rogue_applegate
+- **MP58** (OR106770966) -- lode, 10.33 ac, area: rogue_applegate
+- **MP59** (OR106770967) -- lode, 10.33 ac, area: rogue_applegate
+- **MP60** (OR106770968) -- lode, 10.33 ac, area: rogue_applegate
+- **MP61** (OR106770969) -- lode, 10.33 ac, area: rogue_applegate
+- **MP62** (OR106770970) -- lode, 10.33 ac, area: rogue_applegate
+- **MP63** (OR106770971) -- lode, 8.95 ac, area: rogue_applegate
+- **MP64** (OR106770972) -- lode, 11.71 ac, area: rogue_applegate
+- **MP65** (OR106770973) -- lode, 20.66 ac, area: rogue_applegate
+- **Runners** (OR106771124) -- placer, 20.0 ac, area: rogue_applegate
+- **Placer Hill** (OR106771327) -- placer, 20.0 ac, area: rogue_applegate
+- **Good Ol' Boys** (OR106771328) -- placer, 20.0 ac, area: rogue_applegate
+- **PUREX** (OR106771329) -- placer, 20.0 ac, area: rogue_applegate
+- **Old Man's Quartz** (OR106771813) -- placer, 20.0 ac, area: rogue_applegate
+- **Jeanie** (OR106771851) -- placer, 20.0 ac, area: rogue_applegate
+- **Freedom 1** (OR106777107) -- placer, 120.0 ac, area: cowcreek
+- **MMQ 2** (OR106777728) -- lode, 20.66 ac, area: rogue_applegate
+- **Eclipse** (OR106779086) -- lode, 20.66115702 ac, area: rogue_applegate
+- **Bernard’s** (OR106780173) -- placer, 40.0 ac, area: bohemia
+- **Sweetness** (OR106781315) -- placer, 20.0 ac, area: calapooia
+- **Sweetness 2** (OR106781316) -- placer, 20.0 ac, area: calapooia
+- **Golden Dream** (OR106781548) -- placer, 20.0 ac, area: rogue_applegate
+- **Minnow Three** (OR106781549) -- placer, 20.0 ac, area: rogue_applegate
+- **WONDERLAND** (OR106781550) -- lode, 1537.03 ac, area: rogue_applegate
+- **CCMC # 007** (OR106781557) -- placer, 20.0 ac, area: cowcreek
+- **Fortune Cookie 1** (OR106781593) -- placer, 20.0 ac, area: cowcreek
+- **Fortune Cookie 2** (OR106781594) -- placer, 20.0 ac, area: cowcreek
+- **AZGARD** (OR106782003) -- lode, 20.66 ac, area: rogue_applegate
+- **RMPA Dads** (OR106782256) -- placer, 20.0 ac, area: cowcreek
+- **Tom West** (OR106782844) -- placer, 20.0 ac, area: rogue_applegate
+- **Evil Dwarf Forever** (OR106783447) -- placer, 124.11 ac, area: calapooia
+- **Star** (OR106783527) -- lode, 20.66 ac, area: rogue_applegate
+- **Speaker Placer** (OR106783556) -- placer, 20.0 ac, area: cowcreek
+- **The Royal Eagle** (OR106783558) -- lode, 20.66 ac, area: rogue_applegate
+- **Brother's Gold** (OR106783559) -- placer, 40.0 ac, area: rogue_applegate
+- **Horsehead 2** (OR106783560) -- placer, 20.0 ac, area: rogue_applegate
+- **Horsehead** (OR106783561) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 8** (OR106783740) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 7** (OR106783741) -- placer, 20.0 ac, area: rogue_applegate
+- **Matata** (OR106784009) -- placer, 20.0 ac, area: rogue_applegate
+- **The golden trumpit #1** (OR106784308) -- placer, 20.0 ac, area: calapooia
+- **The golden trumpit #2** (OR106784309) -- placer, 17.8 ac, area: calapooia
+- **Northern Strip 1** (OR106784312) -- placer, 20.0 ac, area: cowcreek
+- **Northern Strip 2** (OR106784313) -- placer, 20.0 ac, area: cowcreek
+- **Winston** (OR106785004) -- placer, 20.0 ac, area: bohemia
+- **Union Creek** (OR106786309) -- placer, 20.0 ac, area: cowcreek
+- **Irish Luck** (OR106786792) -- placer, 20.0 ac, area: rogue_applegate
+- **Deep Down 2** (OR106788741) -- placer, 20.0 ac, area: bohemia
+- **Cupel** (OR106788765) -- placer, 13.25 ac, area: bohemia
+- **Lucky Boy** (OR106788769) -- lode, 20.66 ac, area: rogue_applegate
+- **Nutting Gulch** (OR106788782) -- placer, 40.0 ac, area: rogue_applegate
+- **Good Memories 1** (OR106789272) -- lode, 20.66115702 ac, area: bohemia
+- **Good Memories 2** (OR106789273) -- lode, 20.66115702 ac, area: bohemia
+- **Good Memories 3** (OR106789274) -- lode, 20.66115702 ac, area: bohemia
+- **Little yak** (OR106789800) -- placer, 20.0 ac, area: rogue_applegate
+- **Doe Gold** (OR106790222) -- placer, 20.0 ac, area: cowcreek
+- **Gold Star Quartz** (OR106790888) -- lode, 20.66 ac, area: rogue_applegate
+- **Little Arctic** (OR106790969) -- placer, 20.0 ac, area: cowcreek
+- **Flying Squirrel** (OR106790970) -- placer, 20.0 ac, area: cowcreek
+- **RMT 3** (OR106792516) -- placer, 20.0 ac, area: rogue_applegate
+- **Lumlandia2** (OR106793506) -- lode, 9.09090909 ac, area: quartzville
+- **Slate #3** (OR106794805) -- placer, 20.0 ac, area: rogue_applegate
+- **Yellowhorn #1** (OR106799906) -- lode, 20.66 ac, area: rogue_applegate
+- **Yellowhorn #2** (OR106799907) -- lode, 20.66 ac, area: rogue_applegate
+- **Oregon Beauty** (OR106800333) -- lode, 20.66115702 ac, area: rogue_applegate
+- **Minnow #2** (OR106801633) -- placer, 20.0 ac, area: rogue_applegate
+- **LITTLE YAK** (OR106801724) -- placer, 20.0 ac, area: rogue_applegate
+- **Joker** (OR106801726) -- lode, 20.66 ac, area: rogue_applegate
+- **Lost Buck** (OR106801727) -- lode, 20.66 ac, area: rogue_applegate
+- **Humming Bird** (OR106801728) -- lode, 20.66 ac, area: rogue_applegate
+- **GM1** (OR106801790) -- lode, 20.66 ac, area: rogue_applegate
+- **GM 2** (OR106801791) -- lode, 20.66 ac, area: rogue_applegate
+- **GM 3** (OR106801792) -- lode, 20.66 ac, area: rogue_applegate
+- **GM 4** (OR106801793) -- lode, 320.0 ac, area: rogue_applegate
+- **GM 5** (OR106801794) -- lode, 160.0 ac, area: rogue_applegate
+- **Buckeye Creek** (OR106802356) -- placer, 20.0 ac, area: rogue_applegate
+- **THE PEARL de VERE** (OR106802498) -- placer, 20.0 ac, area: bohemia
+- **Slade Hill #2** (OR106802680) -- placer, 20.0 ac, area: rogue_applegate
+- **Fundamental** (OR106803259) -- placer, 20.0 ac, area: bohemia
+- **Little Yellow Root #3** (OR106803661) -- lode, 20.0 ac, area: rogue_applegate
+- **Yellow Root #5** (OR106803662) -- lode, 20.0 ac, area: rogue_applegate
+- **Sleeping Beauty #1** (OR106803663) -- lode, 20.66 ac, area: rogue_applegate
+- **Sleeping Beauty #2** (OR106803664) -- lode, 20.66 ac, area: rogue_applegate
+- **Slate 10** (OR106804097) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 11** (OR106804098) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 12** (OR106804099) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 13** (OR106804100) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 14** (OR106804101) -- placer, 20.0 ac, area: rogue_applegate
+- **Slate 15** (OR106804102) -- placer, 20.0 ac, area: rogue_applegate
+- **Arm Pit** (OR106805512) -- lode, 20.66115702 ac, area: rogue_applegate
+- **Jack #2** (OR106808054) -- placer, 20.0 ac, area: rogue_applegate
+- **The 541** (OR106815095) -- placer, 60.0 ac, area: rogue_applegate
+- **Bird's Nest Nuevo #2** (OR106815171) -- lode, 20.66 ac, area: bohemia
+- **John Lode** (OR106815172) -- lode, 20.66 ac, area: bohemia
+- **Pop Gun** (OR106815173) -- lode, 20.66 ac, area: bohemia
+- **Gold Pockets** (OR106815206) -- placer, 15.0 ac, area: cowcreek
+- **Horseback Mine** (OR106819050) -- lode, 20.66 ac, area: cowcreek
+- **Bam** (OR106819052) -- lode, 20.66 ac, area: cowcreek
+- **COW 1124** (OR106820768) -- placer, 20.0 ac, area: cowcreek
+- **Zippo Red** (OR106830887) -- placer, 19.42 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 8** (OR106833315) -- lode, 160.0 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 9** (OR106833316) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 10** (OR106833317) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 11** (OR106833318) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 12** (OR106833319) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 13** (OR106833320) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 14** (OR106833321) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 15** (OR106833322) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 16** (OR106833323) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 17** (OR106833324) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 18** (OR106833325) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 19** (OR106833326) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 20** (OR106833327) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 21** (OR106833328) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No.22** (OR106833329) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No.23** (OR106833330) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 24** (OR106833331) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 25** (OR106833332) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 26** (OR106833333) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 27** (OR106833334) -- lode, 20.66 ac, area: rogue_applegate
+- **Apex Minerals and Properties, LLC Claim No. 28** (OR106833335) -- lode, 20.66 ac, area: rogue_applegate
+- **Hilltop** (OR106833780) -- lode, 20.66 ac, area: rogue_applegate
+- **Adam Number 3** (OR106841527) -- placer, 20.0 ac, area: rogue_applegate
+- **Roadside 1** (OR106843158) -- lode, 20.66 ac, area: rogue_applegate
+- **Roadside 2** (OR106843159) -- lode, 20.66 ac, area: rogue_applegate
+- **Rising Star** (OR106843160) -- lode, 20.66 ac, area: rogue_applegate
+- **Rising Star 2** (OR106843161) -- lode, 20.66 ac, area: rogue_applegate
+- **Jelly Bean's Junction #1** (OR106843720) -- placer, 20.0 ac, area: rogue_applegate
+- **Jelly Bean's Junction #2** (OR106843721) -- placer, 20.0 ac, area: rogue_applegate
+- **After Thought Mine** (OR106844872) -- lode, 20.66 ac, area: rogue_applegate
+- **MINNOW** (OR106847678) -- placer, 20.0 ac, area: rogue_applegate
+- **G4 Mining** (OR106848810) -- placer, 120.0 ac, area: calapooia
+- **Minnow #4** (OR106849404) -- placer, 20.0 ac, area: rogue_applegate
+- **Frankie's Place** (OR106849598) -- placer, 20.0 ac, area: calapooia
+- **Frankie's Place** (OR106849599) -- placer, 20.0 ac, area: calapooia
+- **Taylor Falls** (OR106851972) -- placer, 20.0 ac, area: rogue_applegate
+- **PAYDIRT DISCOVERY** (ORMC101588) -- lode, 17.0 ac, area: bohemia
+- **SILVER ROCK** (ORMC101589) -- lode, 20.66 ac, area: bohemia
+- **WIRE GOLD** (ORMC101599) -- lode, 20.66 ac, area: quartzville
+- **RETIREMENT PLAN TOO** (ORMC102703) -- lode, 18.65 ac, area: bohemia
+- **FULL MOON** (ORMC10625) -- placer, 40.0 ac, area: rogue_applegate
+- **CAROLINA #1** (ORMC10819) -- placer, 40.0 ac, area: bohemia
+- **TOBY WAN II** (ORMC122494) -- placer, 20.0 ac, area: bohemia
+- **SAN QUENTIN #1** (ORMC122510) -- placer, 20.0 ac, area: rogue_applegate
+- **GOOD LUCK #1** (ORMC125995) -- placer, 20.0 ac, area: rogue_applegate
+- **GOOD LUCK #2** (ORMC125996) -- placer, 20.0 ac, area: rogue_applegate
+- **GOOD LUCK #3** (ORMC125997) -- placer, 20.0 ac, area: rogue_applegate
+- **GOOD LUCK #4** (ORMC125998) -- placer, 20.0 ac, area: rogue_applegate
+- **POWER ONE** (ORMC125999) -- lode, 20.66 ac, area: rogue_applegate
+- **POWER TWO** (ORMC126000) -- lode, 20.66 ac, area: rogue_applegate
+- **POWER THREE** (ORMC126001) -- lode, 20.66 ac, area: rogue_applegate
+- **POWER FOUR** (ORMC126002) -- lode, 20.66 ac, area: rogue_applegate
+- **EMPTY BOTTLE** (ORMC133937) -- placer, 60.0 ac, area: bohemia
+- **ANGIE M** (ORMC135768) -- placer, 20.0 ac, area: quartzville
+- **ZAZOO** (ORMC137083) -- placer, 20.0 ac, area: rogue_applegate
+- **IGGY DIGGY DOO** (ORMC137147) -- placer, 20.0 ac, area: rogue_applegate
+- **LUCKY 7 MINE** (ORMC137191) -- placer, 70.0 ac, area: bohemia
+- **SMUGGLER MINE** (ORMC138073) -- lode, 20.66 ac, area: rogue_applegate
+- **LOST ARK** (ORMC138512) -- placer, 20.0 ac, area: rogue_applegate
+- **TEAR DROP** (ORMC138513) -- placer, 20.0 ac, area: rogue_applegate
+- **LUCKY STRIKE #3** (ORMC14005) -- lode, 20.0 ac, area: rogue_applegate
+- **LUCKY STRIKE #4** (ORMC14006) -- lode, 20.66 ac, area: rogue_applegate
+- **CONTENTION** (ORMC142433) -- lode, 20.66 ac, area: cowcreek
+- **CLIMAX #3** (ORMC144400) -- placer, 40.0 ac, area: bohemia
+- **BIRD ASSOCIATION** (ORMC145771) -- placer, 80.0 ac, area: rogue_applegate
+- **CHRISTO COUNTESSA** (ORMC146334) -- placer, 100.0 ac, area: bohemia
+- **GOLDEN AGE II** (ORMC147158) -- placer, 20.0 ac, area: rogue_applegate
+- **PLACER CLAIM** (ORMC147500) -- placer, 20.0 ac, area: bohemia
+- **NEW LUCKY STRIKE #1** (ORMC147951) -- lode, 20.66 ac, area: rogue_applegate
+- **NEW LUCKY STRIKE #2** (ORMC147952) -- lode, 20.66 ac, area: rogue_applegate
+- **NEW LUCKY STRIKE #5** (ORMC147953) -- lode, 20.66 ac, area: rogue_applegate
+- **NEW LINDAGLENN** (ORMC147954) -- placer, 40.0 ac, area: rogue_applegate
+- **GENESIS** (ORMC149042) -- placer, 20.0 ac, area: rogue_applegate
+- **WILD ROSE** (ORMC149056) -- placer, 20.0 ac, area: bohemia
+- **BUTTER CUP** (ORMC149057) -- placer, 20.0 ac, area: bohemia
+- **EVENING STAR** (ORMC149529) -- lode, 20.66 ac, area: bohemia
+- **EVENING STAR ANNEX** (ORMC149530) -- lode, 20.66 ac, area: bohemia
+- **YOUNG #1** (ORMC150813) -- lode, 20.66 ac, area: rogue_applegate
+- **YOUNG #2** (ORMC150814) -- lode, 20.66 ac, area: rogue_applegate
+- **YOUNG #3** (ORMC150815) -- lode, 20.66 ac, area: rogue_applegate
+- **BRISTOL SILICA #1** (ORMC150816) -- placer, 20.0 ac, area: rogue_applegate
+- **SILICA #1** (ORMC150817) -- placer, 20.0 ac, area: rogue_applegate
+- **BRISTOL SILICA LODE** (ORMC150818) -- lode, 20.66 ac, area: rogue_applegate
+- **BLUE JAY** (ORMC152162) -- lode, 20.66 ac, area: sixes
+- **GOLDEN CAT** (ORMC152300) -- placer, 40.0 ac, area: bohemia
+- **ECLIPSE** (ORMC152569) -- lode, 20.66 ac, area: rogue_applegate
+- **F B J #1 ON145079** (ORMC153190) -- placer, 20.0 ac, area: rogue_applegate
+- **IRON HORSE** (ORMC153884) -- lode, 20.66 ac, area: rogue_applegate
+- **RETIREMENT PLAN** (ORMC154017) -- placer, 20.0 ac, area: bohemia
+- **TRACY SUE** (ORMC154221) -- placer, 10.0 ac, area: rogue_applegate
+- **UNLUCKY TWOS MS** (ORMC154222) -- mill site, 5.0 ac, area: rogue_applegate
+- **LAWSON BAR** (ORMC154400) -- placer, 716.4 ac, area: cowcreek
+- **BIRD ASSOCIATION #2** (ORMC154407) -- placer, 70.0 ac, area: rogue_applegate
+- **BROKEN BRIDGE** (ORMC154454) -- placer, 40.0 ac, area: quartzville
+- **STARLIGHT #7** (ORMC154895) -- placer, 160.0 ac, area: rogue_applegate
+- **STARLIGHT #8** (ORMC154896) -- placer, 160.0 ac, area: rogue_applegate
+- **EVENING STAR 900** (ORMC154942) -- tunnel site, 206.61 ac, area: bohemia
+- **EVENING STAR** (ORMC154943) -- mill site, 5.0 ac, area: bohemia
+- **PASHA** (ORMC155120) -- lode, 20.66 ac, area: rogue_applegate
+- **TJD #1** (ORMC155137) -- placer, 56.36 ac, area: cowcreek
+- **GOLD STANDARD** (ORMC155266) -- lode, 40.0 ac, area: rogue_applegate
+- **KEELER GOLD** (ORMC155383) -- placer, 20.0 ac, area: rogue_applegate
+- **LITTLE FLORINA** (ORMC155402) -- placer, 40.0 ac, area: cowcreek
+- **EAGLE I** (ORMC155482) -- placer, 20.0 ac, area: bohemia
+- **GOLD FEVER** (ORMC155500) -- placer, 50.0 ac, area: cowcreek
+- **#2 SVINOR** (ORMC155518) -- placer, 20.0 ac, area: sixes
+- **#3 JAR L** (ORMC155519) -- placer, 20.0 ac, area: sixes
+- **JDL** (ORMC155572) -- placer, 50.0 ac, area: sixes
+- **POVERTY PASS** (ORMC155648) -- placer, 40.0 ac, area: sixes
+- **KIT KAT B** (ORMC156231) -- placer, 18.6 ac, area: bohemia
+- **TJD #2** (ORMC156535) -- placer, 160.0 ac, area: cowcreek
+- **WAR EAGLE III** (ORMC156963) -- placer, 18.19 ac, area: bohemia
+- **JUMPOFF JOE** (ORMC156964) -- placer, 20.0 ac, area: rogue_applegate
+- **FORGET ME NOT #2** (ORMC15700) -- lode, 20.66 ac, area: cowcreek
+- **FORGET ME NOT #2** (ORMC15703) -- placer, 20.0 ac, area: cowcreek
+- **HERE I IS** (ORMC157158) -- placer, 80.0 ac, area: rogue_applegate
+- **TROUT HOLE** (ORMC157446) -- placer, 20.0 ac, area: rogue_applegate
+- **GRANDPAS DREAM** (ORMC157474) -- placer, 40.0 ac, area: rogue_applegate
+- **LAST ONE IV #1** (ORMC157613) -- placer, 20.0 ac, area: bohemia
+- **OLYMPIA** (ORMC157633) -- lode, 19.69 ac, area: rogue_applegate
+- **TOMS HONOR** (ORMC158573) -- placer, 40.0 ac, area: bohemia
+- **CLEOPATRA** (ORMC158585) -- placer, 160.0 ac, area: rogue_applegate
+- **HUCK FINN** (ORMC158586) -- placer, 160.0 ac, area: rogue_applegate
+- **DIAMOND** (ORMC158717) -- mill site, 5.0 ac, area: bohemia
+- **4 APPLE ASSOCIATION** (ORMC158749) -- placer, 78.9 ac, area: cowcreek
+- **TATTOOED COYOTE** (ORMC158982) -- lode, 20.66 ac, area: sixes
+- **JOHNS BONANZA** (ORMC159012) -- placer, 20.0 ac, area: rogue_applegate
+- **WVM #3** (ORMC159208) -- placer, 40.0 ac, area: cowcreek
+- **END OF THE TRAIL** (ORMC159291) -- placer, 40.0 ac, area: bohemia
+- **RUSTY NUGGET** (ORMC159457) -- lode, 20.66 ac, area: sixes
+- **ARGENTITE** (ORMC159677) -- lode, 20.66 ac, area: bohemia
+- **BIG BEND** (ORMC159678) -- placer, 20.0 ac, area: bohemia
+- **MILLER JACKPOT** (ORMC159976) -- placer, 20.0 ac, area: rogue_applegate
+- **BASEMENT** (ORMC160081) -- lode, 20.66 ac, area: rogue_applegate
+- **BEAR SIGN** (ORMC160082) -- lode, 20.66 ac, area: rogue_applegate
+- **LONE EAGLE** (ORMC160083) -- lode, 20.66 ac, area: rogue_applegate
+- **POISON OAK** (ORMC160084) -- lode, 20.66 ac, area: rogue_applegate
+- **STEEP SIDE** (ORMC160085) -- lode, 20.66 ac, area: rogue_applegate
+- **ROCKER BOX #1** (ORMC160088) -- placer, 20.0 ac, area: cowcreek
+- **BOTTOMS UP** (ORMC160104) -- placer, 80.0 ac, area: cowcreek
+- **R & R** (ORMC160108) -- placer, 20.0 ac, area: rogue_applegate
+- **BUD PLACER I** (ORMC160286) -- placer, 37.33 ac, area: bohemia
+- **LAST CHANCE** (ORMC160387) -- lode, 10.33 ac, area: calapooia
+- **ROWENA** (ORMC160388) -- lode, 10.33 ac, area: calapooia
+- **ROWENA EXTENSION #1** (ORMC160389) -- lode, 10.33 ac, area: calapooia
+- **WEST CHEROKEE** (ORMC160499) -- placer, 100.0 ac, area: cowcreek
+- **SILVER DOLLAR** (ORMC160675) -- placer, 20.0 ac, area: quartzville
+- **CONFEDERATE** (ORMC160783) -- placer, 80.0 ac, area: sixes
+- **GOLD FORTUNE #1** (ORMC160883) -- placer, 160.0 ac, area: cowcreek
+- **ROGUE GEM & GEO #3** (ORMC160899) -- lode, 15.0 ac, area: cowcreek
+- **BABES BONANZA** (ORMC160911) -- placer, 20.0 ac, area: rogue_applegate
+- **DEWEY** (ORMC161037) -- lode, 20.66 ac, area: rogue_applegate
+- **OREL** (ORMC161038) -- lode, 20.66 ac, area: rogue_applegate
+- **SPOTTED FAWN** (ORMC161039) -- lode, 20.66 ac, area: rogue_applegate
+- **OAKIE BAR** (ORMC161265) -- placer, 21.17 ac, area: rogue_applegate
+- **POLLYANNA III** (ORMC161282) -- placer, 120.0 ac, area: rogue_applegate
+- **WVM #5** (ORMC161445) -- placer, 40.0 ac, area: cowcreek
+- **WVM #4** (ORMC161475) -- placer, 40.0 ac, area: cowcreek
+- **SIX BITS GULCH** (ORMC161494) -- placer, 80.0 ac, area: bohemia
+- **INFINITY MINE** (ORMC161887) -- lode, 17.22 ac, area: calapooia
+- **ROCK PILE** (ORMC162165) -- placer, 30.0 ac, area: cowcreek
+- **AM-1** (ORMC162263) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-2** (ORMC162264) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-3** (ORMC162265) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-4** (ORMC162266) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-5** (ORMC162267) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-6** (ORMC162268) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-7** (ORMC162269) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-8** (ORMC162270) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-9** (ORMC162271) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-10** (ORMC162272) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-11** (ORMC162273) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-12** (ORMC162274) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-13** (ORMC162275) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-14** (ORMC162276) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-15** (ORMC162277) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-16** (ORMC162278) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-17** (ORMC162279) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-18** (ORMC162280) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-19** (ORMC162281) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-20** (ORMC162282) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-21** (ORMC162283) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-22** (ORMC162284) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-23** (ORMC162285) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-24** (ORMC162286) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-25** (ORMC162287) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-26** (ORMC162288) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-27** (ORMC162289) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-28** (ORMC162290) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-29** (ORMC162291) -- lode, 20.66 ac, area: rogue_applegate
+- **AM-30** (ORMC162292) -- lode, 20.66 ac, area: rogue_applegate
+- **5 MINERS** (ORMC162296) -- placer, 81.6 ac, area: rogue_applegate
+- **BLUE BEAR** (ORMC162439) -- placer, 120.0 ac, area: rogue_applegate
+- **LUCKY STRIKE** (ORMC162440) -- placer, 60.0 ac, area: rogue_applegate
+- **MOON HOUSE** (ORMC162441) -- placer, 60.0 ac, area: rogue_applegate
+- **FOUR OUTLAWS** (ORMC162496) -- placer, 120.0 ac, area: cowcreek
+- **WESLEY #1** (ORMC162509) -- lode, 20.66 ac, area: rogue_applegate
+- **WESLEY #2** (ORMC162510) -- lode, 20.66 ac, area: rogue_applegate
+- **WESLEY #3** (ORMC162511) -- lode, 20.66 ac, area: rogue_applegate
+- **WESLEY #4** (ORMC162512) -- lode, 20.66 ac, area: rogue_applegate
+- **GRAVE CREEK 5** (ORMC162522) -- placer, 80.0 ac, area: rogue_applegate
+- **LITTLE RED** (ORMC163049) -- placer, 35.02 ac, area: bohemia
+- **SAILORS GULCH** (ORMC163056) -- placer, 20.0 ac, area: bohemia
+- **GOLDEN KITTY #1** (ORMC163144) -- placer, 160.0 ac, area: quartzville
+- **GOLDEN KITTY #2** (ORMC163145) -- placer, 160.0 ac, area: quartzville
+- **GOLDEN KITTY #3** (ORMC163146) -- placer, 160.0 ac, area: quartzville
+- **GOLDEN KITTY #4** (ORMC163147) -- placer, 160.0 ac, area: quartzville
+- **LUCK OF THE DRAW** (ORMC163283) -- placer, 80.0 ac, area: quartzville
+- **SPIKE BUCK** (ORMC163289) -- lode, 18.04 ac, area: rogue_applegate
+- **WESLEY #5** (ORMC163290) -- lode, 20.66 ac, area: rogue_applegate
+- **WESLEY #6** (ORMC163291) -- lode, 20.66 ac, area: rogue_applegate
+- **WESLEY #7** (ORMC163292) -- lode, 20.66 ac, area: rogue_applegate
+- **ANABELS PMC** (ORMC163311) -- placer, 161.49 ac, area: rogue_applegate
+- **LEFT FORK SARDINE** (ORMC163324) -- placer, 160.0 ac, area: rogue_applegate
+- **MINERS REST** (ORMC163452) -- placer, 40.0 ac, area: cowcreek
+- **4 ACES** (ORMC163686) -- placer, 80.0 ac, area: bohemia
+- **EXODUS** (ORMC163687) -- placer, 80.0 ac, area: bohemia
+- **GOLDEN STAR** (ORMC163920) -- lode, 15.11 ac, area: bohemia
+- **STAR EXTENSION** (ORMC163921) -- lode, 20.1 ac, area: bohemia
+- **NICHODEMUS** (ORMC163922) -- lode, 19.8 ac, area: bohemia
+- **STAR MILL SITE I** (ORMC163923) -- mill site, 5.0 ac, area: bohemia
+- **STAR MILL SITE II** (ORMC163924) -- mill site, 5.0 ac, area: bohemia
+- **STAR MILL SITE III** (ORMC163925) -- mill site, 4.03 ac, area: bohemia
+- **GOLD FORTUNE 4** (ORMC164246) -- placer, 160.0 ac, area: cowcreek
+- **GOLD FORTUNE 5** (ORMC164247) -- placer, 156.81 ac, area: cowcreek
+- **LOG CABIN FEVER #1A** (ORMC164365) -- placer, 24.95 ac, area: rogue_applegate
+- **LOG CABIN FEVER #2** (ORMC164499) -- placer, 36.31 ac, area: rogue_applegate
+- **#2 MONA** (ORMC164503) -- placer, 20.0 ac, area: sixes
+- **#5 NORGE** (ORMC164504) -- placer, 20.0 ac, area: sixes
+- **WHITE HORSE** (ORMC164664) -- placer, 80.0 ac, area: quartzville
+- **WOLF STAR** (ORMC164713) -- placer, 80.0 ac, area: rogue_applegate
+- **GOLDEN MAGGIE II** (ORMC164746) -- placer, 80.0 ac, area: bohemia
+- **WARD CAJ** (ORMC164870) -- placer, 159.78 ac, area: rogue_applegate
+- **CLAIRE 1** (ORMC165078) -- placer, 10.0 ac, area: cowcreek
+- **DOUGLAS BONANZA** (ORMC165199) -- placer, 60.0 ac, area: sixes
+- **GOLDEN GRACE** (ORMC165331) -- placer, 20.0 ac, area: rogue_applegate
+- **GORGEOUS WOMAN** (ORMC165535) -- placer, 159.63 ac, area: rogue_applegate
+- **DIXIE GOLD** (ORMC165538) -- placer, 140.0 ac, area: rogue_applegate
+- **SOUTH STAR** (ORMC165906) -- placer, 160.0 ac, area: rogue_applegate
+- **HOPEFUL** (ORMC165929) -- placer, 40.0 ac, area: bohemia
+- **DREAM ON PLACER A** (ORMC165974) -- placer, 160.0 ac, area: quartzville
+- **MINERS MISERY** (ORMC165975) -- placer, 80.0 ac, area: quartzville
+- **FREE GOLD** (ORMC166145) -- lode, 20.66 ac, area: quartzville
+- **QTJD #81** (ORMC166303) -- placer, 40.0 ac, area: bohemia
+- **GIBSON MINING** (ORMC166315) -- placer, 80.0 ac, area: rogue_applegate
+- **FRANDOR II** (ORMC166409) -- lode, 20.66 ac, area: rogue_applegate
+- **APPHIA POPPYSEED** (ORMC167022) -- placer, 40.0 ac, area: rogue_applegate
+- **JANICE ELLA 1** (ORMC167023) -- placer, 30.0 ac, area: rogue_applegate
+- **JANICE ELLA 2** (ORMC167024) -- placer, 37.54 ac, area: rogue_applegate
+- **FINDERZ KEEPERZ** (ORMC167025) -- placer, 100.0 ac, area: rogue_applegate
+- **SARDINE CA** (ORMC167027) -- placer, 40.0 ac, area: rogue_applegate
+- **EAST EVANS ONE** (ORMC167074) -- placer, 40.69 ac, area: rogue_applegate
+- **TOO EASY** (ORMC167097) -- placer, 40.0 ac, area: bohemia
+- **G & R CLAIM 10** (ORMC167334) -- placer, 40.0 ac, area: cowcreek
+- **GOLDEN SHEILA** (ORMC167383) -- placer, 20.0 ac, area: rogue_applegate
+- **HE COMES ON A WHITE** (ORMC167436) -- placer, 40.0 ac, area: cowcreek
+- **HORSE PLAY** (ORMC167616) -- placer, 40.0 ac, area: cowcreek
+- **JENNIFER** (ORMC167882) -- placer, 20.0 ac, area: sixes
+- **YOUNGER YUKON** (ORMC168483) -- placer, 50.0 ac, area: rogue_applegate
+- **GOLDEN DOLLAR** (ORMC168629) -- placer, 20.0 ac, area: calapooia
+- **MOLONEY EXTENSION** (ORMC168635) -- placer, 10.0 ac, area: rogue_applegate
+- **LAVZ** (ORMC168656) -- placer, 40.0 ac, area: rogue_applegate
+- **SWEAT CAJ** (ORMC168672) -- placer, 72.92 ac, area: cowcreek
+- **GALENA 1** (ORMC168892) -- placer, 40.0 ac, area: quartzville
+- **BEAR PAN FLAT** (ORMC168903) -- placer, 40.0 ac, area: sixes
+- **HUMMINGBIRD** (ORMC168904) -- placer, 20.0 ac, area: sixes
+- **BACK FORTY** (ORMC168989) -- placer, 35.0 ac, area: bohemia
+- **GOLDEN WATERS** (ORMC169004) -- placer, 160.0 ac, area: rogue_applegate
+- **HONEYSUCKLE** (ORMC169129) -- placer, 20.0 ac, area: cowcreek
+- **SQUEEZE PLAY** (ORMC169397) -- placer, 40.0 ac, area: rogue_applegate
+- **JACK BRODY** (ORMC169456) -- placer, 20.0 ac, area: rogue_applegate
+- **DAY DREAMER** (ORMC169498) -- placer, 0.0 ac, area: bohemia
+- **PAIR A DICE** (ORMC169499) -- placer, 20.0 ac, area: bohemia
+- **GOLDEN BOTTOM** (ORMC169557) -- placer, 112.12 ac, area: rogue_applegate
+- **GOLD RUN #6** (ORMC169573) -- placer, 40.0 ac, area: rogue_applegate
+- **FINDERS KEEPERS #1** (ORMC169699) -- placer, 20.0 ac, area: bohemia
+- **FINDERS KEEPERS #2** (ORMC169700) -- placer, 20.0 ac, area: bohemia
+- **FINDERS KEEPERS #3** (ORMC169701) -- placer, 20.0 ac, area: bohemia
+- **RADIO FLYER #1** (ORMC169702) -- placer, 20.0 ac, area: bohemia
+- **RADIO FLYER #2** (ORMC169703) -- placer, 20.0 ac, area: bohemia
+- **DEER CREEK** (ORMC169792) -- placer, 15.0 ac, area: rogue_applegate
+- **DEER CREEK #2** (ORMC169793) -- placer, 12.5 ac, area: rogue_applegate
+- **FRANKLIN MINT** (ORMC169864) -- placer, 19.4 ac, area: bohemia
+- **SEXTON PLACER MINE** (ORMC169961) -- placer, 60.0 ac, area: rogue_applegate
+- **J AND J GLORY HOLE** (ORMC170056) -- placer, 20.0 ac, area: rogue_applegate
+- **BURNING DUTCHMAN** (ORMC170114) -- placer, 40.0 ac, area: rogue_applegate
+- **GRAYBACK GOLD #1** (ORMC170807) -- placer, 20.0 ac, area: rogue_applegate
+- **GRAYBACK GOLD #2** (ORMC170808) -- placer, 20.0 ac, area: rogue_applegate
+- **MOUNTAIN LION #1** (ORMC170814) -- lode, 20.0 ac, area: rogue_applegate
+- **PYX** (ORMC170835) -- lode, 20.66 ac, area: rogue_applegate
+- **BIG MAC** (ORMC170874) -- lode, 20.66 ac, area: rogue_applegate
+- **BIG ROCK** (ORMC170875) -- lode, 20.66 ac, area: rogue_applegate
+- **BLACKJACK** (ORMC170876) -- lode, 20.66 ac, area: rogue_applegate
+- **LITTLE MAC** (ORMC170880) -- lode, 20.66 ac, area: rogue_applegate
+- **OREGON** (ORMC170881) -- lode, 20.66 ac, area: rogue_applegate
+- **WILD ROSE** (ORMC170882) -- lode, 20.66 ac, area: rogue_applegate
+- **CHEROKEE 7** (ORMC170909) -- lode, 20.66 ac, area: cowcreek
+- **MEADOWS #1** (ORMC170963) -- placer, 42.42 ac, area: cowcreek
+- **SAMS GOLDEN ROSE** (ORMC170988) -- placer, 24.06 ac, area: rogue_applegate
+- **DELIVERANCE** (ORMC171003) -- placer, 19.53 ac, area: bohemia
+- **SR HUCKLEBERRY** (ORMC171081) -- lode, 20.66 ac, area: cowcreek
+- **WVM #1  B** (ORMC171094) -- placer, 18.0 ac, area: quartzville
+- **BUSTED FLUSH** (ORMC171107) -- placer, 40.0 ac, area: rogue_applegate
+- **BROKEN FINGER** (ORMC171182) -- placer, 19.08 ac, area: bohemia
+- **GOLDIGGERS** (ORMC171183) -- placer, 20.0 ac, area: bohemia
+- **STAR OF WONDER** (ORMC171330) -- placer, 40.0 ac, area: rogue_applegate
+- **GOLDEN GRAEME** (ORMC171357) -- placer, 20.0 ac, area: rogue_applegate
+- **FAITH #3** (ORMC171379) -- placer, 20.0 ac, area: rogue_applegate
+- **LITTLE DANDY #2** (ORMC171392) -- lode, 20.66 ac, area: rogue_applegate
+- **LITTLE DANDY #3** (ORMC171393) -- lode, 20.66 ac, area: rogue_applegate
+- **MIKES BONANZA** (ORMC171401) -- placer, 20.0 ac, area: rogue_applegate
+- **COW CREEK** (ORMC171403) -- placer, 20.0 ac, area: cowcreek
+- **FAMILY GOLD** (ORMC171555) -- placer, 40.0 ac, area: rogue_applegate
+- **FIRST DREAM** (ORMC171673) -- placer, 39.86 ac, area: rogue_applegate
+- **COPPER KING** (ORMC171712) -- lode, 20.66 ac, area: rogue_applegate
+- **A LOT OF ROCKS** (ORMC171842) -- placer, 20.0 ac, area: rogue_applegate
+- **MOVING ROCKS** (ORMC171843) -- placer, 20.0 ac, area: rogue_applegate
+- **TEDDY BEAR** (ORMC171890) -- placer, 0.0 ac, area: bohemia
+- **TV PLACER** (ORMC171938) -- placer, 41.17 ac, area: rogue_applegate
+- **GOLDEN CATTLE** (ORMC172021) -- placer, 20.0 ac, area: cowcreek
+- **TV PLACER SIX** (ORMC172076) -- placer, 20.0 ac, area: rogue_applegate
+- **MJ NJ PLACER 1** (ORMC172080) -- placer, 20.0 ac, area: rogue_applegate
+- **GREENBACK** (ORMC17209) -- lode, 20.66 ac, area: rogue_applegate
+- **RED ROSE** (ORMC17210) -- lode, 20.66 ac, area: rogue_applegate
+- **BALD HORNET** (ORMC17211) -- lode, 20.66 ac, area: rogue_applegate
+- **CLIMAX** (ORMC17212) -- lode, 20.66 ac, area: rogue_applegate
+- **SERPENTINE** (ORMC17213) -- lode, 20.66 ac, area: rogue_applegate
+- **MAIN PAY** (ORMC172135) -- placer, 20.0 ac, area: rogue_applegate
+- **NEW YORK** (ORMC17214) -- lode, 20.66 ac, area: rogue_applegate
+- **LOG CABIN** (ORMC172174) -- lode, 20.66 ac, area: rogue_applegate
+- **THREE AMIGOS #2** (ORMC172254) -- lode, 20.66 ac, area: rogue_applegate
+- **GYPSY LADY** (ORMC172299) -- placer, 18.42 ac, area: bohemia
+- **LINNY BELL 2** (ORMC172371) -- placer, 20.0 ac, area: bohemia
+- **GOLDEN BRICE** (ORMC172405) -- placer, 40.0 ac, area: bohemia
+- **GOLDEN DOG GOLD** (ORMC172406) -- placer, 20.0 ac, area: bohemia
+- **GOLD PINE QUARTZ MIN** (ORMC172437) -- lode, 20.66 ac, area: rogue_applegate
+- **BLUE QUARTZ MINE** (ORMC172447) -- lode, 20.66 ac, area: rogue_applegate
+- **GRAY QUARTZ MINE** (ORMC172448) -- lode, 20.66 ac, area: rogue_applegate
+- **MATRIX MINE** (ORMC172449) -- lode, 20.66 ac, area: rogue_applegate
+- **LAST STAND** (ORMC172451) -- placer, 60.0 ac, area: rogue_applegate
+- **T H U 3** (ORMC172516) -- lode, 20.66 ac, area: rogue_applegate
+- **B C JONES** (ORMC172521) -- lode, 20.66 ac, area: rogue_applegate
+- **GRUB GULCH QUARTZ** (ORMC172549) -- lode, 20.66 ac, area: rogue_applegate
+- **HOPE** (ORMC172614) -- placer, 20.0 ac, area: bohemia
+- **BOONES LICK** (ORMC172640) -- placer, 20.0 ac, area: rogue_applegate
+- **HOGAN'S FIND** (ORMC172726) -- placer, 20.0 ac, area: rogue_applegate
+- **PURE WHITE GOLD** (ORMC172749) -- placer, 16.69 ac, area: cowcreek
+- **WHITEHORSE CREEK GOL** (ORMC172837) -- placer, 20.0 ac, area: cowcreek
+- **LOTSA GOLD** (ORMC172876) -- placer, 20.0 ac, area: rogue_applegate
+- **RELIEF MINE** (ORMC172954) -- lode, 20.66 ac, area: quartzville
+- **THREE BROTHERS MINE** (ORMC172956) -- lode, 20.66 ac, area: bohemia
+- **T H U 4** (ORMC172982) -- lode, 20.66 ac, area: rogue_applegate
+- **GOLDEN NINE MILE** (ORMC173282) -- placer, 20.0 ac, area: rogue_applegate
+- **GOLD MEADOW PLAINS** (ORMC173386) -- placer, 145.0 ac, area: bohemia
+- **OLD MANZANITA MINE** (ORMC173396) -- lode, 20.66 ac, area: rogue_applegate
+- **OLD PINE MINE** (ORMC173397) -- lode, 20.66 ac, area: rogue_applegate
+- **OLD PINE APEX MINE** (ORMC173405) -- lode, 20.66 ac, area: rogue_applegate
+- **LUCKY DUCK** (ORMC173415) -- placer, 20.0 ac, area: quartzville
+- **APEX MATRIX MINE** (ORMC173416) -- lode, 20.66 ac, area: rogue_applegate
+- **GOLDEN DIGGER** (ORMC173434) -- placer, 20.0 ac, area: quartzville
+- **EVERGREEN 1** (ORMC173448) -- placer, 20.0 ac, area: rogue_applegate
+- **EVERGREEN 2** (ORMC173449) -- placer, 20.0 ac, area: rogue_applegate
+- **MAID OF THE MIST** (ORMC173487) -- lode, 20.66 ac, area: rogue_applegate
+- **Y NOT** (ORMC173540) -- placer, 40.0 ac, area: bohemia
+- **THREE AMIGOS 5** (ORMC173559) -- lode, 15.7 ac, area: rogue_applegate
+- **STARDUSTER** (ORMC173574) -- placer, 67.0 ac, area: quartzville
+- **PARKER B #1** (ORMC173610) -- placer, 20.0 ac, area: quartzville
+- **GOLDEN BELL TWO** (ORMC173614) -- placer, 20.0 ac, area: cowcreek
+- **GOLD MATRIX** (ORMC173639) -- lode, 20.66 ac, area: rogue_applegate
+- **SARA SEANTAE ONE** (ORMC174018) -- placer, 20.0 ac, area: rogue_applegate
+- **SARA SEANTAE TWO** (ORMC174019) -- placer, 20.0 ac, area: rogue_applegate
+- **THREE AMIGOS 7** (ORMC174069) -- lode, 20.66 ac, area: rogue_applegate
+- **THREE AMIGOS 8** (ORMC174070) -- lode, 20.66 ac, area: rogue_applegate
+- **GREAT I AM** (ORMC174107) -- lode, 20.66 ac, area: rogue_applegate
+- **HALLELUJAH MINE** (ORMC174122) -- placer, 30.0 ac, area: quartzville
+- **RIVERSIDE** (ORMC174123) -- placer, 40.0 ac, area: quartzville
+- **GOLDEN DREAMS** (ORMC174152) -- lode, 20.66 ac, area: quartzville
+- **LUCKY GALENA** (ORMC174207) -- placer, 20.0 ac, area: quartzville
+- **SANTIAM 1** (ORMC174208) -- placer, 20.0 ac, area: lnf_santiam
+- **SUNSET MINE** (ORMC174221) -- lode, 20.66 ac, area: bohemia
+- **PHANTOM GOLD ANGEL** (ORMC174236) -- placer, 40.0 ac, area: quartzville
+- **GOLD CREEK** (ORMC174318) -- placer, 20.0 ac, area: quartzville
+- **DIXIE MINE** (ORMC174327) -- lode, 20.66 ac, area: rogue_applegate
+- **MESTAR GULCH** (ORMC174333) -- placer, 40.0 ac, area: rogue_applegate
+- **SUCKER CREEK** (ORMC174355) -- placer, 20.0 ac, area: rogue_applegate
+- **RED DOG 151** (ORMC174369) -- placer, 20.0 ac, area: rogue_applegate
+- **QUARTZ 2** (ORMC174394) -- placer, 40.0 ac, area: rogue_applegate
+- **LADYBUG 3** (ORMC174432) -- placer, 40.0 ac, area: rogue_applegate
+- **ROBERTO I** (ORMC174438) -- placer, 20.0 ac, area: rogue_applegate
+- **ROBERTO II** (ORMC174439) -- placer, 20.0 ac, area: rogue_applegate
+- **ROBERTO III** (ORMC174440) -- placer, 20.0 ac, area: rogue_applegate
+- **ROBERTO IV** (ORMC174441) -- placer, 20.0 ac, area: rogue_applegate
+- **M AND M 1** (ORMC174485) -- placer, 20.0 ac, area: quartzville
+- **M AND M 2** (ORMC174486) -- placer, 20.0 ac, area: quartzville
+- **BONAVENTURE** (ORMC174490) -- placer, 20.0 ac, area: rogue_applegate
+- **FRANDOR 1** (ORMC175110) -- lode, 20.66 ac, area: rogue_applegate
+- **FRANDOR 3** (ORMC175111) -- lode, 20.66 ac, area: rogue_applegate
+- **FRANDOR 4** (ORMC175112) -- lode, 20.66 ac, area: rogue_applegate
+- **FRANDOR 5** (ORMC175113) -- lode, 9.183 ac, area: rogue_applegate
+- **RUSTY SHALE MINE** (ORMC175364) -- lode, 20.66 ac, area: rogue_applegate
+- **BLUE JAY MINE** (ORMC175377) -- lode, 20.66 ac, area: rogue_applegate
+- **BONANZA BEND TWO** (ORMC176024) -- placer, 40.0 ac, area: rogue_applegate
+- **BUCKET** (ORMC176067) -- lode, 20.66 ac, area: bohemia
+- **GOLDEN CROSS (WEDGE)** (ORMC176116) -- lode, 20.66 ac, area: rogue_applegate
+- **JOE'S GOLD BAR 2** (ORMC176228) -- placer, 18.315 ac, area: rogue_applegate
+- **FROG** (ORMC176257) -- placer, 20.0 ac, area: rogue_applegate
+- **THU 14** (ORMC176466) -- lode, 20.66 ac, area: rogue_applegate
+- **HAPPY DAYZ** (ORMC176581) -- placer, 40.0 ac, area: rogue_applegate
+- **DAISY 1** (ORMC176589) -- lode, 20.35 ac, area: rogue_applegate
+- **DAISY 2** (ORMC176590) -- lode, 20.66 ac, area: rogue_applegate
+- **DAISY 3** (ORMC176591) -- lode, 20.66 ac, area: rogue_applegate
+- **DAISY 4** (ORMC176592) -- lode, 20.66 ac, area: rogue_applegate
+- **DAISY 5** (ORMC176593) -- lode, 10.33 ac, area: rogue_applegate
+- **DAISY 6** (ORMC176594) -- lode, 20.66 ac, area: rogue_applegate
+- **SILVERADO #1** (ORMC176597) -- placer, 40.0 ac, area: bohemia
+- **SILVERADO #2** (ORMC176598) -- placer, 40.0 ac, area: bohemia
+- **MORE ROCKS** (ORMC176601) -- placer, 20.0 ac, area: rogue_applegate
+- **FORTUNE COOKIE** (ORMC176605) -- placer, 10.0 ac, area: bohemia
+- **RSM** (ORMC176614) -- placer, 40.0 ac, area: sixes
+- **COPPER QUEEN** (ORMC176615) -- lode, 20.66 ac, area: rogue_applegate
+- **QUARTZ 3** (ORMC176618) -- placer, 13.99 ac, area: rogue_applegate
+- **OAK MINE** (ORMC176622) -- lode, 20.66 ac, area: rogue_applegate
+- **ORO FINO** (ORMC176647) -- lode, 20.66 ac, area: rogue_applegate
+- **SPIRIT OF THE WEST** (ORMC176669) -- placer, 40.0 ac, area: rogue_applegate
+- **CANARY** (ORMC176677) -- lode, 20.42 ac, area: rogue_applegate
+- **DOVE** (ORMC176678) -- lode, 20.66 ac, area: rogue_applegate
+- **MARSH WREN** (ORMC176679) -- lode, 20.66 ac, area: rogue_applegate
+- **ROBIN** (ORMC176680) -- lode, 20.42 ac, area: rogue_applegate
+- **SILVER SCHIST** (ORMC176681) -- lode, 20.66 ac, area: rogue_applegate
+- **BRASS LEDGE** (ORMC176691) -- lode, 20.66 ac, area: rogue_applegate
+- **NESBIT** (ORMC176692) -- lode, 20.66 ac, area: rogue_applegate
+- **UNION CREEK 2** (ORMC176757) -- placer, 20.0 ac, area: cowcreek
+- **UNION CREEK 3** (ORMC176758) -- placer, 20.0 ac, area: cowcreek
+- **UNION CREEK 4** (ORMC176759) -- placer, 20.0 ac, area: cowcreek
+- **HAWGZ GOLD** (ORMC176762) -- placer, 60.0 ac, area: rogue_applegate
+- **BJ** (ORMC176765) -- placer, 20.0 ac, area: rogue_applegate
+- **MARY 1** (ORMC176768) -- lode, 16.11 ac, area: rogue_applegate
+- **MARY 2** (ORMC176769) -- lode, 16.11 ac, area: rogue_applegate
+- **MARY LOAD EXT** (ORMC176770) -- lode, 20.66 ac, area: rogue_applegate
+- **SARDINE 1** (ORMC176790) -- placer, 20.0 ac, area: rogue_applegate
+- **SARDINE 2** (ORMC176791) -- placer, 20.0 ac, area: rogue_applegate
+- **SARDINE 3** (ORMC176792) -- placer, 20.0 ac, area: rogue_applegate
+- **TIDBITS #4** (ORMC176844) -- placer, 20.0 ac, area: calapooia
+- **BARBARA** (ORMC176849) -- lode, 20.66 ac, area: rogue_applegate
+- **BLUE BIRD** (ORMC176850) -- lode, 20.66 ac, area: rogue_applegate
+- **HORSESHOE LOAD EXT 3** (ORMC176896) -- lode, 20.66 ac, area: rogue_applegate
+- **HORSESHOE LOAD EXT 4** (ORMC176897) -- lode, 20.66 ac, area: rogue_applegate
+- **HORSESHOE LOAD EXT 5** (ORMC176898) -- lode, 20.66 ac, area: rogue_applegate
+- **HORSESHOE LOAD EXT 6** (ORMC176899) -- lode, 20.66 ac, area: rogue_applegate
+- **HORSESHOE LOAD EXT 7** (ORMC176900) -- lode, 20.66 ac, area: rogue_applegate
+- **HORSESHOE LOAD EXT 8** (ORMC176901) -- lode, 20.66 ac, area: rogue_applegate
+- **JOHN HALL** (ORMC176918) -- lode, 20.66 ac, area: rogue_applegate
+- **RUSTY GOLD** (ORMC176919) -- placer, 40.0 ac, area: rogue_applegate
+- **RUSTY GOLD 3** (ORMC176920) -- lode, 20.66 ac, area: rogue_applegate
+- **PLEASANT CREEK 1** (ORMC176924) -- placer, 20.0 ac, area: rogue_applegate
+- **KRN JASPER #1** (ORMC176940) -- placer, 20.0 ac, area: cowcreek
+- **KRN JASPER #2** (ORMC176941) -- placer, 20.0 ac, area: cowcreek
+- **KRN JASPER #3** (ORMC176942) -- placer, 20.0 ac, area: cowcreek
+- **KRN JASPER #4** (ORMC176943) -- placer, 20.0 ac, area: cowcreek
+- **LIGHTNING GOLD 1** (ORMC176950) -- placer, 80.0 ac, area: cowcreek
+- **LIGHTNING GOLD 2** (ORMC176951) -- placer, 20.0 ac, area: cowcreek
+- **SHINY GOLD** (ORMC176955) -- placer, 20.0 ac, area: cowcreek
+- **FOREST CREEK 1** (ORMC176963) -- placer, 20.0 ac, area: rogue_applegate
+- **FOREST CREEK 2** (ORMC176964) -- placer, 20.0 ac, area: rogue_applegate
+- **FOREST CREEK 3** (ORMC176965) -- placer, 20.0 ac, area: rogue_applegate
+- **FOREST CREEK 4** (ORMC176966) -- placer, 20.0 ac, area: rogue_applegate
+- **WHISKEY AND LACE** (ORMC176968) -- placer, 20.0 ac, area: rogue_applegate
+- **GOLDEN DRAGON** (ORMC177068) -- placer, 20.0 ac, area: sixes
+- **LAURINA #1** (ORMC177069) -- placer, 20.0 ac, area: sixes
+- **LAURINA #2** (ORMC177070) -- placer, 20.0 ac, area: sixes
+- **LUCKY NUGGET** (ORMC177071) -- placer, 20.0 ac, area: sixes
+- **T AND M** (ORMC177072) -- placer, 20.0 ac, area: sixes
+- **PICKETT CREEK ONE** (ORMC177105) -- placer, 20.0 ac, area: rogue_applegate
+- **MISTY MOUNTAIN 1** (ORMC177113) -- lode, 20.66 ac, area: bohemia
+- **MISTY MOUNTAIN 2** (ORMC177114) -- lode, 20.66 ac, area: bohemia
+- **MISTY MOUNTAIN 3** (ORMC177115) -- lode, 20.66 ac, area: bohemia
+- **UPPER DITCH CREEK 3** (ORMC177124) -- placer, 20.0 ac, area: rogue_applegate
+- **UPPER DITCH CREEK 4** (ORMC177125) -- placer, 20.0 ac, area: rogue_applegate
+- **CATTY** (ORMC177196) -- placer, 20.0 ac, area: bohemia
+- **CRAZY GOLD STEEL** (ORMC177276) -- placer, 20.0 ac, area: rogue_applegate
+- **UPPER HAWGZ GOLD** (ORMC177308) -- placer, 20.0 ac, area: rogue_applegate
+- **TENNESSEE GULCH** (ORMC177440) -- placer, 100.0 ac, area: cowcreek
+- **APEX QUARTZ** (ORMC177598) -- lode, 20.66 ac, area: rogue_applegate
+- **GOLDEN QUARTZ** (ORMC177607) -- lode, 20.66 ac, area: rogue_applegate
+- **QUARTZ MATRIX** (ORMC177608) -- lode, 20.66 ac, area: rogue_applegate
+- **FRIENDS OF MINE** (ORMC177626) -- placer, 20.0 ac, area: rogue_applegate
+- **M & M 2** (ORMC177986) -- placer, 20.0 ac, area: quartzville
+- **M & M 3** (ORMC177987) -- placer, 20.0 ac, area: quartzville
+- **JACKS LANDING II** (ORMC177996) -- placer, 40.0 ac, area: rogue_applegate
+- **S2 J2 K1** (ORMC177997) -- placer, 40.0 ac, area: rogue_applegate
+- **STAIRWAY TO GOLD** (ORMC178000) -- placer, 20.0 ac, area: cowcreek
+- **SARDINE 4** (ORMC178011) -- placer, 20.0 ac, area: rogue_applegate
+- **BLESSED MEADOWS #1** (ORMC178018) -- placer, 79.8 ac, area: cowcreek
+- **BLESSED MEADOWS #2** (ORMC178019) -- placer, 40.0 ac, area: cowcreek
+- **BLESSED MEADOWS #4** (ORMC178020) -- placer, 40.0 ac, area: cowcreek
+- **GOLD BALL** (ORMC178035) -- placer, 20.0 ac, area: rogue_applegate
+- **GOLD BELT** (ORMC178036) -- placer, 20.0 ac, area: rogue_applegate
+- **XPNSV HOBBY** (ORMC178047) -- placer, 40.0 ac, area: quartzville
+- **GLAD MINED** (ORMC178100) -- placer, 20.0 ac, area: rogue_applegate
+- **FOUR K** (ORMC178101) -- placer, 60.0 ac, area: sixes
+- **LOST MAN'S CANYON** (ORMC178111) -- lode, 20.66 ac, area: quartzville
+- **JUMP OFF JOE 1** (ORMC178190) -- placer, 20.0 ac, area: rogue_applegate
+- **RMT1** (ORMC178191) -- placer, 20.0 ac, area: rogue_applegate
+- **DUKE NORRIS #1** (ORMC178194) -- placer, 40.0 ac, area: calapooia
+- **GOLDEN SLIDE** (ORMC178195) -- placer, 40.0 ac, area: rogue_applegate
+- **SLEEPY MINE #1** (ORMC178206) -- lode, 20.66 ac, area: rogue_applegate
+- **GRAVY GOLD** (ORMC178442) -- placer, 20.0 ac, area: rogue_applegate
+- **CROOKED T** (ORMC178467) -- placer, 20.0 ac, area: bohemia
+- **LUCKY MAUD** (ORMC18168) -- lode, 20.66 ac, area: bohemia
+- **RAINBOW ELSIE** (ORMC18169) -- lode, 20.66 ac, area: bohemia
+- **RONDEE** (ORMC18170) -- placer, 11.0 ac, area: bohemia
+- **IOWA** (ORMC18189) -- lode, 20.66 ac, area: rogue_applegate
+- **IDAHO** (ORMC18190) -- lode, 20.66 ac, area: rogue_applegate
+- **BERKELEY** (ORMC18191) -- lode, 20.66 ac, area: rogue_applegate
+- **POSER** (ORMC18192) -- lode, 20.66 ac, area: rogue_applegate
+- **CONFIDENCE** (ORMC18193) -- lode, 20.66 ac, area: rogue_applegate
+- **WASHINGTON** (ORMC18194) -- lode, 20.66 ac, area: rogue_applegate
+- **MONTANA** (ORMC18195) -- lode, 20.66 ac, area: rogue_applegate
+- **COLORADO** (ORMC18196) -- lode, 20.66 ac, area: rogue_applegate
+- **NEVADA** (ORMC18197) -- lode, 20.66 ac, area: rogue_applegate
+- **HAZEL** (ORMC18198) -- lode, 20.66 ac, area: rogue_applegate
+- **DAWN** (ORMC18199) -- lode, 20.66 ac, area: rogue_applegate
+- **MARYLAND** (ORMC18200) -- lode, 20.66 ac, area: rogue_applegate
+- **HIGH ORE** (ORMC18201) -- lode, 20.66 ac, area: rogue_applegate
+- **UTAH** (ORMC18202) -- lode, 20.66 ac, area: rogue_applegate
+- **SUGAR PINE** (ORMC20078) -- lode, 2195.436 ac, area: rogue_applegate
+- **SUGAR PINE S EXT** (ORMC20079) -- lode, 20.66 ac, area: rogue_applegate
+- **BLACK JACK** (ORMC20080) -- lode, 20.66 ac, area: rogue_applegate
+- **BLACK JACK #3** (ORMC20081) -- lode, 20.66 ac, area: rogue_applegate
+- **OREGONIAN** (ORMC20082) -- lode, 20.66 ac, area: rogue_applegate
+- **GOLDEN CYCLE** (ORMC20083) -- lode, 20.66 ac, area: rogue_applegate
+- **CLIMAX #1** (ORMC23002) -- placer, 18.24 ac, area: bohemia
+- **CLIMAX #2** (ORMC23003) -- placer, 20.0 ac, area: bohemia
+- **CLIMAX #4** (ORMC23005) -- placer, 20.0 ac, area: bohemia
+- **CLIMAX #5** (ORMC23006) -- placer, 20.0 ac, area: bohemia
+- **CLIMAX #6** (ORMC23007) -- placer, 20.0 ac, area: bohemia
+- **HOGUM #1** (ORMC23756) -- placer, 20.0 ac, area: cowcreek
+- **HOGUM #2** (ORMC23757) -- placer, 20.0 ac, area: cowcreek
+- **HARD TIMES #1 SOUTH** (ORMC2386) -- lode, 20.66 ac, area: cowcreek
+- **HARD TIMES #2 SOUTH** (ORMC2388) -- lode, 20.66 ac, area: cowcreek
+- **HALF MOON** (ORMC24633) -- placer, 82.15 ac, area: rogue_applegate
+- **CLEMENTINE 1&2** (ORMC25726) -- placer, 40.0 ac, area: sixes
+- **FORGET ME NOT #4** (ORMC26076) -- lode, 20.66 ac, area: cowcreek
+- **HIDDEN TREASURE** (ORMC28579) -- lode, 20.66 ac, area: rogue_applegate
+- **LOST TREASURE** (ORMC28580) -- lode, 20.66 ac, area: rogue_applegate
+- **HIDDEN TREASURE EXT** (ORMC28581) -- lode, 20.66 ac, area: rogue_applegate
+- **LOST TREASURE EXT** (ORMC28582) -- lode, 20.66 ac, area: rogue_applegate
+- **CEDAR BEND** (ORMC30445) -- placer, 18.18 ac, area: quartzville
+- **NEPTUNE BLUE I** (ORMC34471) -- placer, 15.0 ac, area: bohemia
+- **IRISH LUCK #1** (ORMC34974) -- lode, 20.66 ac, area: bohemia
+- **GOLD ROCK** (ORMC39692) -- lode, 20.66 ac, area: bohemia
+- **WHITE CRYSTAL** (ORMC39834) -- lode, 17.21 ac, area: bohemia
+- **FOOLS PARIDISE** (ORMC43176) -- placer, 20.66 ac, area: rogue_applegate
+- **SQUAW CREEK #1** (ORMC52944) -- lode, 20.66 ac, area: rogue_applegate
+- **SQUAW CREEK #2** (ORMC52945) -- lode, 20.66 ac, area: rogue_applegate
+- **SQUAW CREEK #3** (ORMC52946) -- lode, 20.66 ac, area: rogue_applegate
+- **SQUAW CREEK #4** (ORMC52947) -- lode, 20.66 ac, area: rogue_applegate
+- **HIGH VALUE** (ORMC53731) -- lode, 20.66 ac, area: bohemia
+- **HARD TIMES** (ORMC55661) -- lode, 19.29 ac, area: cowcreek
+- **STONE OF SORROW** (ORMC57282) -- placer, 20.0 ac, area: rogue_applegate
+- **KANSAS JAYHAWK** (ORMC63648) -- lode, 20.66 ac, area: rogue_applegate
+- **GC&E** (ORMC6378) -- placer, 8.86 ac, area: rogue_applegate
+- **GROVER MOCK** (ORMC67325) -- placer, 10.0 ac, area: rogue_applegate
+- **MOCKING BIRD** (ORMC67326) -- placer, 20.0 ac, area: rogue_applegate
+- **VALENTINE** (ORMC69062) -- placer, 20.0 ac, area: rogue_applegate
+- **THREE JS** (ORMC7332) -- lode, 20.66 ac, area: rogue_applegate
+- **QUARTER MOON** (ORMC78252) -- placer, 20.0 ac, area: rogue_applegate
+- **LAST CHANCE** (ORMC81850) -- placer, 24.23 ac, area: rogue_applegate
+- **WESTSIDE** (ORMC86891) -- placer, 40.0 ac, area: bohemia
+- **HARD LUCK #2** (ORMC89479) -- placer, 10.0 ac, area: rogue_applegate
+- **CG #1** (ORMC89626) -- lode, 20.66 ac, area: rogue_applegate
+- **LUCKY STRIKE #3** (ORMC92352) -- placer, 20.0 ac, area: rogue_applegate
+- **LUCKY STRIKE #4** (ORMC92353) -- placer, 20.0 ac, area: rogue_applegate
+- **STONE OF SORROW II** (ORMC98565) -- placer, 20.0 ac, area: rogue_applegate
+- **GOLDEN AGE** (ORMC99388) -- placer, 20.0 ac, area: rogue_applegate
+
+## No longer in 'Not Closed' (closed/relinquished/expired since last run) (0)
+
+## Changed disposition/acreage (0)

@@ -1,0 +1,47 @@
+[
+  {
+    "names": [
+      "WVM #3 Dads Creek"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-3-dads-creek.tif",
+    "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-3-dads-creek.pdf",
+    "tif_bytes": 2322873
+  },
+  {
+    "names": [
+      "WVM #4 Dads Creek"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-4-dads-creek.tif",
+    "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-4-dads-creek.pdf",
+    "tif_bytes": 2290879
+  },
+  {
+    "names": [
+      "WVM #5 Dads Creek"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-5-dads-creek.tif",
+    "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/wvm-5-dads-creek.pdf",
+    "tif_bytes": 2288224
+  },
+  {
+    "names": [
+      "Pure White Gold (Whitehorse Cr)"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/cowcreek/lidar/pure-white-gold-whitehorse-cr.tif",
+    "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/pure-white-gold-whitehorse-cr.pdf",
+    "tif_bytes": 2326156
+  },
+  {
+    "names": [
+      "Cow Creek Recreational Gold Panning Area"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/cowcreek/lidar/cow-creek-recreational-gold-panning-area.tif",
+    "pdf": "/home/user/gold-overlays/out/cowcreek/lidar/cow-creek-recreational-gold-panning-area.pdf",
+    "tif_bytes": 2321618
+  }
+]
