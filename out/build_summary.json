@@ -1,1 +1,934 @@
-[]
+[
+  {
+    "area": "bohemia",
+    "bbox": [
+      -122.95,
+      43.45,
+      -122.5,
+      43.78
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [
+      [
+        "BMOA War Eagle III",
+        "polygon",
+        "WAR EAGLE III"
+      ],
+      [
+        "BMOA Westside",
+        "polygon",
+        "WESTSIDE"
+      ],
+      [
+        "BMOA Y Not",
+        "polygon",
+        "Y NOT"
+      ],
+      [
+        "BMOA Placer Claim",
+        "polygon",
+        "PLACER CLAIM"
+      ],
+      [
+        "BMOA Little Red",
+        "polygon",
+        "LITTLE RED"
+      ],
+      [
+        "BMOA Big Bend",
+        "polygon",
+        "BIG BEND"
+      ],
+      [
+        "BMOA Argentite",
+        "polygon",
+        "ARGENTITE"
+      ],
+      [
+        "BMOA Exodus",
+        "polygon",
+        "EXODUS"
+      ],
+      [
+        "BMOA 4 Aces",
+        "polygon",
+        "4 ACES"
+      ],
+      [
+        "Cedar Creek Campground (Brice Cr)",
+        "point",
+        "published site"
+      ]
+    ],
+    "usmin_count": 64,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "open pit mine or quarry",
+      "quarry"
+    ],
+    "milo_count": 1067,
+    "mrds_raw_count": 77,
+    "mrds_kept_after_dedup": 51,
+    "active_claims_count": 147,
+    "active_claims_clipped_to_bbox": 6,
+    "closed_placer_claims_count": 8,
+    "closed_unmatched_to_grid": 0,
+    "density_top_cells": [],
+    "land_blm_features": 1,
+    "land_usfs_features": 1,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 25,
+    "open_ground_top10": [
+      {
+        "name": "OPEN-bohemia-01",
+        "lat": 43.59779110058982,
+        "lon": -122.65981378955048,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-02",
+        "lat": 43.59784197302114,
+        "lon": -122.75227091560049,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-03",
+        "lat": 43.59760451311847,
+        "lon": -122.75248111210823,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-04",
+        "lat": 43.59736432283019,
+        "lon": -122.75232218974833,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-05",
+        "lat": 43.597447794103424,
+        "lon": -122.75231792636026,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-06",
+        "lat": 43.6009751541136,
+        "lon": -122.66107947734355,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-07",
+        "lat": 43.55954116423515,
+        "lon": -122.60054114869209,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-08",
+        "lat": 43.505472877527524,
+        "lon": -122.83964882436186,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-09",
+        "lat": 43.567914,
+        "lon": -122.593042,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-bohemia-10",
+        "lat": 43.598499,
+        "lon": -122.660377,
+        "type": "Adit",
+        "near_claim": false
+      }
+    ],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_onx.gpx",
+        "kml_bytes": 446172,
+        "gpx_bytes": 376153,
+        "feature_count": 1364,
+        "layers": [
+          "My claims & public sites",
+          "Historical workings (USMIN)",
+          "Mine & prospect sites (MILO/MRDS, gold)",
+          "Active mining claims (BLM MLRS)",
+          "Open ground to sample"
+        ]
+      }
+    ]
+  },
+  {
+    "area": "calapooia",
+    "bbox": [
+      -122.55,
+      44.15,
+      -122.28,
+      44.32
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [
+      [
+        "Golden Dollar",
+        "polygon",
+        "GOLDEN DOLLAR"
+      ]
+    ],
+    "usmin_count": 17,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "open pit mine or quarry",
+      "quarry"
+    ],
+    "milo_count": 272,
+    "mrds_raw_count": 15,
+    "mrds_kept_after_dedup": 7,
+    "active_claims_count": 21,
+    "active_claims_clipped_to_bbox": 1,
+    "closed_placer_claims_count": 3,
+    "closed_unmatched_to_grid": 0,
+    "density_top_cells": [],
+    "land_blm_features": 1,
+    "land_usfs_features": 1,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 25,
+    "open_ground_top10": [
+      {
+        "name": "OPEN-calapooia-01",
+        "lat": 44.23027495745254,
+        "lon": -122.33201390280276,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-02",
+        "lat": 44.226261,
+        "lon": -122.33845,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-03",
+        "lat": 44.224547,
+        "lon": -122.353866,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-04",
+        "lat": 44.205812,
+        "lon": -122.372081,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-05",
+        "lat": 44.228850475131004,
+        "lon": -122.34563758079679,
+        "type": "lode",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-06",
+        "lat": 44.2287975303573,
+        "lon": -122.34551591885159,
+        "type": "lode",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-07",
+        "lat": 44.2274617117575,
+        "lon": -122.34444378353507,
+        "type": "lode",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-08",
+        "lat": 44.228031753273385,
+        "lon": -122.34381222363956,
+        "type": "lode",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-09",
+        "lat": 44.22929581954335,
+        "lon": -122.33016357630015,
+        "type": "lode",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-calapooia-10",
+        "lat": 44.230269,
+        "lon": -122.332,
+        "type": "Open Pit Mine",
+        "near_claim": false
+      }
+    ],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_onx.gpx",
+        "kml_bytes": 108143,
+        "gpx_bytes": 85269,
+        "feature_count": 343,
+        "layers": [
+          "My claims & public sites",
+          "Historical workings (USMIN)",
+          "Mine & prospect sites (MILO/MRDS, gold)",
+          "Active mining claims (BLM MLRS)",
+          "Open ground to sample"
+        ]
+      }
+    ]
+  },
+  {
+    "area": "cowcreek",
+    "bbox": [
+      -123.7,
+      42.68,
+      -123.1,
+      42.98
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [
+      [
+        "WVM #3 Dads Creek",
+        "polygon",
+        "WVM #3"
+      ],
+      [
+        "WVM #4 Dads Creek",
+        "polygon",
+        "WVM #4"
+      ],
+      [
+        "WVM #5 Dads Creek",
+        "polygon",
+        "WVM #5"
+      ],
+      [
+        "Pure White Gold (Whitehorse Cr)",
+        "polygon",
+        "PURE WHITE GOLD"
+      ],
+      [
+        "Cow Creek Recreational Gold Panning Area",
+        "point",
+        "published site"
+      ]
+    ],
+    "usmin_count": 225,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "gravel pit",
+      "open pit mine or quarry",
+      "quarry"
+    ],
+    "milo_count": 167,
+    "mrds_raw_count": 113,
+    "mrds_kept_after_dedup": 38,
+    "active_claims_count": 207,
+    "active_claims_clipped_to_bbox": 30,
+    "closed_placer_claims_count": 269,
+    "closed_unmatched_to_grid": 4,
+    "density_top_cells": [
+      {
+        "lat": 42.90560848643323,
+        "lon": -123.52545148749213,
+        "count": 26,
+        "decades": {
+          "2020": 26
+        }
+      },
+      {
+        "lat": 42.90949828792346,
+        "lon": -123.47951766841113,
+        "count": 26,
+        "decades": {
+          "2020": 26
+        }
+      },
+      {
+        "lat": 42.975624913257334,
+        "lon": -123.41521032169773,
+        "count": 14,
+        "decades": {
+          "2020": 14
+        }
+      },
+      {
+        "lat": 42.93283709686483,
+        "lon": -123.47951766841113,
+        "count": 13,
+        "decades": {
+          "2020": 13
+        }
+      },
+      {
+        "lat": 42.89393908196255,
+        "lon": -123.49789119604354,
+        "count": 11,
+        "decades": {
+          "2020": 11
+        }
+      },
+      {
+        "lat": 42.90949828792346,
+        "lon": -123.55301177894076,
+        "count": 10,
+        "decades": {
+          "2020": 10
+        }
+      },
+      {
+        "lat": 42.98340451623779,
+        "lon": -123.37846326643292,
+        "count": 10,
+        "decades": {
+          "2020": 10
+        }
+      },
+      {
+        "lat": 42.91338808941369,
+        "lon": -123.54382501512455,
+        "count": 8,
+        "decades": {
+          "2020": 8
+        }
+      },
+      {
+        "lat": 42.92505749388437,
+        "lon": -123.53463825130837,
+        "count": 8,
+        "decades": {
+          "2020": 8
+        }
+      },
+      {
+        "lat": 42.90949828792346,
+        "lon": -123.51626472367595,
+        "count": 8,
+        "decades": {
+          "2020": 8
+        }
+      }
+    ],
+    "land_blm_features": 1,
+    "land_usfs_features": 0,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 25,
+    "open_ground_top10": [
+      {
+        "name": "OPEN-cowcreek-01",
+        "lat": 42.7162386162379,
+        "lon": -123.25757686165443,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-02",
+        "lat": 42.862185,
+        "lon": -123.385877,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-03",
+        "lat": 42.698004,
+        "lon": -123.608403,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-04",
+        "lat": 42.699277,
+        "lon": -123.608766,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-05",
+        "lat": 42.698376,
+        "lon": -123.607984,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-06",
+        "lat": 42.697119,
+        "lon": -123.609107,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-07",
+        "lat": 42.69794,
+        "lon": -123.60989,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-08",
+        "lat": 42.713288,
+        "lon": -123.577453,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-09",
+        "lat": 42.714018,
+        "lon": -123.577058,
+        "type": "Adit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-cowcreek-10",
+        "lat": 42.862566,
+        "lon": -123.384706,
+        "type": "Prospect Pit",
+        "near_claim": false
+      }
+    ],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/cowcreek/cowcreek_onx.gpx",
+        "kml_bytes": 368589,
+        "gpx_bytes": 446301,
+        "feature_count": 692,
+        "layers": [
+          "My claims & public sites",
+          "Historical workings (USMIN)",
+          "Mine & prospect sites (MILO/MRDS, gold)",
+          "Active mining claims (BLM MLRS)",
+          "Past claim density (closed placer, 500m hex)",
+          "Open ground to sample"
+        ]
+      }
+    ]
+  },
+  {
+    "area": "lnf_santiam",
+    "bbox": [
+      -122.62,
+      44.75,
+      -122.4,
+      44.86
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [
+      [
+        "WVM-LNF25 Little North Santiam",
+        "point",
+        "no MLRS polygon available yet"
+      ]
+    ],
+    "usmin_count": 0,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "gravel pit",
+      "quarry"
+    ],
+    "milo_count": 0,
+    "mrds_raw_count": 0,
+    "mrds_kept_after_dedup": 0,
+    "active_claims_count": 5,
+    "active_claims_clipped_to_bbox": 0,
+    "closed_placer_claims_count": 2,
+    "closed_unmatched_to_grid": 0,
+    "density_top_cells": [],
+    "land_blm_features": 1,
+    "land_usfs_features": 0,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 0,
+    "open_ground_top10": [],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_onx.gpx",
+        "kml_bytes": 6090,
+        "gpx_bytes": 5288,
+        "feature_count": 6,
+        "layers": [
+          "My claims & public sites",
+          "Active mining claims (BLM MLRS)"
+        ]
+      }
+    ]
+  },
+  {
+    "area": "quartzville",
+    "bbox": [
+      -122.5,
+      44.48,
+      -122.15,
+      44.68
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [
+      [
+        "WVM #1B Dry Gulch",
+        "polygon",
+        "WVM #1  B"
+      ],
+      [
+        "Cedar Bend Placer",
+        "polygon",
+        "CEDAR BEND"
+      ]
+    ],
+    "usmin_count": 22,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "gravel pit",
+      "quarry"
+    ],
+    "milo_count": 185,
+    "mrds_raw_count": 16,
+    "mrds_kept_after_dedup": 9,
+    "active_claims_count": 50,
+    "active_claims_clipped_to_bbox": 2,
+    "closed_placer_claims_count": 1,
+    "closed_unmatched_to_grid": 0,
+    "density_top_cells": [],
+    "land_blm_features": 1,
+    "land_usfs_features": 1,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 25,
+    "open_ground_top10": [
+      {
+        "name": "OPEN-quartzville-01",
+        "lat": 44.55485597253256,
+        "lon": -122.27590996582218,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-02",
+        "lat": 44.54771,
+        "lon": -122.275014,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-03",
+        "lat": 44.572628,
+        "lon": -122.29176,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-04",
+        "lat": 44.546626,
+        "lon": -122.258089,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-05",
+        "lat": 44.582342,
+        "lon": -122.311554,
+        "type": "Prospect Pit",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-06",
+        "lat": 44.59715051387162,
+        "lon": -122.32156913592453,
+        "type": "unknown",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-07",
+        "lat": 44.59763757246858,
+        "lon": -122.321724289339,
+        "type": "unknown",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-08",
+        "lat": 44.598271706876716,
+        "lon": -122.32139224806997,
+        "type": "unknown",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-09",
+        "lat": 44.59800679680157,
+        "lon": -122.3216490743567,
+        "type": "unknown",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-quartzville-10",
+        "lat": 44.60020974816574,
+        "lon": -122.3192735884159,
+        "type": "unknown",
+        "near_claim": false
+      }
+    ],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/quartzville/quartzville_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/quartzville/quartzville_onx.gpx",
+        "kml_bytes": 115199,
+        "gpx_bytes": 108477,
+        "feature_count": 293,
+        "layers": [
+          "My claims & public sites",
+          "Historical workings (USMIN)",
+          "Mine & prospect sites (MILO/MRDS, gold)",
+          "Active mining claims (BLM MLRS)",
+          "Open ground to sample"
+        ]
+      }
+    ]
+  },
+  {
+    "area": "rogue_applegate",
+    "bbox": [
+      -123.65,
+      42.15,
+      -122.85,
+      42.7
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [],
+    "usmin_count": 754,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "gravel pit",
+      "open pit mine or quarry",
+      "quarry"
+    ],
+    "milo_count": 694,
+    "mrds_raw_count": 586,
+    "mrds_kept_after_dedup": 205,
+    "active_claims_count": 751,
+    "active_claims_clipped_to_bbox": 94,
+    "closed_placer_claims_count": 66,
+    "closed_unmatched_to_grid": 0,
+    "density_top_cells": [
+      {
+        "lat": 42.496192332630294,
+        "lon": -123.63174562635456,
+        "count": 3,
+        "decades": {
+          "2020": 3
+        }
+      },
+      {
+        "lat": 42.64789459074918,
+        "lon": -123.23927659297745,
+        "count": 3,
+        "decades": {
+          "2020": 3
+        }
+      }
+    ],
+    "land_blm_features": 1,
+    "land_usfs_features": 1,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 25,
+    "open_ground_top10": [
+      {
+        "name": "OPEN-rogue_applegate-01",
+        "lat": 42.35449048903563,
+        "lon": -123.21975634572067,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-02",
+        "lat": 42.35467402745099,
+        "lon": -123.21869881623388,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-03",
+        "lat": 42.34722762346872,
+        "lon": -123.21781608547035,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-04",
+        "lat": 42.346773147674845,
+        "lon": -123.21926691066376,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": true
+      },
+      {
+        "name": "OPEN-rogue_applegate-05",
+        "lat": 42.551506628302214,
+        "lon": -123.62536449228637,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-06",
+        "lat": 42.626230716919274,
+        "lon": -123.59702908980137,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-07",
+        "lat": 42.65751348727447,
+        "lon": -123.5223430267163,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-08",
+        "lat": 42.57178635006294,
+        "lon": -123.59869864077336,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-09",
+        "lat": 42.53956487096125,
+        "lon": -123.50647054096916,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-rogue_applegate-10",
+        "lat": 42.36623824231916,
+        "lon": -123.17617996967728,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      }
+    ],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/rogue_applegate/rogue_applegate_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/rogue_applegate/rogue_applegate_onx.gpx",
+        "kml_bytes": 1120042,
+        "gpx_bytes": 1223846,
+        "feature_count": 2431,
+        "layers": [
+          "Historical workings (USMIN)",
+          "Mine & prospect sites (MILO/MRDS, gold)",
+          "Active mining claims (BLM MLRS)",
+          "Past claim density (closed placer, 500m hex)",
+          "Open ground to sample"
+        ]
+      }
+    ]
+  },
+  {
+    "area": "sixes",
+    "bbox": [
+      -124.45,
+      42.75,
+      -124.2,
+      42.88
+    ],
+    "built_at": "2026-09-28",
+    "reference_points": [
+      [
+        "Sixes River Campground (rec mining)",
+        "point",
+        "published site"
+      ]
+    ],
+    "usmin_count": 5,
+    "usmin_dropped_types": [
+      "borrow pit",
+      "gravel pit",
+      "open pit mine or quarry",
+      "quarry"
+    ],
+    "milo_count": 19,
+    "mrds_raw_count": 16,
+    "mrds_kept_after_dedup": 6,
+    "active_claims_count": 34,
+    "active_claims_clipped_to_bbox": 4,
+    "closed_placer_claims_count": 3,
+    "closed_unmatched_to_grid": 0,
+    "density_top_cells": [],
+    "land_blm_features": 1,
+    "land_usfs_features": 1,
+    "nhd_available": true,
+    "nhd_skipped_for_open_ground": false,
+    "open_ground_count": 6,
+    "open_ground_top10": [
+      {
+        "name": "OPEN-sixes-01",
+        "lat": 42.804505197546426,
+        "lon": -124.30431415842925,
+        "type": "placer (heuristic: surface workings)",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-sixes-02",
+        "lat": 42.776237188255024,
+        "lon": -124.2468251937699,
+        "type": "placer",
+        "near_claim": true
+      },
+      {
+        "name": "OPEN-sixes-03",
+        "lat": 42.76873650152214,
+        "lon": -124.24562531048532,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-sixes-04",
+        "lat": 42.80400140944217,
+        "lon": -124.3178956485598,
+        "type": "placer",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-sixes-05",
+        "lat": 42.804526,
+        "lon": -124.304058,
+        "type": "Open Pit Mine",
+        "near_claim": false
+      },
+      {
+        "name": "OPEN-sixes-06",
+        "lat": 42.777036592130365,
+        "lon": -124.20812442986188,
+        "type": "lode",
+        "near_claim": false
+      }
+    ],
+    "files": [
+      {
+        "kml_path": "/home/user/gold-overlays/out/sixes/sixes_onx.kml",
+        "gpx_path": "/home/user/gold-overlays/out/sixes/sixes_onx.gpx",
+        "kml_bytes": 35862,
+        "gpx_bytes": 34577,
+        "feature_count": 71,
+        "layers": [
+          "My claims & public sites",
+          "Historical workings (USMIN)",
+          "Mine & prospect sites (MILO/MRDS, gold)",
+          "Active mining claims (BLM MLRS)",
+          "Open ground to sample"
+        ]
+      }
+    ]
+  }
+]

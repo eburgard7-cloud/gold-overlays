@@ -363,8 +363,9 @@ def main():
                 print(f"  fetching historical topos for {area}...", flush=True)
                 rasters.build_topo_for_area(area, refresh=args.refresh)
 
-    with open(os.path.join(OUT_DIR, "build_summary.json"), "w") as f:
-        json.dump(all_reports, f, indent=2, default=str)
+    if not args.skip_vectors:
+        with open(os.path.join(OUT_DIR, "build_summary.json"), "w") as f:
+            json.dump(all_reports, f, indent=2, default=str)
 
     if any_problems:
         sys.exit(1)

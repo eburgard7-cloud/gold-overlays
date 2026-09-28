@@ -190,13 +190,17 @@ date,area,waypoint,lat,lon,material,pans,colors,est_size,notes
    resolution is ~0.91 m (3 ft, in its native NAD83(HARN)/Oregon Lambert
    projection) -- exported here reprojected to WGS84 at a matching ~1 m/px,
    satisfying the spec's "≤1 m/pixel" ask.
-9. **Rasters kept under 50 MB individually** (each ~2 km tile GeoTIFF is a
-   few MB after DEFLATE compression, GeoPDFs similar after JPEG compression),
-   so no git-lfs tracking is currently needed for a single build. If you
-   regenerate lidar/topo rasters and any individual file exceeds 50 MB, either
-   run `git lfs track "out/**/*.tif" "out/**/*.pdf"` (git-lfs is installed via
-   `apt-get install git-lfs` in this environment) or keep the file out of git
-   and note its regeneration command here instead.
+9. **Rasters are committed as plain git blobs, not git-lfs.** Every file
+   produced here is well under 50 MB (largest lidar GeoTIFF ~2.4 MB after
+   DEFLATE compression, largest topo GeoPDF ~28 MB), so the spec's ">50 MB
+   keep out of git" threshold never triggers for this build's own outputs.
+   git-lfs *is* installed (`apt-get install git-lfs`) and `git lfs track
+   "out/**/*.tif" "out/**/*.pdf"` was tried first, but this environment's
+   egress policy blocks `lfs.github.com` (push fails with 403 Forbidden on
+   every LFS object), so LFS pointers can't actually reach the remote here.
+   If you regenerate rasters somewhere with LFS push access and a file grows
+   past 50 MB, re-run that `git lfs track` command (re-adds `.gitattributes`)
+   before committing it.
 
 ## Repository layout
 
@@ -215,7 +219,67 @@ gold-overlays/
   cache/                   gitignored: raw API responses, so re-runs don't re-hit slow services
 ```
 
-## What worked / what didn't
+## What worked / what didn't (first full build, 2026-09-28)
 
-See the final summary appended after the first full build run below, and
-each area's `out/<area>/README.md` for area-specific gaps.
+**Feature counts per area** (from `out/build_summary.json` / each area's `build_report.json`):
+
+| area | total features | USMIN | MILO gold | MRDS kept | active claims | closed placer | density cells | open ground | claims clipped to bbox |
+|---|---|---|---|---|---|---|---|---|---|
+| bohemia | 1364 | 64 | 1067 | 51 | 147 | 8 | 0 | 25 | 6 |
+| quartzville | 293 | 22 | 185 | 9 | 50 | 1 | 0 | 25 | 2 |
+| calapooia | 343 | 17 | 272 | 7 | 21 | 3 | 0 | 25 | 1 |
+| lnf_santiam | 6 | 0 | 0 | 0 | 5 | 2 | 0 | 0 | 0 |
+| cowcreek | 692 | 225 | 167 | 38 | 207 | 269 | 10 | 25 | 30 |
+| rogue_applegate | 2431 | 754 | 694 | 205 | 751 | 66 | 2 | 25 | 94 |
+| sixes | 71 | 5 | 19 | 6 | 34 | 3 | 0 | 6 | 4 |
+
+All 7 KML/GPX pairs passed verification: every file under the 4 MB / 3000-feature
+onX caps (largest is rogue_applegate at 1.1 MB / 2431 features), KML and GPX
+feature counts match exactly, and (after the bbox-clip fix below) zero
+coordinates fall outside their area's bbox. All three spot-check claims landed
+within a few meters of their expected coordinates (WVM #1B, Cedar Bend, BMOA
+Little Red -- see `gold_overlays/reference_layer.py`'s polygon-lookup path,
+which resolved 16 of 17 club claims to a real BLM MLRS polygon).
+
+**What worked:**
+- Every planned data source was reachable and usable: USGS USMIN/MRDS (WFS),
+  DOGAMI MILO-4 (file gdb download), BLM MLRS active+closed claims, USGS NHD
+  flowlines, DOGAMI lidar ImageServer export, TNM historical topo API, and
+  DOGAMI Bulletin 61 (OCR'd PDF).
+- GDAL's PDF driver burns the claim outline/point in as a real, selectable
+  vector layer on top of each lidar hillshade -- confirmed in a test render.
+- 16 of 17 reference-table claims resolved to their actual BLM MLRS polygon
+  (by legacy serial or Salesforce SF_ID), not just the reference table's point.
+
+**What didn't work cleanly, and how it was handled:**
+- **BLM's generalized SMA "Cached" land-status service 500s on any bbox
+  larger than a few km^2** with `returnGeometry=true` -- switched to the
+  "LimitedScale" service's separate BLM (id 7) / USFS (id 9) layers instead
+  (see README caveat #2).
+- **A whole-bbox NHD flowline pull returns 15,000+ features** for a ~1,000+
+  km^2 forested area and is far too slow -- switched to fetching flowlines in
+  ~1.6 km tiles, shared across nearby candidate points (see caveat #4).
+- **mrdata.usgs.gov's WFS intermittently 502s** regardless of bbox size or
+  result count (observed on quartzville's USMIN query) -- added retry-with-
+  backoff around every `ogr2ogr` WFS call.
+- **A real BLM MLRS data-quality bug**: at least one active claim per area
+  (up to 94/751 in rogue_applegate) has a ring in its geometry that belongs to
+  a mismatched PLSS aliquot tens of km away (visible in its own `QLTY` field's
+  "DOES NOT MATCH PM ANGLES" warnings). Rendering raw esri rings naively
+  (first ring = outer, rest = holes) drew that stray ring as a donut hole far
+  from the real claim. Fixed by clipping every polygon feature to its area's
+  bbox (and, for reference claims, preferring the sub-polygon that actually
+  contains the reference point) before rendering -- see `geo.clip_rings_to_bbox`.
+- **git-lfs can't push from this environment** (egress policy blocks
+  `lfs.github.com`) -- moot here since every raster produced is well under
+  50 MB, so rasters are committed as plain blobs instead (caveat #9).
+- Everything else in the spec's hard constraints and layer list was
+  implementable as specified; deviations that *were* necessary (land-status
+  granularity, open-ground's road-vs-stream tiebreaker, MLRS's missing
+  located-date field, MILO's sparse deposit-type field) are all called out
+  in "Key assumptions" above and repeated in each area's own README.
+
+Not yet done in this build (candidates for a follow-up pass, not blockers):
+withdrawn-area cross-checking against BLM LR2000 case status (see the
+withdrawn-areas caveat above), and a road dataset for open-ground's
+tertiary ranking tiebreaker.
