@@ -105,4 +105,21 @@ SOURCES = {
     "bulletin61": {
         "url": "https://pubs.oregon.gov/dogami/B/B-061.pdf",
     },
+    "nlsdb_case": {
+        "url": "https://gis.blm.gov/nlsdb/rest/services/Mining_Claims/MiningClaims/MapServer/0",
+        "note": (
+            "'Case Feature Layer' -- all mining-claim cases (active, closed, historical) with real "
+            "geometry, joined 1:1 to layer 3 NLSDB_LND_HIST (action-history table) via CSE_OBJECTID. "
+            "Used only to validate closed-claim density plausibility (see build.py "
+            "validate_closed_claim_density()), not as an onX layer source."
+        ),
+    },
+    "ormap_taxlots": {
+        "url": "https://arcgis.oregonexplorer.info/arcgis/rest/services",
+        "note": (
+            "Blocked by this build environment's egress policy (403 on CONNECT) -- private-land "
+            "checks fall back to a point-level BLM SMA 'Cached_with_PriUnk' query instead (see "
+            "gold_overlays/layers.py::_point_land_check), per the spec's documented fallback."
+        ),
+    },
 }

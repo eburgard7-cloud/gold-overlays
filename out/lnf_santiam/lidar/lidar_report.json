@@ -6,6 +6,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/lnf_santiam/lidar/wvm-lnf25-little-north-santiam.tif",
     "pdf": "/home/user/gold-overlays/out/lnf_santiam/lidar/wvm-lnf25-little-north-santiam.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/lnf_santiam/lidar/wvm-lnf25-little-north-santiam_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2359355
   }
 ]

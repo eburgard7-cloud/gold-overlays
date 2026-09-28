@@ -3,53 +3,50 @@
 Bounding box (WGS84 minLon,minLat,maxLon,maxLat): `(-122.55, 44.15, -122.28, 44.32)`
 Built: 2026-09-28
 
+## Legend
+
+| layer | icon | color | style | meaning |
+|---|---|---|---|---|
+| 1_my_claims | Mineral Site (pin) / filled Area | yellow | solid | WVM/BMOA club claims -- ours |
+| 2_public | Location (pin) | black | n/a (points only) | Public gold-panning sites open to anyone |
+| 3_other_claims | Area only, no pins | red | dotted | Other active BLM claims -- don't dig here |
+| 4_history | Mineral Site (placer/tailings/hydraulic) / Location (adit/shaft/pit) | black | n/a (points only) | Deduped historical workings |
+| 5_scout | Location (pin) | red | n/a (points only) | Open-ground candidates worth scouting |
+| 6_access | Line | black | dash/dot | Claim-access route (only where a real source describes one) |
+
+Only confirmed onX icons/colors are used: icons `Mineral Site` / `Location`; colors yellow `rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black `rgba(0,0,0,1)`. Green for confirmed public sites and any other icon/color in `onx_samples/onx_test.gpx` is a GUESS pending `onx_samples/STYLE_RESULTS.md` -- not used until confirmed (see top-level README).
+
+## Import steps (phone)
+
+1. onX app -> **My Content** -> **Import** -> choose one `<area>_<layer>.gpx` file.
+2. After import, select all the newly-imported items -> **Add to folder** -> name it `"calapooia <layer>"` (e.g. `"calapooia 1_my_claims"`).
+3. Repeat per layer file. Each file is small and single-purpose so the folder step stays quick.
+
 ## Output files
-- `calapooia_onx.kml` / `calapooia_onx.gpx` -- 343 features, 106 KB KML / 83 KB GPX
-  - layers: My claims & public sites, Historical workings (USMIN), Mine & prospect sites (MILO/MRDS, gold), Active mining claims (BLM MLRS), Open ground to sample
+- `calapooia_1_my_claims.gpx` (+ `calapooia_1_my_claims.kml` secondary) -- 2 items, 1.5 KB GPX [OK]
+- `calapooia_3_other_claims.gpx` (+ `calapooia_3_other_claims.kml` secondary) -- 20 items, 13.9 KB GPX [OK]
+- `calapooia_4_history.gpx` (+ `calapooia_4_history.kml` secondary) -- 150 items, 35.1 KB GPX [OK]
+- `calapooia_5_scout.gpx` (+ `calapooia_5_scout.kml` secondary) -- 9 items, 2.8 KB GPX [OK]
+- `caltopo_calapooia.geojson` -- CalTopo bundle, 181 features, all layers combined
 
 ## Layer counts
-- My claims & public sites: 1
-- USMIN historical workings: 17 (dropped types: borrow pit, open pit mine or quarry, quarry)
-- MILO-4 gold sites: 272
-- MRDS gold sites (raw / kept after MILO dedup): 15 / 7
-- Active BLM claims (Not Closed): 21
-- Closed placer claims fetched: 3 (unmatched to any 500m hex: 0)
-- Land status polygons fetched: BLM=1, USFS=1
-- NHD service reachable for this area: True
-- Open ground to sample: 25 waypoints
+- 1_my_claims: 2
+- 2_public: 0 (no verified public-corridor extent geometry source in this build -- not rendered rather than invented)
+- 3_other_claims: 20 (excluded as ours: 1, clipped to bbox: 1)
+- 4_history: 150 / 150 cap (raw records: 296, clusters before cap: 169, dropped generic MILO far from USMIN: 0, dropped prospect pits over cap: 0)
+- 5_scout: 9 / 10 cap (candidate pool: 25, NHD stream filter skipped: False, land checks: {'public_confirmed': 9, 'private_dropped': 0, 'unverifiable': 0})
+- 6_access: 0 (no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route)
 
-## My claims & public sites (reference table)
-- **Golden Dollar** -- polygon (GOLDEN DOLLAR)
-
-## Past claim density -- top cells
-
-| lat | lon | total closed placer claims | by decade |
-|---|---|---|---|
-
-## Open ground to sample -- top 10
-
-| waypoint | lat | lon | feature type | near active claim |
-|---|---|---|---|---|
-| OPEN-calapooia-01 | 44.23027 | -122.33201 | placer (heuristic: surface workings) | False |
-| OPEN-calapooia-02 | 44.22626 | -122.33845 | Adit | False |
-| OPEN-calapooia-03 | 44.22455 | -122.35387 | Adit | False |
-| OPEN-calapooia-04 | 44.20581 | -122.37208 | Adit | False |
-| OPEN-calapooia-05 | 44.22885 | -122.34564 | lode | False |
-| OPEN-calapooia-06 | 44.22880 | -122.34552 | lode | False |
-| OPEN-calapooia-07 | 44.22746 | -122.34444 | lode | False |
-| OPEN-calapooia-08 | 44.22803 | -122.34381 | lode | False |
-| OPEN-calapooia-09 | 44.22930 | -122.33016 | lode | False |
-| OPEN-calapooia-10 | 44.23027 | -122.33200 | Open Pit Mine | False |
+## My claims (layer 1) resolution detail
+- **Golden Dollar** -- area+pin (GOLDEN DOLLAR)
 
 ## Caveats specific to this area
-- BLM claim polygons are approximate to the quarter-section; every claim polygon is labeled
-  `[APPROX quarter-section]` in its name and description.
-- 'Closed-claim density' decade buckets use the MLRS `Created` (database record) date as a proxy for
-  located date -- the public feature service does not expose a true located/last-action date.
-- 'Open ground' ranking's final tiebreaker is distance-to-stream, not distance-to-road (no road
-  dataset was fetched in this build).
-- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes);
-  full deposit-type/production detail lives on the per-site page linked in each description.
+- BLM claim polygons are approximate to the quarter-section (not drawn from a legal survey).
+- Layer 1 'directions' field: no club handbook source exists in this repo, so it reads 'not available' rather than being invented.
+- Layer 2 public-corridor Areas are skipped (no verified extent-polygon source) -- only point pins are rendered for public sites.
+- Layer 5 scout candidates' final tiebreaker is distance-to-stream, not distance-to-road (no road dataset fetched in this build).
+- Layer 6 access routes: skipped, no handbook/directions source data exists in this repo.
+- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes).
 
 ## DOGAMI Bulletin 61 notes
 

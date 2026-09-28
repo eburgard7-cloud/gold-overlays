@@ -3,54 +3,48 @@
 Bounding box (WGS84 minLon,minLat,maxLon,maxLat): `(-123.65, 42.15, -122.85, 42.7)`
 Built: 2026-09-28
 
+## Legend
+
+| layer | icon | color | style | meaning |
+|---|---|---|---|---|
+| 1_my_claims | Mineral Site (pin) / filled Area | yellow | solid | WVM/BMOA club claims -- ours |
+| 2_public | Location (pin) | black | n/a (points only) | Public gold-panning sites open to anyone |
+| 3_other_claims | Area only, no pins | red | dotted | Other active BLM claims -- don't dig here |
+| 4_history | Mineral Site (placer/tailings/hydraulic) / Location (adit/shaft/pit) | black | n/a (points only) | Deduped historical workings |
+| 5_scout | Location (pin) | red | n/a (points only) | Open-ground candidates worth scouting |
+| 6_access | Line | black | dash/dot | Claim-access route (only where a real source describes one) |
+
+Only confirmed onX icons/colors are used: icons `Mineral Site` / `Location`; colors yellow `rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black `rgba(0,0,0,1)`. Green for confirmed public sites and any other icon/color in `onx_samples/onx_test.gpx` is a GUESS pending `onx_samples/STYLE_RESULTS.md` -- not used until confirmed (see top-level README).
+
+## Import steps (phone)
+
+1. onX app -> **My Content** -> **Import** -> choose one `<area>_<layer>.gpx` file.
+2. After import, select all the newly-imported items -> **Add to folder** -> name it `"rogue_applegate <layer>"` (e.g. `"rogue_applegate 1_my_claims"`).
+3. Repeat per layer file. Each file is small and single-purpose so the folder step stays quick.
+
 ## Output files
-- `rogue_applegate_onx.kml` / `rogue_applegate_onx.gpx` -- 2431 features, 1094 KB KML / 1195 KB GPX
-  - layers: Historical workings (USMIN), Mine & prospect sites (MILO/MRDS, gold), Active mining claims (BLM MLRS), Past claim density (closed placer, 500m hex), Open ground to sample
+- `rogue_applegate_3_other_claims.gpx` (+ `rogue_applegate_3_other_claims.kml` secondary) -- 751 items, 592.7 KB GPX [OK]
+- `rogue_applegate_4_history.gpx` (+ `rogue_applegate_4_history.kml` secondary) -- 150 items, 35.7 KB GPX [OK]
+- `rogue_applegate_5_scout.gpx` (+ `rogue_applegate_5_scout.kml` secondary) -- 10 items, 3.1 KB GPX [OK]
+- `caltopo_rogue_applegate.geojson` -- CalTopo bundle, 911 features, all layers combined
 
 ## Layer counts
-- My claims & public sites: 0
-- USMIN historical workings: 754 (dropped types: borrow pit, gravel pit, open pit mine or quarry, quarry)
-- MILO-4 gold sites: 694
-- MRDS gold sites (raw / kept after MILO dedup): 586 / 205
-- Active BLM claims (Not Closed): 751
-- Closed placer claims fetched: 66 (unmatched to any 500m hex: 0)
-- Land status polygons fetched: BLM=1, USFS=1
-- NHD service reachable for this area: True
-- Open ground to sample: 25 waypoints
+- 1_my_claims: 0
+- 2_public: 0 (no verified public-corridor extent geometry source in this build -- not rendered rather than invented)
+- 3_other_claims: 751 (excluded as ours: 0, clipped to bbox: 94)
+- 4_history: 150 / 150 cap (raw records: 1653, clusters before cap: 942, dropped generic MILO far from USMIN: 0, dropped prospect pits over cap: 126)
+- 5_scout: 10 / 10 cap (candidate pool: 25, NHD stream filter skipped: False, land checks: {'public_confirmed': 10, 'private_dropped': 0, 'unverifiable': 0})
+- 6_access: 0 (no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route)
 
-## My claims & public sites (reference table)
-
-## Past claim density -- top cells
-
-| lat | lon | total closed placer claims | by decade |
-|---|---|---|---|
-| 42.4962 | -123.6317 | 3 | 2020s:3 |
-| 42.6479 | -123.2393 | 3 | 2020s:3 |
-
-## Open ground to sample -- top 10
-
-| waypoint | lat | lon | feature type | near active claim |
-|---|---|---|---|---|
-| OPEN-rogue_applegate-01 | 42.35449 | -123.21976 | placer (heuristic: surface workings) | False |
-| OPEN-rogue_applegate-02 | 42.35467 | -123.21870 | placer (heuristic: surface workings) | False |
-| OPEN-rogue_applegate-03 | 42.34723 | -123.21782 | placer (heuristic: surface workings) | False |
-| OPEN-rogue_applegate-04 | 42.34677 | -123.21927 | placer (heuristic: surface workings) | True |
-| OPEN-rogue_applegate-05 | 42.55151 | -123.62536 | placer | False |
-| OPEN-rogue_applegate-06 | 42.62623 | -123.59703 | placer | False |
-| OPEN-rogue_applegate-07 | 42.65751 | -123.52234 | placer | False |
-| OPEN-rogue_applegate-08 | 42.57179 | -123.59870 | placer | False |
-| OPEN-rogue_applegate-09 | 42.53956 | -123.50647 | placer | False |
-| OPEN-rogue_applegate-10 | 42.36624 | -123.17618 | placer (heuristic: surface workings) | False |
+## My claims (layer 1) resolution detail
 
 ## Caveats specific to this area
-- BLM claim polygons are approximate to the quarter-section; every claim polygon is labeled
-  `[APPROX quarter-section]` in its name and description.
-- 'Closed-claim density' decade buckets use the MLRS `Created` (database record) date as a proxy for
-  located date -- the public feature service does not expose a true located/last-action date.
-- 'Open ground' ranking's final tiebreaker is distance-to-stream, not distance-to-road (no road
-  dataset was fetched in this build).
-- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes);
-  full deposit-type/production detail lives on the per-site page linked in each description.
+- BLM claim polygons are approximate to the quarter-section (not drawn from a legal survey).
+- Layer 1 'directions' field: no club handbook source exists in this repo, so it reads 'not available' rather than being invented.
+- Layer 2 public-corridor Areas are skipped (no verified extent-polygon source) -- only point pins are rendered for public sites.
+- Layer 5 scout candidates' final tiebreaker is distance-to-stream, not distance-to-road (no road dataset fetched in this build).
+- Layer 6 access routes: skipped, no handbook/directions source data exists in this repo.
+- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes).
 
 ## DOGAMI Bulletin 61 notes
 

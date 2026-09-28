@@ -7,14 +7,8 @@
     44.86
   ],
   "built_at": "2026-09-28",
-  "reference_points": [
-    [
-      "WVM-LNF25 Little North Santiam",
-      "point",
-      "no MLRS polygon available yet"
-    ]
-  ],
-  "usmin_count": 0,
+  "usmin_points": 0,
+  "usmin_polygons": 0,
   "usmin_dropped_types": [
     "borrow pit",
     "gravel pit",
@@ -23,28 +17,73 @@
   "milo_count": 0,
   "mrds_raw_count": 0,
   "mrds_kept_after_dedup": 0,
-  "active_claims_count": 5,
-  "active_claims_clipped_to_bbox": 0,
-  "closed_placer_claims_count": 2,
-  "closed_unmatched_to_grid": 0,
-  "density_top_cells": [],
+  "active_claims_raw_count": 5,
   "land_blm_features": 1,
   "land_usfs_features": 0,
   "nhd_available": true,
-  "nhd_skipped_for_open_ground": false,
-  "open_ground_count": 0,
-  "open_ground_top10": [],
+  "layer1_my_claims": {
+    "count": 1,
+    "lookups": [
+      [
+        "WVM-LNF25 Little North Santiam",
+        "pin-only",
+        "no MLRS polygon"
+      ]
+    ]
+  },
+  "layer2_public": {
+    "count": 0,
+    "corridor_areas_skipped": "no verified public-corridor extent geometry source in this build -- not rendered rather than invented"
+  },
+  "layer3_other_claims": {
+    "count": 5,
+    "clipped_to_bbox": 0,
+    "excluded_as_my_claims": 0
+  },
+  "layer4_history": {
+    "raw_records": 0,
+    "clusters_before_cap": 0,
+    "dropped_generic_milo_far_from_usmin": 0,
+    "dropped_prospect_pits_over_cap": 0,
+    "final_count": 0,
+    "max_allowed": 150
+  },
+  "layer5_scout": {
+    "count": 0,
+    "nhd_skipped": false,
+    "candidate_pool": 0,
+    "land_checks": {
+      "public_confirmed": 0,
+      "private_dropped": 0,
+      "unverifiable": 0
+    }
+  },
+  "layer6_access": {
+    "count": 0,
+    "reason": "no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route"
+  },
   "files": [
     {
-      "kml_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_onx.kml",
-      "gpx_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_onx.gpx",
-      "kml_bytes": 6090,
-      "gpx_bytes": 5288,
-      "feature_count": 6,
-      "layers": [
-        "My claims & public sites",
-        "Active mining claims (BLM MLRS)"
-      ]
+      "layer": "1_my_claims",
+      "gpx_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_1_my_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_1_my_claims.kml",
+      "item_count": 1,
+      "gpx_bytes": 743,
+      "kml_bytes": 762,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "3_other_claims",
+      "gpx_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_3_other_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_3_other_claims.kml",
+      "item_count": 5,
+      "gpx_bytes": 4534,
+      "kml_bytes": 4148,
+      "under_4mb": true,
+      "under_3000_items": true
     }
-  ]
+  ],
+  "caltopo_path": "/home/user/gold-overlays/out/lnf_santiam/caltopo_lnf_santiam.geojson",
+  "caltopo_feature_count": 6
 }

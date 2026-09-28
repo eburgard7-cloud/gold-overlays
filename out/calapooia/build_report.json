@@ -7,14 +7,8 @@
     44.32
   ],
   "built_at": "2026-09-28",
-  "reference_points": [
-    [
-      "Golden Dollar",
-      "polygon",
-      "GOLDEN DOLLAR"
-    ]
-  ],
-  "usmin_count": 17,
+  "usmin_points": 17,
+  "usmin_polygons": 0,
   "usmin_dropped_types": [
     "borrow pit",
     "open pit mine or quarry",
@@ -23,102 +17,93 @@
   "milo_count": 272,
   "mrds_raw_count": 15,
   "mrds_kept_after_dedup": 7,
-  "active_claims_count": 21,
-  "active_claims_clipped_to_bbox": 1,
-  "closed_placer_claims_count": 3,
-  "closed_unmatched_to_grid": 0,
-  "density_top_cells": [],
+  "active_claims_raw_count": 21,
   "land_blm_features": 1,
   "land_usfs_features": 1,
   "nhd_available": true,
-  "nhd_skipped_for_open_ground": false,
-  "open_ground_count": 25,
-  "open_ground_top10": [
-    {
-      "name": "OPEN-calapooia-01",
-      "lat": 44.23027495745254,
-      "lon": -122.33201390280276,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-02",
-      "lat": 44.226261,
-      "lon": -122.33845,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-03",
-      "lat": 44.224547,
-      "lon": -122.353866,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-04",
-      "lat": 44.205812,
-      "lon": -122.372081,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-05",
-      "lat": 44.228850475131004,
-      "lon": -122.34563758079679,
-      "type": "lode",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-06",
-      "lat": 44.2287975303573,
-      "lon": -122.34551591885159,
-      "type": "lode",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-07",
-      "lat": 44.2274617117575,
-      "lon": -122.34444378353507,
-      "type": "lode",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-08",
-      "lat": 44.228031753273385,
-      "lon": -122.34381222363956,
-      "type": "lode",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-09",
-      "lat": 44.22929581954335,
-      "lon": -122.33016357630015,
-      "type": "lode",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-calapooia-10",
-      "lat": 44.230269,
-      "lon": -122.332,
-      "type": "Open Pit Mine",
-      "near_claim": false
+  "layer1_my_claims": {
+    "count": 2,
+    "lookups": [
+      [
+        "Golden Dollar",
+        "area+pin",
+        "GOLDEN DOLLAR"
+      ]
+    ]
+  },
+  "layer2_public": {
+    "count": 0,
+    "corridor_areas_skipped": "no verified public-corridor extent geometry source in this build -- not rendered rather than invented"
+  },
+  "layer3_other_claims": {
+    "count": 20,
+    "clipped_to_bbox": 1,
+    "excluded_as_my_claims": 1
+  },
+  "layer4_history": {
+    "raw_records": 296,
+    "clusters_before_cap": 169,
+    "dropped_generic_milo_far_from_usmin": 0,
+    "dropped_prospect_pits_over_cap": 0,
+    "final_count": 150,
+    "max_allowed": 150
+  },
+  "layer5_scout": {
+    "count": 9,
+    "nhd_skipped": false,
+    "candidate_pool": 25,
+    "land_checks": {
+      "public_confirmed": 9,
+      "private_dropped": 0,
+      "unverifiable": 0
     }
-  ],
+  },
+  "layer6_access": {
+    "count": 0,
+    "reason": "no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route"
+  },
   "files": [
     {
-      "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_onx.kml",
-      "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_onx.gpx",
-      "kml_bytes": 108143,
-      "gpx_bytes": 85269,
-      "feature_count": 343,
-      "layers": [
-        "My claims & public sites",
-        "Historical workings (USMIN)",
-        "Mine & prospect sites (MILO/MRDS, gold)",
-        "Active mining claims (BLM MLRS)",
-        "Open ground to sample"
-      ]
+      "layer": "1_my_claims",
+      "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_1_my_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_1_my_claims.kml",
+      "item_count": 2,
+      "gpx_bytes": 1498,
+      "kml_bytes": 1527,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "3_other_claims",
+      "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_3_other_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_3_other_claims.kml",
+      "item_count": 20,
+      "gpx_bytes": 14257,
+      "kml_bytes": 14644,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "4_history",
+      "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_4_history.gpx",
+      "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_4_history.kml",
+      "item_count": 150,
+      "gpx_bytes": 35911,
+      "kml_bytes": 34345,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "5_scout",
+      "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_5_scout.gpx",
+      "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_5_scout.kml",
+      "item_count": 9,
+      "gpx_bytes": 2851,
+      "kml_bytes": 2767,
+      "under_4mb": true,
+      "under_3000_items": true
     }
-  ]
+  ],
+  "caltopo_path": "/home/user/gold-overlays/out/calapooia/caltopo_calapooia.geojson",
+  "caltopo_feature_count": 181
 }

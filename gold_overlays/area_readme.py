@@ -1,6 +1,28 @@
 """Generates out/<area>/README.md from a build_area() report dict."""
 import os
 
+LAYER_LEGEND = [
+    ("1_my_claims", "Mineral Site (pin) / filled Area", "yellow", "solid",
+     "WVM/BMOA club claims -- ours"),
+    ("2_public", "Location (pin)", "black", "n/a (points only)",
+     "Public gold-panning sites open to anyone"),
+    ("3_other_claims", "Area only, no pins", "red", "dotted",
+     "Other active BLM claims -- don't dig here"),
+    ("4_history", "Mineral Site (placer/tailings/hydraulic) / Location (adit/shaft/pit)", "black", "n/a (points only)",
+     "Deduped historical workings"),
+    ("5_scout", "Location (pin)", "red", "n/a (points only)",
+     "Open-ground candidates worth scouting"),
+    ("6_access", "Line", "black", "dash/dot",
+     "Claim-access route (only where a real source describes one)"),
+]
+
+
+def _legend_table():
+    lines = ["| layer | icon | color | style | meaning |", "|---|---|---|---|---|"]
+    for key, icon, color, style, meaning in LAYER_LEGEND:
+        lines.append(f"| {key} | {icon} | {color} | {style} | {meaning} |")
+    return lines
+
 
 def write_area_readme(report, out_dir, bulletin_notes=""):
     area = report["area"]
@@ -12,61 +34,77 @@ def write_area_readme(report, out_dir, bulletin_notes=""):
     lines.append(f"Built: {report['built_at']}")
     lines.append("")
 
+    lines.append("## Legend")
+    lines.append("")
+    lines.extend(_legend_table())
+    lines.append("")
+    lines.append(
+        "Only confirmed onX icons/colors are used: icons `Mineral Site` / `Location`; colors yellow "
+        "`rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black `rgba(0,0,0,1)`. Green for confirmed public "
+        "sites and any other icon/color in `onx_samples/onx_test.gpx` is a GUESS pending "
+        "`onx_samples/STYLE_RESULTS.md` -- not used until confirmed (see top-level README)."
+    )
+    lines.append("")
+
+    lines.append("## Import steps (phone)")
+    lines.append("")
+    lines.append("1. onX app -> **My Content** -> **Import** -> choose one `<area>_<layer>.gpx` file.")
+    lines.append("2. After import, select all the newly-imported items -> **Add to folder** -> "
+                 f'name it `"{area} <layer>"` (e.g. `"{area} 1_my_claims"`).')
+    lines.append("3. Repeat per layer file. Each file is small and single-purpose so the folder step stays quick.")
+    lines.append("")
+
     lines.append("## Output files")
     for fr in report["files"]:
-        lines.append(f"- `{os.path.basename(fr['kml_path'])}` / `{os.path.basename(fr['gpx_path'])}` -- "
-                     f"{fr['feature_count']} features, {fr['kml_bytes']/1024:.0f} KB KML / {fr['gpx_bytes']/1024:.0f} KB GPX")
-        lines.append(f"  - layers: {', '.join(fr['layers'])}")
+        ok = "OK" if (fr["under_4mb"] and fr["under_3000_items"]) else "OVER LIMIT"
+        lines.append(
+            f"- `{os.path.basename(fr['gpx_path'])}` (+ `{os.path.basename(fr['kml_path'])}` secondary) -- "
+            f"{fr['item_count']} items, {fr['gpx_bytes']/1024:.1f} KB GPX [{ok}]"
+        )
+    if report.get("caltopo_path"):
+        lines.append(f"- `{os.path.basename(report['caltopo_path'])}` -- CalTopo bundle, "
+                     f"{report['caltopo_feature_count']} features, all layers combined")
     lines.append("")
 
     lines.append("## Layer counts")
-    lines.append(f"- My claims & public sites: {len(report['reference_points'])}")
-    lines.append(f"- USMIN historical workings: {report['usmin_count']} (dropped types: {', '.join(report['usmin_dropped_types']) or 'none'})")
-    lines.append(f"- MILO-4 gold sites: {report['milo_count']}")
-    lines.append(f"- MRDS gold sites (raw / kept after MILO dedup): {report['mrds_raw_count']} / {report['mrds_kept_after_dedup']}")
-    lines.append(f"- Active BLM claims (Not Closed): {report['active_claims_count']}")
-    lines.append(f"- Closed placer claims fetched: {report['closed_placer_claims_count']} "
-                 f"(unmatched to any 500m hex: {report['closed_unmatched_to_grid']})")
-    lines.append(f"- Land status polygons fetched: BLM={report['land_blm_features']}, USFS={report['land_usfs_features']}")
-    lines.append(f"- NHD service reachable for this area: {report['nhd_available']}"
-                 + (" -- 150m stream filter SKIPPED for open ground" if report.get('nhd_skipped_for_open_ground') else ""))
-    lines.append(f"- Open ground to sample: {report['open_ground_count']} waypoints")
+    lines.append(f"- 1_my_claims: {report['layer1_my_claims']['count']}")
+    lines.append(f"- 2_public: {report['layer2_public']['count']} ({report['layer2_public']['corridor_areas_skipped']})")
+    lines.append(f"- 3_other_claims: {report['layer3_other_claims']['count']} "
+                 f"(excluded as ours: {report['layer3_other_claims']['excluded_as_my_claims']}, "
+                 f"clipped to bbox: {report['layer3_other_claims']['clipped_to_bbox']})")
+    l4 = report["layer4_history"]
+    lines.append(f"- 4_history: {l4['final_count']} / {l4['max_allowed']} cap "
+                 f"(raw records: {l4['raw_records']}, clusters before cap: {l4['clusters_before_cap']}, "
+                 f"dropped generic MILO far from USMIN: {l4['dropped_generic_milo_far_from_usmin']}, "
+                 f"dropped prospect pits over cap: {l4['dropped_prospect_pits_over_cap']})")
+    l5 = report["layer5_scout"]
+    lines.append(f"- 5_scout: {l5['count']} / 10 cap (candidate pool: {l5['candidate_pool']}, "
+                 f"NHD stream filter skipped: {l5['nhd_skipped']}, land checks: {l5['land_checks']})")
+    lines.append(f"- 6_access: {report['layer6_access']['count']} ({report['layer6_access']['reason']})")
     lines.append("")
 
-    lines.append("## My claims & public sites (reference table)")
-    for name, kind, note in report["reference_points"]:
+    lines.append("## My claims (layer 1) resolution detail")
+    for name, kind, note in report["layer1_my_claims"]["lookups"]:
         lines.append(f"- **{name}** -- {kind} ({note})")
     lines.append("")
 
-    lines.append("## Past claim density -- top cells")
-    lines.append("")
-    lines.append("| lat | lon | total closed placer claims | by decade |")
-    lines.append("|---|---|---|---|")
-    for cell in report["density_top_cells"]:
-        decades = ", ".join(f"{d}s:{n}" for d, n in sorted(cell["decades"].items(), key=lambda kv: (kv[0] is None, kv[0])))
-        lines.append(f"| {cell['lat']:.4f} | {cell['lon']:.4f} | {cell['count']} | {decades} |")
-    lines.append("")
-
-    lines.append("## Open ground to sample -- top 10")
-    lines.append("")
-    lines.append("| waypoint | lat | lon | feature type | near active claim |")
-    lines.append("|---|---|---|---|---|")
-    for c in report["open_ground_top10"]:
-        lines.append(f"| {c['name']} | {c['lat']:.5f} | {c['lon']:.5f} | {c['type']} | {c['near_claim']} |")
-    lines.append("")
-
     lines.append("## Caveats specific to this area")
-    lines.append("- BLM claim polygons are approximate to the quarter-section; every claim polygon is labeled")
-    lines.append("  `[APPROX quarter-section]` in its name and description.")
-    lines.append("- 'Closed-claim density' decade buckets use the MLRS `Created` (database record) date as a proxy for")
-    lines.append("  located date -- the public feature service does not expose a true located/last-action date.")
-    lines.append("- 'Open ground' ranking's final tiebreaker is distance-to-stream, not distance-to-road (no road")
-    lines.append("  dataset was fetched in this build).")
-    if report.get("nhd_skipped_for_open_ground"):
-        lines.append("- **NHD flowline service was unreachable for this area** -- the 150m stream-proximity filter was")
-        lines.append("  skipped for layer F; treat 'open ground' candidates here as unfiltered by stream distance.")
-    lines.append("- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes);")
-    lines.append("  full deposit-type/production detail lives on the per-site page linked in each description.")
+    lines.append("- BLM claim polygons are approximate to the quarter-section (not drawn from a legal survey).")
+    lines.append("- Layer 1 'directions' field: no club handbook source exists in this repo, so it reads "
+                 "'not available' rather than being invented.")
+    lines.append("- Layer 2 public-corridor Areas are skipped (no verified extent-polygon source) -- only "
+                 "point pins are rendered for public sites.")
+    lines.append("- Layer 5 scout candidates' final tiebreaker is distance-to-stream, not distance-to-road "
+                 "(no road dataset fetched in this build).")
+    if report["layer5_scout"]["nhd_skipped"]:
+        lines.append("- **NHD flowline service was unreachable for this area** -- the 150m stream-proximity "
+                      "filter was skipped for layer 5; treat scout candidates here as unfiltered by stream distance.")
+    lc = report["layer5_scout"]["land_checks"]
+    if lc.get("unverifiable"):
+        lines.append(f"- {lc['unverifiable']} scout candidate(s) could not be re-verified against BLM SMA "
+                      "point-level land status (service error) -- flagged '(check owner)' in their description.")
+    lines.append("- Layer 6 access routes: skipped, no handbook/directions source data exists in this repo.")
+    lines.append("- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes).")
     lines.append("")
 
     if bulletin_notes:

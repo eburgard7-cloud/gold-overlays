@@ -6,6 +6,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-war-eagle-iii.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-war-eagle-iii.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-war-eagle-iii_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2191968
   },
   {
@@ -15,6 +17,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-westside.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-westside.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-westside_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2252090
   },
   {
@@ -24,6 +28,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-y-not.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-y-not.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-y-not_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2291125
   },
   {
@@ -33,6 +39,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-placer-claim.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-placer-claim.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-placer-claim_overlay.gpkg",
+    "overlay_feature_count": 13,
     "tif_bytes": 2374654
   },
   {
@@ -43,6 +51,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-little-red.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-little-red.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-little-red_overlay.gpkg",
+    "overlay_feature_count": 4,
     "tif_bytes": 2317180
   },
   {
@@ -52,6 +62,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-argentite.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-argentite.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-argentite_overlay.gpkg",
+    "overlay_feature_count": 4,
     "tif_bytes": 2323162
   },
   {
@@ -61,6 +73,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-exodus.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-exodus.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-exodus_overlay.gpkg",
+    "overlay_feature_count": 4,
     "tif_bytes": 2338190
   },
   {
@@ -70,6 +84,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-4-aces.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-4-aces.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-4-aces_overlay.gpkg",
+    "overlay_feature_count": 9,
     "tif_bytes": 2307865
   },
   {
@@ -79,6 +95,8 @@
     "status": "ok",
     "tif": "/home/user/gold-overlays/out/bohemia/lidar/cedar-creek-campground-brice-cr.tif",
     "pdf": "/home/user/gold-overlays/out/bohemia/lidar/cedar-creek-campground-brice-cr.pdf",
+    "overlay_gpkg": "/home/user/gold-overlays/out/bohemia/lidar/cedar-creek-campground-brice-cr_overlay.gpkg",
+    "overlay_feature_count": 1,
     "tif_bytes": 2412528
   }
 ]

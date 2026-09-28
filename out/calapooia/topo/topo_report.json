@@ -2,15 +2,13 @@
   {
     "scale": "15 x 15",
     "title": "USGS 1:62500-scale Quadrangle for Leaburg, OR 1951",
-    "status": "downloaded",
-    "path": "/home/user/gold-overlays/out/calapooia/topo/USGS_1_62500_scale_Quadrangle_for_Leaburg_OR_1951.pdf",
-    "bytes": 11015616
+    "status": "cached",
+    "path": "/home/user/gold-overlays/out/calapooia/topo/USGS_1_62500_scale_Quadrangle_for_Leaburg_OR_1951.pdf"
   },
   {
     "scale": "7.5 x 7.5",
     "title": "USGS 1:24000-scale Quadrangle for Farmers Butte, OR 1988",
-    "status": "downloaded",
-    "path": "/home/user/gold-overlays/out/calapooia/topo/USGS_1_24000_scale_Quadrangle_for_Farmers_Butte_OR_1988.pdf",
-    "bytes": 17749394
+    "status": "cached",
+    "path": "/home/user/gold-overlays/out/calapooia/topo/USGS_1_24000_scale_Quadrangle_for_Farmers_Butte_OR_1988.pdf"
   }
 ]

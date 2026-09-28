@@ -1,27 +1,26 @@
 #!/usr/bin/env python3
-"""Build onX-ready KML/GPX gold-prospecting overlays for one or all areas.
+"""Build onX-ready per-layer GPX/KML overlays (+ CalTopo GeoJSON bundle) for
+one or all gold-prospecting areas.
 
 Usage:
     python build.py --area bohemia
     python build.py --area all
     python build.py --area all --refresh      # bypass the on-disk cache
-    python build.py --check-bboxes            # NHD creek-coverage sanity check only
+    python build.py --validate-density        # one-time NLSDB density check (task step 3)
 """
 import argparse
 import datetime
 import json
-import math
 import os
 import sys
-from collections import Counter, defaultdict
-
-from shapely.geometry import Point, shape as shp_shape
+import xml.etree.ElementTree as ET
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from gold_overlays.config import AREAS, AREA_LABELS, SOURCES, REFERENCE_POINTS
-from gold_overlays import geo, render, reference_layer, open_ground
-from gold_overlays.sources import usmin, mrds, milo, blm_claims, land_status, nhd, lidar, topo
+from gold_overlays.config import AREAS, AREA_LABELS, SOURCES
+from gold_overlays import geo, layers, render_layers, caltopo
+from gold_overlays.http import cached_get_json
+from gold_overlays.sources import usmin, mrds, milo, blm_claims, land_status, nhd
 from gold_overlays.area_readme import write_area_readme
 try:
     from gold_overlays.bulletin_notes import NOTES as BULLETIN_NOTES
@@ -31,201 +30,50 @@ except ImportError:
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 TODAY = datetime.date.today().isoformat()
 
-
-def clip300(s):
-    s = s or ""
-    return s if len(s) <= 300 else s[:299] + "…"
-
-
-# ---------------------------------------------------------------- USMIN ----
-def build_usmin_features(bbox, refresh):
-    pts, dropped_pt_types = usmin.fetch_points(bbox, refresh)
-    polys, dropped_poly_types = usmin.fetch_polygons(bbox, refresh)
-    features = []
-    for p in pts:
-        desc = clip300(f"USMIN {p['ftr_type']} | topo: {p['topo_name']} ({p['topo_date']}) 1:{p['topo_scale']} | src: USGS USMIN")
-        features.append({
-            "type": "point", "name": p["ftr_type"] or "USMIN feature",
-            "description": desc, "style": "usmin", "coords": (p["lon"], p["lat"]),
-        })
-    for p in polys:
-        clipped_rings, _ = geo.clip_rings_to_bbox(p["rings"], bbox)
-        if clipped_rings is None:
-            continue
-        desc = clip300(f"USMIN {p['ftr_type']} | topo: {p['topo_name']} ({p['topo_date']}) 1:{p['topo_scale']} | src: USGS USMIN")
-        features.append({
-            "type": "polygon", "name": p["ftr_type"] or "USMIN feature",
-            "description": desc, "style": "usmin_polygon", "coords": clipped_rings,
-        })
-    dropped = dropped_pt_types | dropped_poly_types
-    return features, pts, polys, dropped
+LAYER_TITLES = {
+    "1_my_claims": "My claims",
+    "2_public": "Public panning sites",
+    "3_other_claims": "Other active claims",
+    "4_history": "Historical sites",
+    "5_scout": "Scout candidates",
+    "6_access": "Access routes",
+}
 
 
-# ------------------------------------------------------------ MILO/MRDS ----
-def _norm_name(s):
-    return "".join(ch for ch in (s or "").lower() if ch.isalnum())
+def _remove_old_combined_outputs(out_dir, area_name):
+    for ext in ("kml", "gpx"):
+        for suffix in ("", "_part2", "_part3", "_part4"):
+            p = os.path.join(out_dir, f"{area_name}_onx{suffix}.{ext}")
+            if os.path.exists(p):
+                os.remove(p)
 
 
-def build_milo_mrds_features(bbox, refresh):
-    milo_sites = milo.fetch_gold_sites(bbox, refresh)
-    mrds_sites = mrds.fetch_gold_sites(bbox, refresh)
-
-    milo_by_name = defaultdict(list)
-    for s in milo_sites:
-        milo_by_name[_norm_name(s["site_name"])].append(s)
-
-    kept_mrds = []
-    for m in mrds_sites:
-        dup = False
-        for s in milo_by_name.get(_norm_name(m["site_name"]), []):
-            if geo.point_distance_m(m["lon"], m["lat"], s["lon"], s["lat"]) <= 250:
-                dup = True
-                break
-        if not dup:
-            kept_mrds.append(m)
-
-    features = []
-    combined_points = []
-    for s in milo_sites:
-        desc = clip300(
-            f"MILO gold | {s['commodity']} | {s['deposit_class']} | "
-            f"discovered {s['year_discovery'] or '?'} | prod started {s['year_production'] or '?'} | "
-            f"size: {s['product_size'] or 'n/a'} | src: DOGAMI MILO-4 {s['milo_id'] or ''}"
-        )
-        features.append({
-            "type": "point", "name": s["site_name"], "description": desc,
-            "style": "milo_gold", "coords": (s["lon"], s["lat"]),
-        })
-        s2 = dict(s)
-        s2["_source"] = "MILO"
-        combined_points.append(s2)
-    for m in kept_mrds:
-        desc = clip300(f"MRDS gold occurrence | status: {m['dev_stat']} | commodities: {m['code_list']} | src: {m['url']}")
-        features.append({
-            "type": "point", "name": m["site_name"] or "MRDS site", "description": desc,
-            "style": "site_other", "coords": (m["lon"], m["lat"]),
-        })
-        m2 = dict(m)
-        m2["_source"] = "MRDS"
-        m2["deposit_class"] = m.get("dev_stat")
-        combined_points.append(m2)
-    return features, combined_points, len(milo_sites), len(mrds_sites), len(kept_mrds)
-
-
-# ------------------------------------------------------------- Claims C ----
-def build_active_claims_features(bbox, refresh):
-    claims = blm_claims.fetch_active(bbox, refresh)
-    features = []
-    n_clipped = 0
-    for c in claims:
-        if not c["rings"]:
-            continue
-        clipped_rings, was_clipped = geo.clip_rings_to_bbox(c["rings"], bbox)
-        if clipped_rings is None:
-            continue
-        if was_clipped:
-            n_clipped += 1
-        desc = clip300(
-            f"{c['case_type']} | serial {c['legacy_serial'] or c['serial']} | {c['acres']} ac | "
-            f"{c['disposition']} | qtr-sec {c['quarter_section']} | recorded~{c['created_year']} "
-            f"(DB date, not legal located date) | src: BLM MLRS Not Closed | APPROX (BLM quarter-section)"
-        )
-        features.append({
-            "type": "polygon",
-            "name": f"{c['name']} [APPROX quarter-section]",
-            "description": desc,
-            "style": "active_claim",
-            "coords": clipped_rings,
-        })
-    return features, claims, n_clipped
-
-
-# ------------------------------------------------------------- Density D ----
-def build_closed_density_features(bbox, refresh):
-    claims = blm_claims.fetch_closed_placer(bbox, refresh)
-    hexes = geo.make_hex_grid(bbox, cell_size_m=500)
-    from shapely.prepared import prep
-    from shapely.strtree import STRtree
-    hex_prep = [prep(h) for h in hexes]
-    hex_tree = STRtree(hexes)
-
-    cell_counts = [0] * len(hexes)
-    cell_decades = [Counter() for _ in hexes]
-    unmatched = 0
-    for c in claims:
-        if not c["rings"]:
-            continue
-        poly = geo.esri_rings_to_polygon(c["rings"])
-        centroid = poly.centroid
-        placed = False
-        for i in hex_tree.query(centroid):
-            if hex_prep[i].contains(centroid):
-                cell_counts[i] += 1
-                decade = (c["created_year"] // 10 * 10) if c["created_year"] else None
-                cell_decades[i][decade] += 1
-                placed = True
-                break
-        if not placed:
-            unmatched += 1
-
-    features = []
-    top_cells = []
-    for i, hx in enumerate(hexes):
-        count = cell_counts[i]
-        if count < 3:
-            continue
-        if count <= 5:
-            style = "density_low"
-        elif count <= 10:
-            style = "density_med"
-        else:
-            style = "density_high"
-        decades = cell_decades[i]
-        decade_str = ", ".join(f"{d}s:{n}" for d, n in sorted(decades.items(), key=lambda kv: (kv[0] is None, kv[0])))
-        c = hx.centroid
-        desc = clip300(f"Closed placer claims (record-date proxy): {count} total | by decade: {decade_str} | src: BLM MLRS Closed")
-        features.append({
-            "type": "polygon", "name": f"Closed-claim density: {count}", "description": desc,
-            "style": style, "coords": [list(hx.exterior.coords)],
-        })
-        top_cells.append({"lat": c.y, "lon": c.x, "count": count, "decades": dict(decades)})
-    top_cells.sort(key=lambda x: -x["count"])
-    return features, top_cells, len(claims), unmatched
-
-
-# ---------------------------------------------------------------- main -----
 def build_area(area_name, refresh=False):
     bbox = AREAS[area_name]
     print(f"\n=== {area_name} {bbox} ===", flush=True)
     out_dir = os.path.join(OUT_DIR, area_name)
     os.makedirs(out_dir, exist_ok=True)
+    _remove_old_combined_outputs(out_dir, area_name)
     report = {"area": area_name, "bbox": bbox, "built_at": TODAY}
 
-    print("  fetching reference points...", flush=True)
-    ref_feats, ref_lookups = reference_layer.build_reference_features(bbox, refresh)
-    report["reference_points"] = ref_lookups
-
     print("  fetching USMIN...", flush=True)
-    usmin_feats, usmin_pts, usmin_polys, usmin_dropped = build_usmin_features(bbox, refresh)
-    report["usmin_count"] = len(usmin_feats)
-    report["usmin_dropped_types"] = sorted(usmin_dropped)
+    usmin_pts, usmin_dropped_pt = usmin.fetch_points(bbox, refresh)
+    usmin_polys, usmin_dropped_poly = usmin.fetch_polygons(bbox, refresh)
+    report["usmin_points"] = len(usmin_pts)
+    report["usmin_polygons"] = len(usmin_polys)
+    report["usmin_dropped_types"] = sorted(usmin_dropped_pt | usmin_dropped_poly)
 
     print("  fetching MILO/MRDS...", flush=True)
-    milo_mrds_feats, combined_gold_points, n_milo, n_mrds_raw, n_mrds_kept = build_milo_mrds_features(bbox, refresh)
-    report["milo_count"] = n_milo
-    report["mrds_raw_count"] = n_mrds_raw
-    report["mrds_kept_after_dedup"] = n_mrds_kept
+    milo_sites = milo.fetch_gold_sites(bbox, refresh)
+    mrds_sites_raw = mrds.fetch_gold_sites(bbox, refresh)
+    mrds_kept = layers.dedup_mrds_against_milo(milo_sites, mrds_sites_raw)
+    report["milo_count"] = len(milo_sites)
+    report["mrds_raw_count"] = len(mrds_sites_raw)
+    report["mrds_kept_after_dedup"] = len(mrds_kept)
 
     print("  fetching active claims...", flush=True)
-    active_feats, active_claims_raw, n_claims_clipped = build_active_claims_features(bbox, refresh)
-    report["active_claims_count"] = len(active_feats)
-    report["active_claims_clipped_to_bbox"] = n_claims_clipped
-
-    print("  fetching closed claims + building density grid...", flush=True)
-    density_feats, top_cells, n_closed, n_unmatched = build_closed_density_features(bbox, refresh)
-    report["closed_placer_claims_count"] = n_closed
-    report["closed_unmatched_to_grid"] = n_unmatched
-    report["density_top_cells"] = top_cells[:10]
+    active_claims_raw = blm_claims.fetch_active(bbox, refresh)
+    report["active_claims_raw_count"] = len(active_claims_raw)
 
     print("  fetching land status (BLM/USFS)...", flush=True)
     land_by_agency = land_status.fetch_land_status(bbox, refresh)
@@ -236,110 +84,241 @@ def build_area(area_name, refresh=False):
     nhd_available = nhd.check_service_available(bbox)
     report["nhd_available"] = nhd_available
 
-    print("  computing open-ground candidates (per-point NHD checks)...", flush=True)
-    top_open, nhd_skipped = open_ground.build_candidates(
-        usmin_pts, combined_gold_points, land_by_agency, active_claims_raw, nhd_available, area_name, bbox,
-        refresh=refresh,
+    print("  building layer 1 (my claims)...", flush=True)
+    layer1_items, my_claim_serials, l1_report = layers.build_layer1_my_claims(bbox, area_name, refresh)
+    report["layer1_my_claims"] = l1_report
+
+    print("  building layer 2 (public)...", flush=True)
+    layer2_items, l2_report = layers.build_layer2_public(bbox, area_name)
+    report["layer2_public"] = l2_report
+
+    print("  building layer 3 (other active claims)...", flush=True)
+    layer3_items, l3_report = layers.build_layer3_other_claims(active_claims_raw, my_claim_serials, bbox)
+    report["layer3_other_claims"] = l3_report
+
+    print("  building layer 4 (deduped history)...", flush=True)
+    layer4_items, l4_report = layers.build_layer4_history(usmin_pts, usmin_polys, milo_sites, mrds_kept, bbox)
+    report["layer4_history"] = l4_report
+
+    print("  building layer 5 (scout / open ground)...", flush=True)
+    combined_gold_points = []
+    for s in milo_sites:
+        s2 = dict(s)
+        s2["_source"] = "MILO"
+        combined_gold_points.append(s2)
+    for m in mrds_kept:
+        m2 = dict(m)
+        m2["_source"] = "MRDS"
+        combined_gold_points.append(m2)
+    layer5_items, l5_report = layers.build_layer5_scout(
+        usmin_pts, combined_gold_points, mrds_kept, land_by_agency, active_claims_raw,
+        nhd_available, area_name, bbox, refresh=refresh,
     )
-    report["nhd_skipped_for_open_ground"] = nhd_skipped
-    open_feats = []
-    for c in top_open:
-        near = " | NEAR ACTIVE CLAIM (<50m, approx)" if c["near_claim"] else ""
-        stream_txt = f"{c['dist_to_stream_m']:.0f}m to stream" if c.get("dist_to_stream_m") is not None else "stream dist n/a"
-        desc = clip300(
-            f"{c['label']} | agency: {c['agency']} | {stream_txt} | cluster: {c['cluster_density']} nearby{near} | "
-            f"src: {c['source']}"
-        )
-        open_feats.append({
-            "type": "point", "name": c["waypoint_name"], "description": desc,
-            "style": "open_ground", "coords": (c["lon"], c["lat"]),
-        })
-    report["open_ground_count"] = len(open_feats)
-    report["open_ground_top10"] = [
-        {"name": c["waypoint_name"], "lat": c["lat"], "lon": c["lon"], "type": c["ftr_type"], "near_claim": c["near_claim"]}
-        for c in top_open[:10]
-    ]
+    report["layer5_scout"] = l5_report
 
-    layers = [
-        ("My claims & public sites", ref_feats),
-        ("Historical workings (USMIN)", usmin_feats),
-        ("Mine & prospect sites (MILO/MRDS, gold)", milo_mrds_feats),
-        ("Active mining claims (BLM MLRS)", active_feats),
-        ("Past claim density (closed placer, 500m hex)", density_feats),
-        ("Open ground to sample", open_feats),
-    ]
-    layers = [(name, feats) for name, feats in layers if feats]
+    print("  building layer 6 (access routes)...", flush=True)
+    layer6_items, l6_report = layers.build_layer6_access(area_name)
+    report["layer6_access"] = l6_report
 
-    print("  writing KML/GPX...", flush=True)
-    file_reports = render.write_area_outputs(area_name, layers, out_dir, doc_title=AREA_LABELS[area_name])
+    print("  writing per-layer GPX/KML + CalTopo bundle...", flush=True)
+    layer_defs = [
+        ("1_my_claims", layer1_items), ("2_public", layer2_items),
+        ("3_other_claims", layer3_items), ("4_history", layer4_items),
+        ("5_scout", layer5_items), ("6_access", layer6_items),
+    ]
+    file_reports = []
+    caltopo_features = []
+    for key, items in layer_defs:
+        if not items:
+            continue
+        rep, feats = render_layers.write_layer_outputs(area_name, key, LAYER_TITLES[key], items, out_dir)
+        file_reports.append(rep)
+        caltopo_features.extend(feats)
     report["files"] = file_reports
+
+    caltopo_path = os.path.join(out_dir, f"caltopo_{area_name}.geojson")
+    caltopo.write_bundle(caltopo_features, caltopo_path)
+    report["caltopo_path"] = caltopo_path
+    report["caltopo_feature_count"] = len(caltopo_features)
 
     with open(os.path.join(out_dir, "build_report.json"), "w") as f:
         json.dump(report, f, indent=2, default=str)
 
     write_area_readme(report, out_dir, bulletin_notes=BULLETIN_NOTES.get(area_name, ""))
 
-    print(f"  done: {sum(fr['feature_count'] for fr in file_reports)} features across {len(file_reports)} file pair(s)")
+    total_items = sum(fr["item_count"] for fr in file_reports)
+    print(f"  done: {total_items} items across {len(file_reports)} layer file(s)")
     return report
 
 
-def _kml_coords_outside_bbox(kml_path, bbox, tolerance_deg=0.05):
-    """tolerance_deg (~5 km) absorbs expected edge overlap from bbox-intersect
-    queries (a claim/hex/land polygon that merely straddles the box edge is
-    not a data error) while still catching a genuinely wrong-region feature.
-    """
-    import xml.etree.ElementTree as ET
+# ------------------------------------------------------------- verify ------
+def _gpx_items_and_bbox_offenders(gpx_path, bbox, tolerance_deg=0.01):
     minlon, minlat, maxlon, maxlat = bbox
-    ns = {"k": "http://www.opengis.net/kml/2.2"}
-    t = ET.parse(kml_path)
+    ns = {"g": "http://www.topografix.com/GPX/1/1"}
+    t = ET.parse(gpx_path)
+    root = t.getroot()
     offenders = []
-    for coord_el in t.findall(".//k:coordinates", ns):
-        text = (coord_el.text or "").strip()
-        if not text:
-            continue
-        for triple in text.split():
-            parts = triple.split(",")
-            if len(parts) < 2:
-                continue
-            lon, lat = float(parts[0]), float(parts[1])
-            if not (minlon - tolerance_deg <= lon <= maxlon + tolerance_deg
-                     and minlat - tolerance_deg <= lat <= maxlat + tolerance_deg):
+    icon_or_style_missing = []
+    n_items = 0
+    for wpt in root.findall("g:wpt", ns):
+        n_items += 1
+        lat, lon = float(wpt.get("lat")), float(wpt.get("lon"))
+        if not (minlon - tolerance_deg <= lon <= maxlon + tolerance_deg and
+                minlat - tolerance_deg <= lat <= maxlat + tolerance_deg):
+            offenders.append((lon, lat))
+        icon_el = wpt.find(".//{http://www.onxmaps.com}icon")
+        if icon_el is None or not (icon_el.text or "").strip():
+            icon_or_style_missing.append(wpt.findtext("g:name", default="?", namespaces=ns))
+    for rte in root.findall("g:rte", ns):
+        n_items += 1
+        type_el = rte.find("g:type", ns)
+        style_el = rte.find(".//{http://www.onxmaps.com}style")
+        color_el = rte.find(".//{http://www.onxmaps.com}color")
+        if type_el is None or style_el is None or color_el is None:
+            icon_or_style_missing.append(rte.findtext("g:name", default="?", namespaces=ns))
+        for pt in rte.findall("g:rtept", ns):
+            lat, lon = float(pt.get("lat")), float(pt.get("lon"))
+            if not (minlon - tolerance_deg <= lon <= maxlon + tolerance_deg and
+                    minlat - tolerance_deg <= lat <= maxlat + tolerance_deg):
                 offenders.append((lon, lat))
-    return offenders
+    return n_items, offenders, icon_or_style_missing
 
 
 def verify_area(report):
+    from gold_overlays.onx_style import ALL_CONFIRMED_COLORS, ALL_CONFIRMED_ICONS
+
     problems = []
     bbox = report["bbox"]
     for fr in report["files"]:
-        if fr["kml_bytes"] > 4 * 1024 * 1024:
-            problems.append(f"{fr['kml_path']} exceeds 4MB ({fr['kml_bytes']} bytes)")
         if fr["gpx_bytes"] > 4 * 1024 * 1024:
             problems.append(f"{fr['gpx_path']} exceeds 4MB ({fr['gpx_bytes']} bytes)")
-        if fr["feature_count"] > 3000:
-            problems.append(f"{fr['kml_path']} exceeds 3000 features ({fr['feature_count']})")
-        offenders = _kml_coords_outside_bbox(fr["kml_path"], bbox)
+        if fr["item_count"] > 3000:
+            problems.append(f"{fr['gpx_path']} exceeds 3000 items ({fr['item_count']})")
+        try:
+            ET.parse(fr["gpx_path"])
+        except ET.ParseError as e:
+            problems.append(f"{fr['gpx_path']} failed to parse: {e}")
+            continue
+        n_items, offenders, missing = _gpx_items_and_bbox_offenders(fr["gpx_path"], bbox)
         if offenders:
-            problems.append(f"{fr['kml_path']} has {len(offenders)} coordinate(s) outside bbox, e.g. {offenders[:3]}")
+            problems.append(f"{fr['gpx_path']} has {len(offenders)} coordinate(s) outside bbox, e.g. {offenders[:3]}")
+        if missing:
+            problems.append(f"{fr['gpx_path']} has {len(missing)} item(s) missing onx:icon/type+style+color: {missing[:3]}")
+        # name length + color/icon whitelist check via raw text scan
+        with open(fr["gpx_path"], encoding="utf-8") as f:
+            text = f.read()
+        import re
+        for name in re.findall(r"<name>(.*?)</name>", text):
+            from xml.sax.saxutils import unescape
+            if len(unescape(name)) > 32:
+                problems.append(f"{fr['gpx_path']} has a name over 32 chars: {unescape(name)!r}")
+        for icon in re.findall(r"<onx:icon>(.*?)</onx:icon>", text):
+            from xml.sax.saxutils import unescape
+            if unescape(icon) not in ALL_CONFIRMED_ICONS:
+                problems.append(f"{fr['gpx_path']} uses unconfirmed onx:icon {icon!r}")
+        for color in re.findall(r"<onx:color>(.*?)</onx:color>", text):
+            from xml.sax.saxutils import unescape
+            if unescape(color) not in ALL_CONFIRMED_COLORS:
+                problems.append(f"{fr['gpx_path']} uses unconfirmed onx:color {color!r}")
+
+    if report["layer4_history"]["final_count"] > 150:
+        problems.append(f"layer4_history has {report['layer4_history']['final_count']} > 150 cap")
+    if report["layer5_scout"]["count"] > 10:
+        problems.append(f"layer5_scout has {report['layer5_scout']['count']} > 10 cap")
     return problems
 
 
-def run_check_bboxes():
-    print("NHD bbox coverage check is documented manually in README.md 'Bounding box notes'.")
-    print("(Re-derivable by querying gold_overlays.sources.nhd against a padded bbox per named creek.)")
+SPOT_CHECK_SERIALS = {"ORMC171094", "ORMC30445", "ORMC163049"}
+
+
+def verify_spot_check_claims(all_reports):
+    found = set()
+    for report in all_reports:
+        path = os.path.join(OUT_DIR, report["area"], f"{report['area']}_1_my_claims.gpx")
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            text = f.read()
+        for serial in SPOT_CHECK_SERIALS:
+            if serial in text:
+                found.add(serial)
+    missing = SPOT_CHECK_SERIALS - found
+    return missing
+
+
+# --------------------------------------------- closed-claim density check --
+def validate_closed_claim_density():
+    """Task step 3: try gis.blm.gov/nlsdb NLSDB_LND_HIST (layer 3, an
+    action-history TABLE with no geometry of its own) via its 1:1 join to
+    layer 0 ('Case Feature Layer', which does carry full case geometry --
+    active + closed + historical, all record types). Keep/use it only if
+    Bohemia's case count lands within 3x of The Diggings' ~1,550 claims
+    estimate; otherwise it stays out of every output (it already is, since
+    the new 6-layer style guide has no density layer) and this is documented.
+    """
+    url = SOURCES["nlsdb_case"]["url"]
+    bbox = AREAS["bohemia"]
+    params = {
+        "geometry": f"{bbox[0]},{bbox[1]},{bbox[2]},{bbox[3]}",
+        "geometryType": "esriGeometryEnvelope", "inSR": 4326,
+        "spatialRel": "esriSpatialRelIntersects", "returnCountOnly": "true", "f": "json",
+    }
+    try:
+        data = cached_get_json(url + "/query", params, timeout=60)
+        count = data.get("count")
+    except Exception as e:
+        count = None
+        print(f"NLSDB case-count query failed: {e}")
+
+    diggings_estimate = 1550
+    old_mlrs_closed_count = 8  # from the previous build's BLM_Natl_MLRS_Mining_Claims_Closed pull
+    result = {
+        "bohemia_nlsdb_case_count": count,
+        "diggings_estimate": diggings_estimate,
+        "old_mlrs_closed_placer_count": old_mlrs_closed_count,
+        "within_3x": (diggings_estimate / 3 <= count <= diggings_estimate * 3) if count is not None else False,
+    }
+    lines = [
+        "# Closed-claim density validation (task step 3)", "",
+        f"- `BLM_Natl_MLRS_Mining_Claims_Closed` (old approach): {old_mlrs_closed_count} placer claims for Bohemia "
+        "-- confirmed to lack legacy geometry for most historical claims.",
+        f"- `gis.blm.gov/nlsdb/.../MiningClaims/MapServer` layer 3 (`NLSDB_LND_HIST`) is an action-history **table** "
+        "with no geometry of its own; it joins 1:1 to layer 0 (`Case Feature Layer`, `CSE_OBJECTID`) which *does* "
+        "carry full case geometry for every record type (active, closed, historical, patented, excluded, conveyed).",
+        f"- Layer 0 case count intersecting the Bohemia bbox: **{count}**.",
+        f"- The Diggings' estimate for Bohemia: ~{diggings_estimate}.",
+        f"- Ratio: {count / diggings_estimate:.2f}x " + ("(within 3x -- PASS)" if result["within_3x"] else "(NOT within 3x -- FAIL)")
+        if count is not None else "- Query failed -- could not validate.",
+        "",
+        "**Decision:** " + (
+            "The NLSDB Case Feature Layer is plausible for Bohemia and could support a future "
+            "'closed-claim density' layer. It is NOT added as a 7th onX layer in this build because "
+            "the style guide (section 1 of the task) defines only the 6 layers 1_my_claims..6_access; "
+            "no density layer is in scope for onX output. This validation is recorded here for the record."
+            if result["within_3x"] else
+            "NLSDB does not check out within 3x either -- the closed-claim density concept stays out of "
+            "every output, as it already was under the new 6-layer style guide."
+        ),
+        "",
+    ]
+    os.makedirs(OUT_DIR, exist_ok=True)
+    with open(os.path.join(OUT_DIR, "closed_claim_density_validation.md"), "w") as f:
+        f.write("\n".join(lines))
+    print("\n".join(lines))
+    return result
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--area", default="all")
     ap.add_argument("--refresh", action="store_true")
-    ap.add_argument("--check-bboxes", action="store_true")
+    ap.add_argument("--validate-density", action="store_true")
     ap.add_argument("--rasters", action="store_true", help="also build layer G (lidar) + H (historical topos)")
-    ap.add_argument("--skip-vectors", action="store_true", help="with --rasters, skip the KML/GPX build")
+    ap.add_argument("--skip-vectors", action="store_true", help="with --rasters, skip the GPX/KML build")
     args = ap.parse_args()
 
-    if args.check_bboxes:
-        run_check_bboxes()
+    if args.validate_density:
+        validate_closed_claim_density()
         return
 
     areas = list(AREAS.keys()) if args.area == "all" else [args.area]
@@ -366,6 +345,13 @@ def main():
     if not args.skip_vectors:
         with open(os.path.join(OUT_DIR, "build_summary.json"), "w") as f:
             json.dump(all_reports, f, indent=2, default=str)
+        if args.area == "all":
+            missing = verify_spot_check_claims(all_reports)
+            if missing:
+                any_problems = True
+                print(f"VERIFICATION PROBLEM: spot-check claims missing from 1_my_claims outputs: {missing}")
+            else:
+                print("Spot-check claims OK: all 3 present in their area's 1_my_claims.gpx")
 
     if any_problems:
         sys.exit(1)

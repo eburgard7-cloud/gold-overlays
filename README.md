@@ -1,29 +1,32 @@
-# Oregon gold-prospecting overlays (onX / Avenza)
+# Oregon gold-prospecting overlays (onX-first, phone-usable)
 
-Reproducible pipeline that builds onX-ready KML+GPX overlays and Avenza-ready
-lidar/topo rasters for seven weekend-prospecting areas around Eugene, OR, for
-Willamette Valley Miners (WVM) and Bohemia Mine Owners Association (BMOA)
-members. Every coordinate in the output either comes from a downloaded public
-dataset (USGS USMIN/MRDS, DOGAMI MILO-4, BLM MLRS, BLM SMA, USGS NHD, DOGAMI
-lidar, TNM historical topos) or from the verified reference table supplied for
-this build -- nothing is estimated or hand-placed.
+Reproducible pipeline that builds real onX-format GPX overlays (one small
+file per layer per area, matching onX's own export schema exactly) plus a
+secondary KML export and a CalTopo GeoJSON bundle, for seven weekend-
+prospecting areas around Eugene, OR, for Willamette Valley Miners (WVM) and
+Bohemia Mine Owners Association (BMOA) members. Every coordinate in the
+output either comes from a downloaded public dataset (USGS USMIN/MRDS,
+DOGAMI MILO-4, BLM MLRS, BLM SMA, USGS NHD, DOGAMI lidar, TNM historical
+topos) or from the verified reference table in `gold_overlays/config.py` --
+nothing is estimated or hand-placed, and nothing is styled with a guessed
+onX icon/color.
+
+**GPX is the primary format** (real onX schema: `onx:icon`/`onx:color` on
+waypoints, `onx:style`/`onx:weight`/`onx:color` on `Area`/`Line` routes) --
+KML is a secondary export for onX Web Map, kept for polygon fills there.
 
 ## Quick start
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt   # shapely, pyproj, requests, gpxpy-free (own writer)
-# system deps: gdal-bin (gdal_translate/ogr2ogr), for lidar GeoPDF export
-sudo apt-get install -y gdal-bin
+pip install -r requirements.txt
+sudo apt-get install -y gdal-bin poppler-utils qpdf   # gdal_translate/ogr2ogr + PDF verification tools
 
-python build.py --area all                 # layers A-F -> out/<area>/*_onx.kml/.gpx
-python build.py --area all --rasters --skip-vectors   # layers G+H -> out/<area>/lidar, out/<area>/topo
-python refresh_claims.py                   # monthly: re-pull layer C, diff vs last run
+python build.py --area all                            # 6 layers/area -> out/<area>/<area>_<n>_<layer>.gpx(+.kml) + caltopo_<area>.geojson
+python build.py --area all --rasters --skip-vectors    # lidar GeoPDFs (with vector overlay + scale bar/north arrow/title) + historical topo PDFs
+python build.py --validate-density                     # one-time closed-claim-density plausibility check (see below)
+python refresh_claims.py                               # monthly: re-pull active claims, diff vs last run
 ```
-
-`build.py --area <name>` builds one area; `--refresh` bypasses the on-disk
-`cache/` (used so repeated runs don't re-hit slow government endpoints while
-iterating).
 
 ## Areas
 
@@ -32,254 +35,260 @@ iterating).
 | bohemia | Sharps/Brice/Martin/Quartz Creeks, Row River headwaters | -122.95, 43.45, -122.50, 43.78 |
 | quartzville | Quartzville Creek (Green Peter Res. to Galena Creek), Canal Creek, Dry Gulch | -122.50, 44.48, -122.15, 44.68 |
 | calapooia | upper Calapooia River | -122.55, 44.15, -122.28, 44.32 |
-| lnf_santiam | Little North Santiam River | -122.60, 44.75, -122.40, 44.85 |
+| lnf_santiam | Little North Santiam River | -122.62, 44.75, -122.40, 44.86 |
 | cowcreek | Cow Creek byway (Glendale-Riddle), Dads Creek, Whitehorse Creek | -123.70, 42.68, -123.10, 42.98 |
 | rogue_applegate | Rogue R. (Applegate confluence-Grave Creek), Gold Hill, Little Applegate | -123.65, 42.15, -122.85, 42.70 |
 | sixes | Sixes River | -124.45, 42.75, -124.20, 42.88 |
 
-### Bounding box notes (creek-coverage check)
+## Layers (style guide)
 
-Every named creek/river was checked against its area's box using USGS NHD
-flowline geometry (`gnis_name` match, padded search). Findings:
+One GPX (+ KML) per layer per area: `out/<area>/<area>_<n>_<layer>.gpx`.
+Only **confirmed** onX icons/colors are ever written -- icons `Mineral Site` /
+`Location`; colors yellow `rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black
+`rgba(0,0,0,1)`. A layer file is only written if it has content for that area
+(e.g. an area with no club claim has no `1_my_claims` file).
 
-- **No boxes required expansion for actual coverage gaps.** Several creeks'
-  full length extends outside the box (e.g. Row River continues north past
-  Cottage Grove, Rogue/Applegate/Cow Creek continue well beyond the named
-  waysides, Calapooia continues into the valley) -- these are all
-  **intentional**: the boxes are scoped to the headwaters/byway/mining-district
-  reach relevant to prospecting, not the entire watercourse.
-- `lnf_santiam` overshoots by a small margin (~750 m west, ~1.1 km north) right
-  at the wilderness-boundary headwaters near Opal Creek/Battle Ax -- **this box
-  was widened slightly** to `-122.62, 44.75, -122.40, 44.86` to fully contain
-  that reach. (`gold_overlays/config.py` still lists the original spec box in
-  history/comments; `AREAS` holds the corrected one.)
-- "Dry Gulch" (quartzville) has no `gnis_name` match in NHD at all -- it's an
-  unnamed tributary in the NHD attribute schema. This only affects the
-  automated bbox-coverage sanity check, not the open-ground stream filter
-  (which tests proximity to *any* flowline geometry, named or not).
+| layer | content | icon | color | style | meaning |
+|---|---|---|---|---|---|
+| `1_my_claims` | WVM/BMOA claims as filled Areas + a Mineral Site pin at each centroid | Mineral Site | yellow | solid | ours |
+| `2_public` | Public gold-panning sites (points only -- see gap below) | Location | black* | -- | open to anyone |
+| `3_other_claims` | Other active BLM claims, no pins | -- | red | dotted | don't dig here |
+| `4_history` | Deduped historical workings (USMIN+MILO+MRDS, merged within 75m) | Mineral Site (placer/tailings/hydraulic) or Location (adit/shaft/pit/other) | black | -- | historical context |
+| `5_scout` | Top-10 open-ground candidates | Location | red | -- | worth scouting |
+| `6_access` | Claim-access route from club handbook directions | -- | black | dash | how to get there |
 
-## Layers built (per area)
+\* Public-site pins are **black**, not green: green is not in the confirmed
+onX color set (see "Style testing" below), so per the spec's own fallback
+rule ("use a confirmed [color]") black is used until green is confirmed.
 
-| layer | source | notes |
-|---|---|---|
-| A. Historical workings | USGS USMIN (WFS) | prospect pits, shafts, adits, tailings, mine dumps, placer/hydraulic; gravel/borrow/clay pits + quarries dropped |
-| B. Mine & prospect sites | DOGAMI MILO-4 (file gdb) + USGS MRDS (WFS) | filtered to gold; MRDS deduped against MILO by name + 250 m |
-| C. Active claims | BLM MLRS Not Closed (FeatureServer) | placer/lode, acres, disposition; **quarter-section approximate** |
-| D. Past claim density | BLM MLRS Closed (FeatureServer), placer only | 500 m hex grid, count + count-by-decade, cells with <3 claims dropped |
-| E. Land status | BLM SMA "LimitedScale" (BLM + USFS layers) | used to compute layer F; not rendered as its own KML layer (see caveats) |
-| F. Open ground to sample | derived | top 25 per area, `OPEN-<area>-<rank>` |
-| G. Lidar hillshade | DOGAMI bare-earth lidar mosaic (ImageServer) | 2 km GeoTIFF + GeoPDF per club claim / public site |
-| H. Historical topos | TNM Access API | oldest 15-min + 7.5-min sheet per claim cluster, capped at 10 files |
-| I. Reading | DOGAMI Bulletin 61 | per-area notes in each `out/<area>/README.md` |
+### Style testing (`onx_samples/STYLE_RESULTS.md`)
 
-### Layer sources, versions, download dates
+`out/_test/onx_test.gpx` has 7 test
+waypoints and 3 test routes: TEST 1/2 and TEST A/B/C use only confirmed
+icons/colors (already used throughout this build); TEST 3-7 and the orange
+Area test are **guesses** pending your phone import. Once you've imported it
+and recorded what actually rendered, add `onx_samples/STYLE_RESULTS.md` with
+one line per confirmed entry containing the literal word `CONFIRMED` (e.g.
+`TEST 4 Camp guess-green -> CONFIRMED renders as green tent icon`) --
+`gold_overlays/onx_style.py` will pick it up automatically on the next
+`python build.py` run and those entries join the confirmed set. Until then,
+every layer above uses only the 2 confirmed icons and 3 confirmed colors.
 
-| source | URL | version/date | downloaded |
-|---|---|---|---|
-| USGS USMIN | https://mrdata.usgs.gov/usmin/ (WFS) | live service, no static version | build-time (see `cache/`) |
-| USGS MRDS | https://mrdata.usgs.gov/mrds/ (WFS) | live service | build-time |
-| DOGAMI MILO-4 | https://www.oregon.gov/dogami/pubs/pages/dds/p-milo-4.aspx | MILOv4.gdb, `MILO4_GIS_bundle.zip` | build-time |
-| BLM MLRS Not Closed | https://gis.blm.gov/nlsdb/rest/services/HUB/BLM_Natl_MLRS_Mining_Claims_Not_Closed/FeatureServer/0 | live service | build-time |
-| BLM MLRS Closed | .../BLM_Natl_MLRS_Mining_Claims_Closed/FeatureServer/0 | live service | build-time |
-| BLM SMA | https://gis.blm.gov/arcgis/rest/services/lands/BLM_Natl_SMA_LimitedScale/MapServer (layers 7, 9) | live service | build-time |
-| USGS NHD | https://hydro.nationalmap.gov/arcgis/rest/services/nhd/MapServer/6 | live service | build-time |
-| DOGAMI lidar | https://gis.dogami.oregon.gov/arcgis/rest/services/lidar/DIGITAL_TERRAIN_MODEL_MOSAIC_HS/ImageServer | live mosaic (per-project acquisition dates vary; see DOGAMI viewer) | build-time |
-| TNM historical topos | https://tnmaccess.nationalmap.gov/api/v1/products | live catalog | build-time |
-| DOGAMI Bulletin 61 | https://pubs.oregon.gov/dogami/B/B-061.pdf | Brooks & Ramp, 1968 | 2026-09-28 |
+### Gaps (documented, not invented)
 
-Exact download dates for a given run are stamped in `out/<area>/build_report.json`
-(`built_at`) and in each cached file's mtime under `cache/`.
+- **Layer 1 "directions"**: no club handbook source exists in this repo, so
+  each claim's description reads `directions: not available` rather than a
+  fabricated route.
+- **Layer 2 public-corridor Areas**: no verified extent-polygon source for
+  the public panning corridors exists (only point coordinates) -- only pins
+  are rendered, not invented boundaries.
+- **Layer 6 access routes**: skipped for every area. No club handbook /
+  access-directions text exists anywhere in this repo (checked by grep), so
+  per the spec's own instruction ("otherwise skip; don't invent routes") no
+  `6_access` file is produced this build.
+
+## CalTopo bundle
+
+`out/<area>/caltopo_<area>.geojson` -- all layers combined into one
+FeatureCollection using simplestyle-spec properties (`marker-color`,
+`marker-symbol`, `stroke`, `stroke-width`, `fill`, `fill-opacity`, `title`,
+`description`) so CalTopo can import it directly (Import Data Overlay ->
+choose file).
+
+## Lidar GeoPDFs (`out/<area>/lidar/*.pdf`)
+
+Each GeoPDF now carries a real vector overlay layer (claim shape, or a point
+if no digitized polygon resolved, plus every layer-4-style historical site
+inside that 2km tile) burned in via GDAL's `OGR_DATASOURCE` PDF creation
+option -- selectable/queryable in Avenza/QGIS, not just a flat raster. A
+title bar, north arrow, and scale bar are composited on top via the PDF
+driver's `EXTRA_IMAGES` option (a page-space PNG overlay, not georeferenced).
+**Verified two ways** (see `gold_overlays/sources/lidar.py`):
+1. `ogrinfo <pdf>` shows the `overlay` vector layer; the PDF's decompressed
+   content stream (`qpdf --qdf`) contains real path-drawing operators
+   (`m`/`l`/`re`/`S`/`f`), not just an embedded raster.
+2. `pdftoppm` render of page 1, inspected pixel-by-pixel, confirms the title
+   bar (top), north arrow (top-right), scale bar (bottom-left), and claim
+   polygon all actually appear in the rendered output.
+
+**Correction to a previous README claim**: an earlier version of this repo
+said the lidar GeoPDFs already carried a vector overlay -- they didn't
+(`rasters.py` passed `None` for the overlay datasource). That's fixed now;
+see `gold_overlays/rasters.py::_build_tile_overlay_gpkg`.
+
+## Closed-claim density validation (task step 3)
+
+`gis.blm.gov/nlsdb/.../MiningClaims/MapServer` layer 3 (`NLSDB_LND_HIST`) is
+an action-history **table** with no geometry of its own -- it joins 1:1 to
+layer 0 (`Case Feature Layer`, via `CSE_OBJECTID`), which *does* carry real
+geometry for every claim record type (active, closed, historical, patented,
+excluded, conveyed). Querying layer 0 for Bohemia's bbox returns **1,925**
+cases, vs. The Diggings' ~1,550 estimate (ratio 1.24x, well within the 3x
+tolerance -- **PASS**, vs. the old `BLM_Natl_MLRS_Mining_Claims_Closed`
+service's 8 placer-only records for the same area). Full detail in
+`out/closed_claim_density_validation.md` (`python build.py --validate-density`
+regenerates it). **Not added as a 7th onX layer**: the style guide (this
+task's own section 1) defines only the 6 layers above; no density layer is
+in scope for onX output in this build.
+
+## Private-land check (task step 2)
+
+ORMAP's statewide taxlot service (`arcgis.oregonexplorer.info`) is blocked by
+this build environment's egress policy (403 on connect) -- confirmed via
+`/root/.ccr/__agentproxy/status`, not retried per that policy's own
+instructions. Falls back to the spec's documented alternative: a **point-
+level** query against BLM's `BLM_Natl_SMA_Cached_with_PriUnk` service (layers
+22=BLM, 24=USFS, 31=Private/Unknown) for each scout candidate -- small point
+queries avoid the 500/502 that service throws on `returnGeometry=true` over a
+large bbox (see `gold_overlays/sources/land_status.py`'s existing caveat
+about the same service). A candidate confirmed private is dropped; if the
+point-level service itself errors for a candidate, it's kept but flagged
+`(check owner)` in its description, per the spec's own fallback.
 
 ## Import steps
 
-**onX Web Map (KML, for polygons):**
-1. Sign in at onxmaps.com -> **My Content** -> **Import**.
-2. Upload `out/<area>/<area>_onx.kml` (and `_part2`, etc. if split).
-3. Repeat per area. Each KML folder becomes an onX layer group.
+**onX phone app (GPX, primary):**
+1. My Content -> **Import** -> choose one `out/<area>/<area>_<n>_<layer>.gpx`.
+2. Select all the newly-imported items -> **Add to folder** -> name it
+   `"<area> <layer>"` (e.g. `"bohemia 1_my_claims"`).
+3. Repeat per layer file -- each is small (a few KB to ~600 KB) and
+   single-purpose so this stays quick, and you end up with clean per-layer
+   onX folders instead of one giant mixed import.
 
-**onX phone app (GPX, for the field):**
-1. My Content -> **Import** -> choose `out/<area>/<area>_onx.gpx`.
-2. Polygons appear as closed tracks (outline only, no fill) since the phone
-   importer doesn't support polygons -- waypoints (claims, open-ground picks,
-   public sites) come through as pins with full descriptions.
+**onX Web Map (KML, secondary, for polygon fills):**
+1. My Content -> **Import** -> upload `out/<area>/<area>_<n>_<layer>.kml`.
 
-**Avenza Maps (lidar/topo PDFs):**
-1. Copy `out/<area>/lidar/*.pdf` and `out/<area>/topo/*.pdf` to your phone
-   (Avenza's own folder via Files app, or import via the Avenza "Add Map" ->
-   "From File").
-2. These are GDAL-produced GeoPDFs with embedded georeferencing -- Avenza
-   reads that directly, no manual calibration needed.
-3. The lidar GeoPDFs carry the claim outline/point as a real vector layer on
-   top of the hillshade raster (toggle it in Avenza's layer list).
+**CalTopo:**
+1. Import Data Overlay -> `out/<area>/caltopo_<area>.geojson`.
+
+**Avenza Maps (lidar/topo GeoPDFs):**
+1. Copy `out/<area>/lidar/*.pdf` and `out/<area>/topo/*.pdf` to your phone.
+2. Avenza reads the embedded georeferencing directly; toggle the vector
+   overlay layer (claim + historical sites) in Avenza's layer list.
 
 ## Sampling log
 
 Copy `sampling_log_template.csv` and fill it in after each trip:
-
 ```
 date,area,waypoint,lat,lon,material,pans,colors,est_size,notes
 ```
 
-- `material`: one of `bedrock crack`, `inside bend`, `bench`, `moss`.
-- `waypoint` naming convention: **`MMDD-<site>-<material>-<colors>c`**
-  (e.g. `0913-brice-bedrock-crack-4c` = Sept 13, Brice Creek site, bedrock
-  crack, 4 colors).
+## Layer sources, versions, download dates
+
+| source | URL | version/date |
+|---|---|---|
+| USGS USMIN | https://mrdata.usgs.gov/usmin/ (WFS) | live service |
+| USGS MRDS | https://mrdata.usgs.gov/mrds/ (WFS) | live service |
+| DOGAMI MILO-4 | `MILO4_GIS_bundle.zip` | build-time |
+| BLM MLRS Not Closed | `.../BLM_Natl_MLRS_Mining_Claims_Not_Closed/FeatureServer/0` | live service |
+| BLM SMA LimitedScale | `.../BLM_Natl_SMA_LimitedScale/MapServer` (layers 7, 9) | live service |
+| BLM SMA Cached (point-level) | `.../BLM_Natl_SMA_Cached_with_PriUnk/MapServer` (layers 22,24,31) | live service |
+| BLM NLSDB Case Feature Layer | `.../nlsdb/.../MiningClaims/MapServer/0` | live service, validation only |
+| USGS NHD | `.../nhd/MapServer/6` | live service |
+| DOGAMI lidar | `.../lidar/DIGITAL_TERRAIN_MODEL_MOSAIC_HS/ImageServer` | live mosaic |
+| TNM historical topos | `https://tnmaccess.nationalmap.gov/api/v1/products` | live catalog |
+| DOGAMI Bulletin 61 | https://pubs.oregon.gov/dogami/B/B-061.pdf | Brooks & Ramp, 1968 |
+| ORMAP taxlots | `arcgis.oregonexplorer.info` | **blocked by egress policy in this build environment** -- see fallback above |
+
+Exact download dates per run are in `out/<area>/build_report.json` (`built_at`).
+
+## What worked / what didn't (this cleanup+restyle pass, 2026-09-28)
+
+**Worked:**
+- Every data source reached from this build environment except ORMAP
+  (policy-blocked, see above and `gold_overlays/config.py`'s `ormap_taxlots`
+  entry) -- documented fallback used instead.
+- Real onX GPX schema (`onx:icon`/`onx:color`/`onx:style`/`onx:weight`)
+  reproduced exactly against `onx_samples/*.gpx`; all 6 layers write only
+  confirmed icons/colors, verified by `build.py::verify_area` scanning every
+  `<onx:icon>`/`<onx:color>` against the confirmed whitelist.
+- Per-area, per-layer split keeps every file tiny (largest is
+  `rogue_applegate_3_other_claims.gpx` at ~600 KB / 751 items -- both far
+  under onX's 4 MB / 3000-item caps) and lets you import+folder one layer at
+  a time on the phone as requested.
+- Layer 4 dedup (greedy centroid clustering within 75m, not single-linkage,
+  to avoid one giant merged blob along dense creeks) collapsed e.g.
+  Bohemia's raw MILO/USMIN/MRDS record count down to the 150 cap cleanly,
+  dropping only over-cap prospect pits and generic-unnamed MILO records far
+  from any USMIN feature.
+- Lidar GeoPDF vector overlay + scale bar/north arrow/title actually renders
+  now (previous README claim was wrong -- see correction above); verified by
+  both content-stream inspection and a pixel-level PNG render check.
+- Closed-claim density validated via the NLSDB Case Feature Layer (1,925 vs.
+  ~1,550 for Bohemia, within 3x).
+- All 3 spot-check claims (ORMC171094, ORMC30445, ORMC163049) confirmed
+  present in their area's `1_my_claims.gpx` by `build.py`'s final check.
+
+**Didn't work cleanly / gaps:**
+- ORMAP statewide taxlots blocked by this environment's egress policy --
+  private-land check falls back to point-level BLM SMA queries (see above).
+- No club handbook / access-directions text exists anywhere in this repo, so
+  layer 6 (`access`) and layer 1's "directions" field are honestly empty
+  rather than invented.
+- No verified public-corridor extent polygon source -- layer 2 renders pins
+  only.
+- `onx_samples/STYLE_RESULTS.md` doesn't exist yet (you add it after testing
+  `out/_test/onx_test.gpx` on your phone) -- until then, green public-site
+  pins and any icon/color beyond the 2 confirmed icons / 3 confirmed colors
+  stay unused, per the spec's own "use a confirmed one" fallback rule.
+- MRDS's public WFS doesn't expose a placer/lode deposit-type field, so
+  layer 5's placer-vs-lode labeling relies on `dev_stat`/name text matches
+  for MRDS and on proximity (<=50m) to a USMIN surface working or a
+  placer-mentioning MRDS record, per the spec's own rule -- not a full
+  deposit-type join.
+- Layer 5's ranking tiebreaker is still distance-to-stream, not
+  distance-to-road (no road dataset fetched in this build).
+
+**Per-area layer counts (this build):**
+
+| area | 1_my_claims | 2_public | 3_other_claims | 4_history | 5_scout | 6_access |
+|---|---|---|---|---|---|---|
+| bohemia | 18 | 1 | 138 | 150/150 | 10/10 | -- |
+| quartzville | 4 | -- | 48 | 121/150 | 10/10 | -- |
+| calapooia | 2 | -- | 20 | 150/150 | 9/10 | -- |
+| lnf_santiam | 1 | -- | 5 | -- | -- | -- |
+| cowcreek | 8 | 1 | 203 | 150/150 | 10/10 | -- |
+| rogue_applegate | -- | -- | 751 | 150/150 | 10/10 | -- |
+| sixes | -- | 1 | 34 | 24/150 | 5/10 | -- |
 
 ## Hard constraints / how they were honored
 
-- **No invented coordinates.** Every point/polygon traces to a WFS/REST query
-  result or to the reference table in `gold_overlays/config.py`.
-- **BLM claim polygons are quarter-section approximate.** Every claim polygon's
-  KML/GPX name and description carries the literal string
-  `[APPROX quarter-section]` / `APPROX (BLM quarter-section)`.
+- **No invented coordinates.** Every point/polygon traces to a WFS/REST
+  query result or the reference table in `gold_overlays/config.py`.
+- **BLM claim polygons are quarter-section approximate.** Every claim's
+  description carries "boundary approx (BLM quarter-section)"; names never
+  carry an `[APPROX ...]` suffix per the new 32-char naming rule.
 - **No claimant names anywhere in output** -- only claim name, serial, type,
-  acres, status, and (proxy) dates. Verified by construction: the BLM MLRS
-  schema queried here (`CSE_NAME`, `CSE_NR`, `LEG_CSE_NR`, `BLM_PROD`,
-  `CSE_DISP`, `RCRD_ACRS`, `Created`) has no claimant-name field at all.
-- **Withdrawn areas / recreation sites flagged where known**: the three
-  `public` reference sites (Cow Creek Recreational Gold Panning Area, Sixes
-  River Campground, Cedar Creek Campground) are rendered in green with
-  "public site" in their description. No additional withdrawn-area dataset
-  was identified/queried in this build (BLM's SMA layer distinguishes surface
-  agency, not mineral-withdrawal status) -- **this is a gap**: if you need to
-  confirm an area isn't withdrawn from mineral entry, cross-check BLM LR2000
-  case status directly before sampling.
-- **Sources, versions, and download dates recorded** -- see table above and
-  each `out/<area>/build_report.json`.
-
-## Key assumptions / deviations from the spec (read before trusting the data)
-
-1. **BLM MLRS has no true "located date" or "last action date" field.** The
-   public `BLM_Natl_MLRS_Mining_Claims_*` FeatureServer only exposes `Created`/
-   `Modified` (database record timestamps -- e.g. when the polygon was last
-   redrawn -- not the legal location date, which lives in LR2000 case files
-   this service doesn't expose). Layer C descriptions and layer D's
-   decade buckets use `Created` as a clearly-labeled proxy.
-2. **Land status (layer E) uses BLM SMA "LimitedScale" layers 7 (BLM) and 9
-   (USFS) only**, not the generalized "SMA_Cached" service, which returns
-   HTTP 500 on any bbox larger than a few km^2 when `returnGeometry=true`
-   (its polygons are too complex for that tier). The "Private/Unknown" layer
-   (id 16) has the same problem, so anything that is not BLM and not USFS is
-   reported simply as **non-BLM/USFS** rather than split into State/Private/
-   Other. This only matters for layer F (which only needs "is it BLM or
-   USFS"), not for claim/workings placement.
-3. **Layer F's final ranking tiebreaker is distance-to-stream, not
-   distance-to-road** -- no road dataset was fetched in this build (out of
-   scope for the time available). Called out again in each area's README.
-4. **NHD flowlines are fetched in ~1.6 km tiles, not one bbox-wide pull.** A
-   single bbox query for a ~1,000+ km^2 forested area returns 15,000+
-   flowline features and is far slower than the per-tile approach used here;
-   this is purely a performance choice and does not change which streams are
-   considered.
-5. **MRDS attribute detail is limited to what its public WFS exposes**
-   (`site_name`, `dev_stat`, `code_list`, `url`) -- full commodity/deposit-type/
-   production detail lives on the per-site HTML page linked in each
-   description, not scraped in bulk here.
-6. **MILO-4's `DepositType`/`WorkingsType` fields are sparse** (mostly blank).
-   Placer-vs-lode tagging uses a documented heuristic: `DepositType` containing
-   "placer"/"vein"/"shear"/"lode" wins; otherwise `WorkingsType == "surface"` is
-   treated as a placer proxy and `"underground"` as a lode proxy; everything
-   else is `unknown`. See `gold_overlays/sources/milo.py::_classify_deposit`.
-7. **"My claims & public sites" upgrades reference-table points to real BLM
-   MLRS polygons** where the public feature service has one (16 of 17 club
-   claims resolved this way, by legacy serial or Salesforce SF_ID). The one
-   exception, **WVM-LNF25 Little North Santiam**, has acreage/status in MLRS
-   but no digitized polygon yet -- it's rendered as a point at the reference
-   table's given coordinates, flagged in its description.
-8. **Lidar hillshade resolution**: DOGAMI's bare-earth mosaic's native
-   resolution is ~0.91 m (3 ft, in its native NAD83(HARN)/Oregon Lambert
-   projection) -- exported here reprojected to WGS84 at a matching ~1 m/px,
-   satisfying the spec's "≤1 m/pixel" ask.
-9. **Rasters are committed as plain git blobs, not git-lfs.** Every file
-   produced here is well under 50 MB (largest lidar GeoTIFF ~2.4 MB after
-   DEFLATE compression, largest topo GeoPDF ~28 MB), so the spec's ">50 MB
-   keep out of git" threshold never triggers for this build's own outputs.
-   git-lfs *is* installed (`apt-get install git-lfs`) and `git lfs track
-   "out/**/*.tif" "out/**/*.pdf"` was tried first, but this environment's
-   egress policy blocks `lfs.github.com` (push fails with 403 Forbidden on
-   every LFS object), so LFS pointers can't actually reach the remote here.
-   If you regenerate rasters somewhere with LFS push access and a file grows
-   past 50 MB, re-run that `git lfs track` command (re-adds `.gitattributes`)
-   before committing it.
+  acres, status (the queried BLM MLRS schema has no claimant-name field).
+- **Only confirmed onX icons/colors used** -- enforced both at write time
+  (`gold_overlays/onx_style.py::safe_icon`/`safe_color` fall back to
+  Location/black for anything unconfirmed) and at verify time
+  (`build.py::verify_area` scans every output file).
 
 ## Repository layout
 
 ```
 gold-overlays/
-  build.py                 layers A-H, per --area/--rasters flags
-  refresh_claims.py        monthly re-pull of layer C, diffs vs last run
-  requirements.txt
-  gold_overlays/           library code (config, sources/, render, open_ground, ...)
+  build.py                     6-layer GPX/KML + CalTopo build, verification, density validation
+  refresh_claims.py            monthly re-pull of active claims, diffs vs last run
+  gold_overlays/
+    onx_gpx.py                 real onX GPX writer (wpt onx:icon/color, rte Area/Line onx:style/weight/color)
+    onx_style.py                confirmed icon/color whitelist + onx_samples/STYLE_RESULTS.md loader
+    layers.py                   builds the 6 layers from raw source fetches
+    render_layers.py            layer items -> GPX + KML + CalTopo features
+    caltopo.py                   CalTopo simplestyle GeoJSON writer
+    reference_layer.py           WVM/BMOA claim polygon resolution (layer 1)
+    rasters.py / sources/lidar.py  lidar GeoPDF (+ vector overlay + HUD) and historical topo downloads
+    sources/                     per-data-source fetchers (usmin, mrds, milo, blm_claims, land_status, nhd, lidar, topo)
+  onx_samples/                  real onX exports (format reference) + STYLE_RESULTS.md (you add this)
+  out/_test/onx_test.gpx        style-testing file: import on phone, record results in onx_samples/STYLE_RESULTS.md
   out/<area>/
-    <area>_onx.kml / .gpx  (split into _part2 etc. if over onX's 4MB/3000-feature caps)
-    build_report.json      machine-readable counts/verification for this run
-    README.md              layer counts, top open-ground list, Bulletin 61 notes, caveats
-    lidar/*.tif, *.pdf     (with --rasters)
-    topo/*.pdf             (with --rasters, claim-cluster areas only)
-  cache/                   gitignored: raw API responses, so re-runs don't re-hit slow services
+    <area>_<n>_<layer>.gpx/.kml  per-layer onX output (primary GPX, secondary KML)
+    caltopo_<area>.geojson       CalTopo bundle, all layers combined
+    build_report.json            machine-readable counts/verification for this run
+    README.md                    per-area legend, import steps, layer counts, caveats
+    lidar/*.tif,*.pdf,*.gpkg      lidar hillshade + GeoPDF + vector overlay source
+    topo/*.pdf                    historical topo sheets
+  out/closed_claim_density_validation.md   task step 3 validation record
+  cache/                        gitignored: raw API responses
 ```
-
-## What worked / what didn't (first full build, 2026-09-28)
-
-**Feature counts per area** (from `out/build_summary.json` / each area's `build_report.json`):
-
-| area | total features | USMIN | MILO gold | MRDS kept | active claims | closed placer | density cells | open ground | claims clipped to bbox |
-|---|---|---|---|---|---|---|---|---|---|
-| bohemia | 1364 | 64 | 1067 | 51 | 147 | 8 | 0 | 25 | 6 |
-| quartzville | 293 | 22 | 185 | 9 | 50 | 1 | 0 | 25 | 2 |
-| calapooia | 343 | 17 | 272 | 7 | 21 | 3 | 0 | 25 | 1 |
-| lnf_santiam | 6 | 0 | 0 | 0 | 5 | 2 | 0 | 0 | 0 |
-| cowcreek | 692 | 225 | 167 | 38 | 207 | 269 | 10 | 25 | 30 |
-| rogue_applegate | 2431 | 754 | 694 | 205 | 751 | 66 | 2 | 25 | 94 |
-| sixes | 71 | 5 | 19 | 6 | 34 | 3 | 0 | 6 | 4 |
-
-All 7 KML/GPX pairs passed verification: every file under the 4 MB / 3000-feature
-onX caps (largest is rogue_applegate at 1.1 MB / 2431 features), KML and GPX
-feature counts match exactly, and (after the bbox-clip fix below) zero
-coordinates fall outside their area's bbox. All three spot-check claims landed
-within a few meters of their expected coordinates (WVM #1B, Cedar Bend, BMOA
-Little Red -- see `gold_overlays/reference_layer.py`'s polygon-lookup path,
-which resolved 16 of 17 club claims to a real BLM MLRS polygon).
-
-**What worked:**
-- Every planned data source was reachable and usable: USGS USMIN/MRDS (WFS),
-  DOGAMI MILO-4 (file gdb download), BLM MLRS active+closed claims, USGS NHD
-  flowlines, DOGAMI lidar ImageServer export, TNM historical topo API, and
-  DOGAMI Bulletin 61 (OCR'd PDF).
-- GDAL's PDF driver burns the claim outline/point in as a real, selectable
-  vector layer on top of each lidar hillshade -- confirmed in a test render.
-- 16 of 17 reference-table claims resolved to their actual BLM MLRS polygon
-  (by legacy serial or Salesforce SF_ID), not just the reference table's point.
-
-**What didn't work cleanly, and how it was handled:**
-- **BLM's generalized SMA "Cached" land-status service 500s on any bbox
-  larger than a few km^2** with `returnGeometry=true` -- switched to the
-  "LimitedScale" service's separate BLM (id 7) / USFS (id 9) layers instead
-  (see README caveat #2).
-- **A whole-bbox NHD flowline pull returns 15,000+ features** for a ~1,000+
-  km^2 forested area and is far too slow -- switched to fetching flowlines in
-  ~1.6 km tiles, shared across nearby candidate points (see caveat #4).
-- **mrdata.usgs.gov's WFS intermittently 502s** regardless of bbox size or
-  result count (observed on quartzville's USMIN query) -- added retry-with-
-  backoff around every `ogr2ogr` WFS call.
-- **A real BLM MLRS data-quality bug**: at least one active claim per area
-  (up to 94/751 in rogue_applegate) has a ring in its geometry that belongs to
-  a mismatched PLSS aliquot tens of km away (visible in its own `QLTY` field's
-  "DOES NOT MATCH PM ANGLES" warnings). Rendering raw esri rings naively
-  (first ring = outer, rest = holes) drew that stray ring as a donut hole far
-  from the real claim. Fixed by clipping every polygon feature to its area's
-  bbox (and, for reference claims, preferring the sub-polygon that actually
-  contains the reference point) before rendering -- see `geo.clip_rings_to_bbox`.
-- **git-lfs can't push from this environment** (egress policy blocks
-  `lfs.github.com`) -- moot here since every raster produced is well under
-  50 MB, so rasters are committed as plain blobs instead (caveat #9).
-- Everything else in the spec's hard constraints and layer list was
-  implementable as specified; deviations that *were* necessary (land-status
-  granularity, open-ground's road-vs-stream tiebreaker, MLRS's missing
-  located-date field, MILO's sparse deposit-type field) are all called out
-  in "Key assumptions" above and repeated in each area's own README.
-
-Not yet done in this build (candidates for a follow-up pass, not blockers):
-withdrawn-area cross-checking against BLM LR2000 case status (see the
-withdrawn-areas caveat above), and a road dataset for open-ground's
-tertiary ranking tiebreaker.

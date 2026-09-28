@@ -7,59 +7,8 @@
     43.78
   ],
   "built_at": "2026-09-28",
-  "reference_points": [
-    [
-      "BMOA War Eagle III",
-      "polygon",
-      "WAR EAGLE III"
-    ],
-    [
-      "BMOA Westside",
-      "polygon",
-      "WESTSIDE"
-    ],
-    [
-      "BMOA Y Not",
-      "polygon",
-      "Y NOT"
-    ],
-    [
-      "BMOA Placer Claim",
-      "polygon",
-      "PLACER CLAIM"
-    ],
-    [
-      "BMOA Little Red",
-      "polygon",
-      "LITTLE RED"
-    ],
-    [
-      "BMOA Big Bend",
-      "polygon",
-      "BIG BEND"
-    ],
-    [
-      "BMOA Argentite",
-      "polygon",
-      "ARGENTITE"
-    ],
-    [
-      "BMOA Exodus",
-      "polygon",
-      "EXODUS"
-    ],
-    [
-      "BMOA 4 Aces",
-      "polygon",
-      "4 ACES"
-    ],
-    [
-      "Cedar Creek Campground (Brice Cr)",
-      "point",
-      "published site"
-    ]
-  ],
-  "usmin_count": 64,
+  "usmin_points": 64,
+  "usmin_polygons": 0,
   "usmin_dropped_types": [
     "borrow pit",
     "open pit mine or quarry",
@@ -68,102 +17,143 @@
   "milo_count": 1067,
   "mrds_raw_count": 77,
   "mrds_kept_after_dedup": 51,
-  "active_claims_count": 147,
-  "active_claims_clipped_to_bbox": 6,
-  "closed_placer_claims_count": 8,
-  "closed_unmatched_to_grid": 0,
-  "density_top_cells": [],
+  "active_claims_raw_count": 147,
   "land_blm_features": 1,
   "land_usfs_features": 1,
   "nhd_available": true,
-  "nhd_skipped_for_open_ground": false,
-  "open_ground_count": 25,
-  "open_ground_top10": [
-    {
-      "name": "OPEN-bohemia-01",
-      "lat": 43.59779110058982,
-      "lon": -122.65981378955048,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-02",
-      "lat": 43.59784197302114,
-      "lon": -122.75227091560049,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-03",
-      "lat": 43.59760451311847,
-      "lon": -122.75248111210823,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-04",
-      "lat": 43.59736432283019,
-      "lon": -122.75232218974833,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-05",
-      "lat": 43.597447794103424,
-      "lon": -122.75231792636026,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-06",
-      "lat": 43.6009751541136,
-      "lon": -122.66107947734355,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-07",
-      "lat": 43.55954116423515,
-      "lon": -122.60054114869209,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-08",
-      "lat": 43.505472877527524,
-      "lon": -122.83964882436186,
-      "type": "placer (heuristic: surface workings)",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-09",
-      "lat": 43.567914,
-      "lon": -122.593042,
-      "type": "Adit",
-      "near_claim": false
-    },
-    {
-      "name": "OPEN-bohemia-10",
-      "lat": 43.598499,
-      "lon": -122.660377,
-      "type": "Adit",
-      "near_claim": false
+  "layer1_my_claims": {
+    "count": 18,
+    "lookups": [
+      [
+        "BMOA War Eagle III",
+        "area+pin",
+        "WAR EAGLE III"
+      ],
+      [
+        "BMOA Westside",
+        "area+pin",
+        "WESTSIDE"
+      ],
+      [
+        "BMOA Y Not",
+        "area+pin",
+        "Y NOT"
+      ],
+      [
+        "BMOA Placer Claim",
+        "area+pin",
+        "PLACER CLAIM"
+      ],
+      [
+        "BMOA Little Red",
+        "area+pin",
+        "LITTLE RED"
+      ],
+      [
+        "BMOA Big Bend",
+        "area+pin",
+        "BIG BEND"
+      ],
+      [
+        "BMOA Argentite",
+        "area+pin",
+        "ARGENTITE"
+      ],
+      [
+        "BMOA Exodus",
+        "area+pin",
+        "EXODUS"
+      ],
+      [
+        "BMOA 4 Aces",
+        "area+pin",
+        "4 ACES"
+      ]
+    ]
+  },
+  "layer2_public": {
+    "count": 1,
+    "corridor_areas_skipped": "no verified public-corridor extent geometry source in this build -- not rendered rather than invented"
+  },
+  "layer3_other_claims": {
+    "count": 138,
+    "clipped_to_bbox": 6,
+    "excluded_as_my_claims": 9
+  },
+  "layer4_history": {
+    "raw_records": 1182,
+    "clusters_before_cap": 676,
+    "dropped_generic_milo_far_from_usmin": 0,
+    "dropped_prospect_pits_over_cap": 1,
+    "final_count": 150,
+    "max_allowed": 150
+  },
+  "layer5_scout": {
+    "count": 10,
+    "nhd_skipped": false,
+    "candidate_pool": 25,
+    "land_checks": {
+      "public_confirmed": 10,
+      "private_dropped": 0,
+      "unverifiable": 0
     }
-  ],
+  },
+  "layer6_access": {
+    "count": 0,
+    "reason": "no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route"
+  },
   "files": [
     {
-      "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_onx.kml",
-      "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_onx.gpx",
-      "kml_bytes": 446172,
-      "gpx_bytes": 376153,
-      "feature_count": 1364,
-      "layers": [
-        "My claims & public sites",
-        "Historical workings (USMIN)",
-        "Mine & prospect sites (MILO/MRDS, gold)",
-        "Active mining claims (BLM MLRS)",
-        "Open ground to sample"
-      ]
+      "layer": "1_my_claims",
+      "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_1_my_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_1_my_claims.kml",
+      "item_count": 18,
+      "gpx_bytes": 10475,
+      "kml_bytes": 9739,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "2_public",
+      "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_2_public.gpx",
+      "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_2_public.kml",
+      "item_count": 1,
+      "gpx_bytes": 625,
+      "kml_bytes": 669,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "3_other_claims",
+      "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_3_other_claims.gpx",
+      "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_3_other_claims.kml",
+      "item_count": 138,
+      "gpx_bytes": 100679,
+      "kml_bytes": 100458,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "4_history",
+      "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_4_history.gpx",
+      "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_4_history.kml",
+      "item_count": 150,
+      "gpx_bytes": 35215,
+      "kml_bytes": 33429,
+      "under_4mb": true,
+      "under_3000_items": true
+    },
+    {
+      "layer": "5_scout",
+      "gpx_path": "/home/user/gold-overlays/out/bohemia/bohemia_5_scout.gpx",
+      "kml_path": "/home/user/gold-overlays/out/bohemia/bohemia_5_scout.kml",
+      "item_count": 10,
+      "gpx_bytes": 3231,
+      "kml_bytes": 3130,
+      "under_4mb": true,
+      "under_3000_items": true
     }
-  ]
+  ],
+  "caltopo_path": "/home/user/gold-overlays/out/bohemia/caltopo_bohemia.geojson",
+  "caltopo_feature_count": 317
 }

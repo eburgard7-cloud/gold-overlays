@@ -3,54 +3,51 @@
 Bounding box (WGS84 minLon,minLat,maxLon,maxLat): `(-122.5, 44.48, -122.15, 44.68)`
 Built: 2026-09-28
 
+## Legend
+
+| layer | icon | color | style | meaning |
+|---|---|---|---|---|
+| 1_my_claims | Mineral Site (pin) / filled Area | yellow | solid | WVM/BMOA club claims -- ours |
+| 2_public | Location (pin) | black | n/a (points only) | Public gold-panning sites open to anyone |
+| 3_other_claims | Area only, no pins | red | dotted | Other active BLM claims -- don't dig here |
+| 4_history | Mineral Site (placer/tailings/hydraulic) / Location (adit/shaft/pit) | black | n/a (points only) | Deduped historical workings |
+| 5_scout | Location (pin) | red | n/a (points only) | Open-ground candidates worth scouting |
+| 6_access | Line | black | dash/dot | Claim-access route (only where a real source describes one) |
+
+Only confirmed onX icons/colors are used: icons `Mineral Site` / `Location`; colors yellow `rgba(255,255,0,1)`, red `rgba(255,51,0,1)`, black `rgba(0,0,0,1)`. Green for confirmed public sites and any other icon/color in `onx_samples/onx_test.gpx` is a GUESS pending `onx_samples/STYLE_RESULTS.md` -- not used until confirmed (see top-level README).
+
+## Import steps (phone)
+
+1. onX app -> **My Content** -> **Import** -> choose one `<area>_<layer>.gpx` file.
+2. After import, select all the newly-imported items -> **Add to folder** -> name it `"quartzville <layer>"` (e.g. `"quartzville 1_my_claims"`).
+3. Repeat per layer file. Each file is small and single-purpose so the folder step stays quick.
+
 ## Output files
-- `quartzville_onx.kml` / `quartzville_onx.gpx` -- 293 features, 112 KB KML / 106 KB GPX
-  - layers: My claims & public sites, Historical workings (USMIN), Mine & prospect sites (MILO/MRDS, gold), Active mining claims (BLM MLRS), Open ground to sample
+- `quartzville_1_my_claims.gpx` (+ `quartzville_1_my_claims.kml` secondary) -- 4 items, 3.4 KB GPX [OK]
+- `quartzville_3_other_claims.gpx` (+ `quartzville_3_other_claims.kml` secondary) -- 48 items, 43.9 KB GPX [OK]
+- `quartzville_4_history.gpx` (+ `quartzville_4_history.kml` secondary) -- 121 items, 28.3 KB GPX [OK]
+- `quartzville_5_scout.gpx` (+ `quartzville_5_scout.kml` secondary) -- 10 items, 3.1 KB GPX [OK]
+- `caltopo_quartzville.geojson` -- CalTopo bundle, 183 features, all layers combined
 
 ## Layer counts
-- My claims & public sites: 2
-- USMIN historical workings: 22 (dropped types: borrow pit, gravel pit, quarry)
-- MILO-4 gold sites: 185
-- MRDS gold sites (raw / kept after MILO dedup): 16 / 9
-- Active BLM claims (Not Closed): 50
-- Closed placer claims fetched: 1 (unmatched to any 500m hex: 0)
-- Land status polygons fetched: BLM=1, USFS=1
-- NHD service reachable for this area: True
-- Open ground to sample: 25 waypoints
+- 1_my_claims: 4
+- 2_public: 0 (no verified public-corridor extent geometry source in this build -- not rendered rather than invented)
+- 3_other_claims: 48 (excluded as ours: 2, clipped to bbox: 1)
+- 4_history: 121 / 150 cap (raw records: 246, clusters before cap: 121, dropped generic MILO far from USMIN: 0, dropped prospect pits over cap: 0)
+- 5_scout: 10 / 10 cap (candidate pool: 25, NHD stream filter skipped: False, land checks: {'public_confirmed': 10, 'private_dropped': 0, 'unverifiable': 0})
+- 6_access: 0 (no club handbook / access-directions source data exists in this repo -- skipped rather than inventing a route)
 
-## My claims & public sites (reference table)
-- **WVM #1B Dry Gulch** -- polygon (WVM #1  B)
-- **Cedar Bend Placer** -- polygon (CEDAR BEND)
-
-## Past claim density -- top cells
-
-| lat | lon | total closed placer claims | by decade |
-|---|---|---|---|
-
-## Open ground to sample -- top 10
-
-| waypoint | lat | lon | feature type | near active claim |
-|---|---|---|---|---|
-| OPEN-quartzville-01 | 44.55486 | -122.27591 | placer (heuristic: surface workings) | False |
-| OPEN-quartzville-02 | 44.54771 | -122.27501 | Prospect Pit | False |
-| OPEN-quartzville-03 | 44.57263 | -122.29176 | Prospect Pit | False |
-| OPEN-quartzville-04 | 44.54663 | -122.25809 | Prospect Pit | False |
-| OPEN-quartzville-05 | 44.58234 | -122.31155 | Prospect Pit | False |
-| OPEN-quartzville-06 | 44.59715 | -122.32157 | unknown | False |
-| OPEN-quartzville-07 | 44.59764 | -122.32172 | unknown | False |
-| OPEN-quartzville-08 | 44.59827 | -122.32139 | unknown | False |
-| OPEN-quartzville-09 | 44.59801 | -122.32165 | unknown | False |
-| OPEN-quartzville-10 | 44.60021 | -122.31927 | unknown | False |
+## My claims (layer 1) resolution detail
+- **WVM 1B Dry Gulch** -- area+pin (WVM #1  B)
+- **Cedar Bend Placer** -- area+pin (CEDAR BEND)
 
 ## Caveats specific to this area
-- BLM claim polygons are approximate to the quarter-section; every claim polygon is labeled
-  `[APPROX quarter-section]` in its name and description.
-- 'Closed-claim density' decade buckets use the MLRS `Created` (database record) date as a proxy for
-  located date -- the public feature service does not expose a true located/last-action date.
-- 'Open ground' ranking's final tiebreaker is distance-to-stream, not distance-to-road (no road
-  dataset was fetched in this build).
-- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes);
-  full deposit-type/production detail lives on the per-site page linked in each description.
+- BLM claim polygons are approximate to the quarter-section (not drawn from a legal survey).
+- Layer 1 'directions' field: no club handbook source exists in this repo, so it reads 'not available' rather than being invented.
+- Layer 2 public-corridor Areas are skipped (no verified extent-polygon source) -- only point pins are rendered for public sites.
+- Layer 5 scout candidates' final tiebreaker is distance-to-stream, not distance-to-road (no road dataset fetched in this build).
+- Layer 6 access routes: skipped, no handbook/directions source data exists in this repo.
+- MRDS attribute detail is limited to what its public WFS exposes (name/status/commodity codes).
 
 ## DOGAMI Bulletin 61 notes
 
