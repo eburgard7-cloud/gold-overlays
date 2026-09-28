@@ -1,0 +1,124 @@
+{
+  "area": "calapooia",
+  "bbox": [
+    -122.55,
+    44.15,
+    -122.28,
+    44.32
+  ],
+  "built_at": "2026-09-28",
+  "reference_points": [
+    [
+      "Golden Dollar",
+      "polygon",
+      "GOLDEN DOLLAR"
+    ]
+  ],
+  "usmin_count": 17,
+  "usmin_dropped_types": [
+    "borrow pit",
+    "open pit mine or quarry",
+    "quarry"
+  ],
+  "milo_count": 272,
+  "mrds_raw_count": 15,
+  "mrds_kept_after_dedup": 7,
+  "active_claims_count": 21,
+  "active_claims_clipped_to_bbox": 1,
+  "closed_placer_claims_count": 3,
+  "closed_unmatched_to_grid": 0,
+  "density_top_cells": [],
+  "land_blm_features": 1,
+  "land_usfs_features": 1,
+  "nhd_available": true,
+  "nhd_skipped_for_open_ground": false,
+  "open_ground_count": 25,
+  "open_ground_top10": [
+    {
+      "name": "OPEN-calapooia-01",
+      "lat": 44.23027495745254,
+      "lon": -122.33201390280276,
+      "type": "placer (heuristic: surface workings)",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-02",
+      "lat": 44.226261,
+      "lon": -122.33845,
+      "type": "Adit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-03",
+      "lat": 44.224547,
+      "lon": -122.353866,
+      "type": "Adit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-04",
+      "lat": 44.205812,
+      "lon": -122.372081,
+      "type": "Adit",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-05",
+      "lat": 44.228850475131004,
+      "lon": -122.34563758079679,
+      "type": "lode",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-06",
+      "lat": 44.2287975303573,
+      "lon": -122.34551591885159,
+      "type": "lode",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-07",
+      "lat": 44.2274617117575,
+      "lon": -122.34444378353507,
+      "type": "lode",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-08",
+      "lat": 44.228031753273385,
+      "lon": -122.34381222363956,
+      "type": "lode",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-09",
+      "lat": 44.22929581954335,
+      "lon": -122.33016357630015,
+      "type": "lode",
+      "near_claim": false
+    },
+    {
+      "name": "OPEN-calapooia-10",
+      "lat": 44.230269,
+      "lon": -122.332,
+      "type": "Open Pit Mine",
+      "near_claim": false
+    }
+  ],
+  "files": [
+    {
+      "kml_path": "/home/user/gold-overlays/out/calapooia/calapooia_onx.kml",
+      "gpx_path": "/home/user/gold-overlays/out/calapooia/calapooia_onx.gpx",
+      "kml_bytes": 108143,
+      "gpx_bytes": 85269,
+      "feature_count": 343,
+      "layers": [
+        "My claims & public sites",
+        "Historical workings (USMIN)",
+        "Mine & prospect sites (MILO/MRDS, gold)",
+        "Active mining claims (BLM MLRS)",
+        "Open ground to sample"
+      ]
+    }
+  ]
+}

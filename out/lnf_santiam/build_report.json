@@ -1,0 +1,50 @@
+{
+  "area": "lnf_santiam",
+  "bbox": [
+    -122.62,
+    44.75,
+    -122.4,
+    44.86
+  ],
+  "built_at": "2026-09-28",
+  "reference_points": [
+    [
+      "WVM-LNF25 Little North Santiam",
+      "point",
+      "no MLRS polygon available yet"
+    ]
+  ],
+  "usmin_count": 0,
+  "usmin_dropped_types": [
+    "borrow pit",
+    "gravel pit",
+    "quarry"
+  ],
+  "milo_count": 0,
+  "mrds_raw_count": 0,
+  "mrds_kept_after_dedup": 0,
+  "active_claims_count": 5,
+  "active_claims_clipped_to_bbox": 0,
+  "closed_placer_claims_count": 2,
+  "closed_unmatched_to_grid": 0,
+  "density_top_cells": [],
+  "land_blm_features": 1,
+  "land_usfs_features": 0,
+  "nhd_available": true,
+  "nhd_skipped_for_open_ground": false,
+  "open_ground_count": 0,
+  "open_ground_top10": [],
+  "files": [
+    {
+      "kml_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_onx.kml",
+      "gpx_path": "/home/user/gold-overlays/out/lnf_santiam/lnf_santiam_onx.gpx",
+      "kml_bytes": 6090,
+      "gpx_bytes": 5288,
+      "feature_count": 6,
+      "layers": [
+        "My claims & public sites",
+        "Active mining claims (BLM MLRS)"
+      ]
+    }
+  ]
+}
