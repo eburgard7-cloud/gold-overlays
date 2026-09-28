@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:onx="http://www.onxmaps.com" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd " version="1.1" creator="onXmaps hunt ios">
+	<wpt lat="43.739478" lon="-123.082054">
+		<time>2026-09-28T02:58:19Z</time>
+		<name>old mining claim maybe</name>
+		<desc>https://thediggings.com/mines/ormc89312</desc>
+		<extensions>
+			<onx:icon>Mineral Site</onx:icon>
+			<onx:color>rgba(255, 255, 0, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="43.739282" lon="-123.080671">
+		<time>2026-09-28T02:58:19Z</time>
+		<name>Waypoint 09/27/26 19:56</name>
+		<extensions>
+			<onx:icon>Location</onx:icon>
+			<onx:color>rgba(255, 51, 0, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<rte>
+		<name>Area 09/27/26 19:55</name>
+		<type>Area</type>
+		<extensions>
+			<onx:style>solid</onx:style>
+			<onx:weight>4.0</onx:weight>
+			<onx:color>rgba(255, 51, 0, 1)</onx:color>
+		</extensions>
+		<rtept lat="43.738911" lon="-123.084891">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.741078" lon="-123.084809">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.741752" lon="-123.080689">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.738391" lon="-123.079036">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.738911" lon="-123.084891">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+	</rte>
+	<rte>
+		<name>Route 09/27/26, 19:57</name>
+		<type>Route</type>
+		<extensions>
+			<onx:style>solid</onx:style>
+			<onx:weight>4.0</onx:weight>
+			<onx:color>rgba(0, 0, 0, 1)</onx:color>
+		</extensions>
+		<rtept lat="43.73913" lon="-123.08081">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.73893" lon="-123.08109999999999">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.73866" lon="-123.08143">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.73884" lon="-123.08121">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+		<rtept lat="43.73968" lon="-123.08243">
+			<time>2026-09-28T02:58:19Z</time>
+		</rtept>
+	</rte>
+</gpx>
