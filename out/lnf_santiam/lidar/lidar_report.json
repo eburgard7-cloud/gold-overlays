@@ -1,0 +1,11 @@
+[
+  {
+    "names": [
+      "WVM-LNF25 Little North Santiam"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/lnf_santiam/lidar/wvm-lnf25-little-north-santiam.tif",
+    "pdf": "/home/user/gold-overlays/out/lnf_santiam/lidar/wvm-lnf25-little-north-santiam.pdf",
+    "tif_bytes": 2359355
+  }
+]

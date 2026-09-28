@@ -1,0 +1,16 @@
+[
+  {
+    "scale": "15 x 15",
+    "title": "USGS 1:62500-scale Quadrangle for Culp Creek, OR 1955",
+    "status": "downloaded",
+    "path": "/home/user/gold-overlays/out/bohemia/topo/USGS_1_62500_scale_Quadrangle_for_Culp_Creek_OR_1955.pdf",
+    "bytes": 10295797
+  },
+  {
+    "scale": "7.5 x 7.5",
+    "title": "USGS 1:24000-scale Quadrangle for Bearbones Mtn, OR 1986",
+    "status": "downloaded",
+    "path": "/home/user/gold-overlays/out/bohemia/topo/USGS_1_24000_scale_Quadrangle_for_Bearbones_Mtn_OR_1986.pdf",
+    "bytes": 17418286
+  }
+]

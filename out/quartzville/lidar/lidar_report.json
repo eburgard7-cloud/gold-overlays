@@ -1,0 +1,20 @@
+[
+  {
+    "names": [
+      "WVM #1B Dry Gulch"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/quartzville/lidar/wvm-1b-dry-gulch.tif",
+    "pdf": "/home/user/gold-overlays/out/quartzville/lidar/wvm-1b-dry-gulch.pdf",
+    "tif_bytes": 2403232
+  },
+  {
+    "names": [
+      "Cedar Bend Placer"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/quartzville/lidar/cedar-bend-placer.tif",
+    "pdf": "/home/user/gold-overlays/out/quartzville/lidar/cedar-bend-placer.pdf",
+    "tif_bytes": 2387639
+  }
+]

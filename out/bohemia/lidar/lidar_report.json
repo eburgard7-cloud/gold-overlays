@@ -1,0 +1,84 @@
+[
+  {
+    "names": [
+      "BMOA War Eagle III"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-war-eagle-iii.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-war-eagle-iii.pdf",
+    "tif_bytes": 2191968
+  },
+  {
+    "names": [
+      "BMOA Westside"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-westside.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-westside.pdf",
+    "tif_bytes": 2252090
+  },
+  {
+    "names": [
+      "BMOA Y Not"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-y-not.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-y-not.pdf",
+    "tif_bytes": 2291125
+  },
+  {
+    "names": [
+      "BMOA Placer Claim"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-placer-claim.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-placer-claim.pdf",
+    "tif_bytes": 2374654
+  },
+  {
+    "names": [
+      "BMOA Little Red",
+      "BMOA Big Bend"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-little-red.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-little-red.pdf",
+    "tif_bytes": 2317180
+  },
+  {
+    "names": [
+      "BMOA Argentite"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-argentite.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-argentite.pdf",
+    "tif_bytes": 2323162
+  },
+  {
+    "names": [
+      "BMOA Exodus"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-exodus.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-exodus.pdf",
+    "tif_bytes": 2338190
+  },
+  {
+    "names": [
+      "BMOA 4 Aces"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-4-aces.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/bmoa-4-aces.pdf",
+    "tif_bytes": 2307865
+  },
+  {
+    "names": [
+      "Cedar Creek Campground (Brice Cr)"
+    ],
+    "status": "ok",
+    "tif": "/home/user/gold-overlays/out/bohemia/lidar/cedar-creek-campground-brice-cr.tif",
+    "pdf": "/home/user/gold-overlays/out/bohemia/lidar/cedar-creek-campground-brice-cr.pdf",
+    "tif_bytes": 2412528
+  }
+]
