@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xmlns:onx="http://www.onxmaps.com" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd " version="1.1" creator="onXmaps hunt ios">
+	<wpt lat="44.596600" lon="-122.301100">
+		<name>TEST 1 Mineral Site yellow</name>
+		<desc>exact values from your export</desc>
+		<extensions>
+			<onx:icon>Mineral Site</onx:icon>
+			<onx:color>rgba(255, 255, 0, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="44.597800" lon="-122.301100">
+		<name>TEST 2 Location red</name>
+		<desc>exact values from your export</desc>
+		<extensions>
+			<onx:icon>Location</onx:icon>
+			<onx:color>rgba(255, 51, 0, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="44.599000" lon="-122.301100">
+		<name>TEST 3 Water Source guess-blue</name>
+		<desc>icon name from app, color guessed</desc>
+		<extensions>
+			<onx:icon>Water Source</onx:icon>
+			<onx:color>rgba(0, 153, 255, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="44.600200" lon="-122.301100">
+		<name>TEST 4 Camp guess-green</name>
+		<desc>icon+color guessed</desc>
+		<extensions>
+			<onx:icon>Camp</onx:icon>
+			<onx:color>rgba(132, 212, 0, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="44.601400" lon="-122.301100">
+		<name>TEST 5 Parking guess-purple</name>
+		<desc>icon+color guessed</desc>
+		<extensions>
+			<onx:icon>Parking</onx:icon>
+			<onx:color>rgba(128, 0, 128, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="44.602600" lon="-122.301100">
+		<name>TEST 6 Trailhead guess-brown</name>
+		<desc>icon+color guessed</desc>
+		<extensions>
+			<onx:icon>Trailhead</onx:icon>
+			<onx:color>rgba(139, 69, 19, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<wpt lat="44.603800" lon="-122.301100">
+		<name>TEST 7 Hazard guess-white</name>
+		<desc>icon+color guessed</desc>
+		<extensions>
+			<onx:icon>Hazard</onx:icon>
+			<onx:color>rgba(255, 255, 255, 1)</onx:color>
+		</extensions>
+	</wpt>
+	<rte>
+		<name>TEST A WVM 1B claim area orange-guess</name>
+		<type>Area</type>
+		<extensions>
+			<onx:style>solid</onx:style>
+			<onx:weight>4.0</onx:weight>
+			<onx:color>rgba(255, 153, 0, 1)</onx:color>
+		</extensions>
+		<rtept lat="44.597233" lon="-122.303133"></rtept>
+		<rtept lat="44.598233" lon="-122.299800"></rtept>
+		<rtept lat="44.596517" lon="-122.299617"></rtept>
+		<rtept lat="44.596050" lon="-122.300200"></rtept>
+		<rtept lat="44.594983" lon="-122.302983"></rtept>
+		<rtept lat="44.597233" lon="-122.303133"></rtept>
+	</rte>
+	<rte>
+		<name>TEST B dot line red</name>
+		<type>Line</type>
+		<extensions>
+			<onx:style>dot</onx:style>
+			<onx:weight>4.0</onx:weight>
+			<onx:color>rgba(255, 51, 0, 1)</onx:color>
+		</extensions>
+		<rtept lat="44.595600" lon="-122.305100"></rtept>
+		<rtept lat="44.596100" lon="-122.303100"></rtept>
+		<rtept lat="44.595600" lon="-122.301100"></rtept>
+	</rte>
+	<rte>
+		<name>TEST C dash line black</name>
+		<type>Line</type>
+		<extensions>
+			<onx:style>dash</onx:style>
+			<onx:weight>4.0</onx:weight>
+			<onx:color>rgba(0, 0, 0, 1)</onx:color>
+		</extensions>
+		<rtept lat="44.594600" lon="-122.305100"></rtept>
+		<rtept lat="44.595100" lon="-122.303100"></rtept>
+		<rtept lat="44.594600" lon="-122.301100"></rtept>
+	</rte>
+</gpx>
